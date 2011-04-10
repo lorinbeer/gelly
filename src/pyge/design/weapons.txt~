@@ -1,0 +1,38 @@
+Weapons
+  a wide variety of weapons exist, with many categories, however, weapons can be categorized by
+form, function, and damage type.
+
+Form: how the weapon is shaped
+-swords
+-spears
+-clubs
+Function: what the weapon is used for
+
+Damage Types
+  Cutting
+  Piercing
+  Bashing
+All weapons have a rating in each of the three damage types, indicating how much of this type of
+damage the weapon is capable of. 
+The rating is in the form of a function: f(e)=n
+
+Damage Function f(e,s)=d
+  given energy e, how much damage does the weapon deal in cutting, piercing, and bashing damage.
+  
+
+Armour Piercing
+  given by a function f(e)=ap
+  can be viewed as the force the weapon exerts per unit area
+  a weapon must exceed the armours toughness value in order to penetrate
+
+Mass
+how heavy the weapon is, defines an upward limit on how 
+
+
+Threshold Modifier
+weapons can have modifiers on how a skill behaves, 
+- heavier weapons tend to increase the activation threshold of skills
+- skills used with weapons that do not have a particular skill in the weapons skill list incur
+  a +1 cost of activation, indicating that the move may be awkward
+- some skills may reduce the base threshold. Small swords and knives may have a -1 or even -2
+  cost of activation

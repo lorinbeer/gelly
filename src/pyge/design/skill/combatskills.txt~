@@ -1,0 +1,163 @@
+Combat Skills
+Skills used in combat. Usually to hurt things.
+
+
+All Combat Abilities have the following properties:
+-Level: of the ability (skill level)
+-Threshold: activation cost of the ability ie how much it costs to use
+-Maximum Energy: the maximum amount of energy that can be channeled through the ability
+
+
+Passive Abilities
+Abilities that, once activated, provide a passive affect to the environment or character.
+
+
+Active Abilities
+
+
+Defense Abilities
+  Parry: use a weapon to deflect an incoming attack
+    level: 1-5
+    threshold: energy of attack to be parried+weapon parry rating
+  Block: use a weapon to block an incoming attack
+    level: 1-5
+    threshold: energy of attack
+ 
+  Riposte: Adds an attack slot to parry moves, allows a counter attack after a successful parry
+    prereq: parry lvl 3
+    level: 1-5
+    threshold: weapon parry rating+energy = energy of attack to be parried + energy of attack
+    	       (must be able to beat the opponents attack by a margin of 2)
+  Dodge: attempt to avoid an attack by moving out of its way
+    level: 1-5
+    threshold: movement rating+energy = energy of attack to be dodged
+  Dodge Move: attempt to avoid an attack while simultaneously moving to a more advantageous
+              position
+              level: 1-5
+              theshold: 
+
+Martial Attack Abilities
+  abilities which physically attack a target with a weapon
+  the astute observer will note that many of the basic martial abilities have nothing to say
+  about the damaged they deal. This is because damage dealt is a weapon function of energy, 
+  and wielder strength.
+
+  Slash: basic cutting attack, many varieties exist, volumes written on form and 
+         technique, but the basics are essentially the same
+         -level: 1-5
+         -threshold: 2
+         -max energy: level+3
+         -damage: dependent on weapon
+  Thrust: basic piercing attack, master fencers are known settle disagreements on proper form with
+          live demonstrations. 
+          -level: 1-5
+          -threshold: 2
+          -max energy: level+3
+  Strike: downward cutting attack from an overhead stance
+          -level: 1-5
+          -threshold: 2 if in high guard, 3 otherwise
+          -max energy: level+4
+          -+1 effective energy against parry&dodge
+  Spin: attack made with a 2-handed weapon where one hand is pulled, the other pushed. This is
+         generally only possible with polearms. It has the advantage of being fast, with a very
+         short minimum range, but at the cost of half of the weapons normal reach
+         -level: 1-5
+         -threshold: 2
+         -max energy: level+1/4*str
+         -reach: weapon reach * 1/2
+  Dual Strike: strike simultaneously with 2 equipped weapons. High energy attack which is becomes
+               very difficult for the target to parry or dodge
+               -level:1-5
+               -threshold: 4
+               -max energy: level+8, split between both weapons
+               -+2*(number of equiped weapons-opponents weapons) to effective energy against
+                parry
+               -only useable while dual wielding
+  Weapon Strike: strike an opponent's weapon followed by a quick attack, in an attempt to push the
+                 defender's weapon out of position, making parrying more difficult. A weapon
+                 strike is an essential skill when your opponent has *priority*
+                 -level: 1-5
+                 -threshold: 3
+                 -max energy: level+4
+                 -+2*(number of equiped weapons-opponents weapons) to effective energy against 
+		  parry&dodge*
+                 -if blocked, attacker gains *priority*
+                 -(-1) to range penalty, to a minimum of 0
+  Feint: strike at the opponent, changing target midswing.
+         -level: 1-5
+         -threshold: 4
+         -max energy: level+6
+  Double Attack: attack twice, in rapid succession. The second attack is generally easier to
+                 parry or dodge. Each attack is itself another skill.
+                 -level: 1-5
+                 -threshold: 2
+                 -max enegy: both of the chosen skills must have there threshold payed, and work 
+		             exactly as described
+                 -the second attack suffers a -2 penalty to parry/dodge
+  Momentum: 
+  Grab: attempt to grab an opponents weapon, either with a grab-capable weapon, or a bare fist.
+        -level: 1-5
+        -threshold: 2
+        -max energy: skill level+1/2*strength
+        -if a grab capable weapon is equipped (swordbreaker) that weapon is used, otherwise, bare
+         hand is used
+        -if bare hand is used the target weapon is edged, an armour penetration is calculated 
+         againsnt the attackers hand armour as if the target struck the attacker on the hand with
+         e=energy of grab**
+  Hook: attempt to grab an opponent, either with a hook-capable weapon, or with bare hands
+        -level: 1-5
+        -threshold: 2
+        -max energy: skill level + 1/2*strength
+        -Halberds and other weapons capable of hooking an opponent typically have bonuses, but 
+         this is not always the case.
+  Shove: bodily push an opponent away. This skill is very useful when an opponent has priority,
+         but you have a weapon with greater reach.
+         -level: 1-5
+         -threshold: 2
+         -max energy: skill level + 1/2*strength
+         -weapon: hands are used unless a weapon capable of a shove is equipped. Swords are 
+                  typically not capable of shoving, while polearms and shields are.
+         -defense: a shove cannot be parried, but it can be dodged or blocked. If dodged, the
+                   attacker must make an agility check or is considered off-balance
+                   dodge: attacker shove skill+str+energy <= defender dodge skill+agi+energy
+                   block: attacker shove skill+str+energy <= defender dodge skill+str+energy
+  Attack Move: attack while moving, can be used in an attempt to move into occupied tiles
+               -level: 1-5
+               -threshold: 4+weapon penalties+movement penalties
+               -max energy:is an attempt to force your opponent to move back
+   
+
+  Tackle: attempt to bring an opponent to the ground.
+          -level: 1-5
+          -threshold: 2
+          -max energy: skill level
+          
+
+*if Weapon strike is attempted by a dual wielding character (sword/shield, sword/sword, etc) 
+ against a single wielding opponent (spear, greatsword, etc), Weapon strike gains +2 against
+ attepmts to dodge and parry. If weapon strike is attempted by a triple wielding character
+ (3 armed koala or something), the effective energy against dodge and parry is +4, etc.
+**grabbing a sharp weapon with an unarmoured or lightly armoured hand is a great way to earn the
+  nickname "Five Fingers"
+
+
+example
+- Character A uses a level 2 slash skill against character D. The skill has a threshold of 2, 
+  damage of 2, max damage of 3, and max energy of 5.
+- A uses 5 energy points for the ability, the maximum challenge rating possible for this level 2 
+  skill. The challenge rating to defend against most skills is equal to the total energy used.
+- D has a level 3 parry skill set to defend against attacks.
+
+
+Skill Slots
+  skill slots allow another layer of customization to characters
+
+
+Defense Slots
+  Recovery: if a defense action fails, another may be attempted
+  Fast: 2 defense actions can be performed each round
+  Effortless:  a percentage of the energy spent on defense is recovered at the end of the round
+
+Passive Slots
+
+Active Slots

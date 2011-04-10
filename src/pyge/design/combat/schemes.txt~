@@ -1,0 +1,71 @@
+Combat System Schemes
+
+
+there are a variety of possibilities which can be imlemented in the current system with little
+to no modification of the game engine. Which one will be chosen largely depends on how well it
+models reality, as well as how much fun it is.
+
+
+Scheme 1
+  Overview: actions are performed during a characters turn, with the turn ending once a maximum
+            number of actions has been performed. Actions have a fixed energy cost, usually
+            proportional to the power of the action.
+    Major Action: actions which take considerable time and/or preparation, such as attacking,
+                  movement, reloading a ranged weapon, etc
+    Minor Action: actions which take negligible time, such as stance changes, activating 
+                  abilities, target changes, etc
+  Implementation:
+   A character would be able to perform a maximum number of actions on his/her turn, 
+   such as:
+    method 1: One Major action or two minor actions
+    method 2: One Major action and two minor actions
+    method 3: One Major action and unlimited minor actions
+
+
+
+Scheme 2
+  Overview: actions are performed during a characters turn, with the turn ending once a character
+            has performed a single action or chosen to end his/her turn. Actions have a fixed
+            energy cost, usually proportional to the actions power.
+    Action: an attack, spellcast, etc
+  
+  Implementation:
+    A character chooses which of his abilities to use on his/her turn. Almost every ability
+    constitutes an action, with some abilities affecting the next major action used.
+
+
+Scheme 3
+  Overview: actions are performed during a character's turn, with the turn ending once a character
+            has performed a single action or chosen to end the turn. Actions have a variable
+            energy cost, determined by the character.
+    Action: an ability with a minimun energy cost (threshold) and (sometimes) a maximum energy
+            cost.
+
+  Implementation:
+  
+  Pros: -tactical component of not spending too much energy during a turn, leaving enough for 
+         defense
+
+Scheme 4
+  Overview: actions are performed during a character's turn, with the turn ending once a character
+            has run out of energy or chosen to end the turn. Actions have a fixed energy cost, but
+            any number of actions can be performed during a single turn so long as the character
+            has energy left to spend.
+    Action: an ability with a fixed energy cost
+
+  Implementation:
+    Turn: A character continues to perform actions until he/she runs out of energy or chooses to 
+          end her turn.
+    defense: any unused energy from a characters turn is available for defense actions during the
+             opponent(s) turn.
+
+  Pros: -tactical component of not spending too much energy during a turn, leaving enough for 
+         defense
+
+  Cons:-careful balancing required to ensure that a given actions' energy cost is not too low,
+        otherwise repeated uses in a single turn by a high level character might break balance
+       -careful balance of character level:energy pool ratio. Too low, and HL characters die 
+        easily to lower level characters, too high and HL characters are unbeatable
+       -without a limit on the number of actions performed, may (would) allow high level 
+        characters to wipe out whole groups of low level characters in a single turn
+         

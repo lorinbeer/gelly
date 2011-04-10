@@ -1,0 +1,64 @@
+Skills
+
+
+Overview:
+  Skills are an abstract measure of proficiency in a given area. All characters cultivate a set 
+  of skills throughout their lifetimes. This means that characters can both increase a given 
+  skills relative level of proficiency, and learn new skills.
+  Learning and improving skills is the primary means of character progression available to 
+  players.
+
+
+Skillset
+A characters set of skills (or skillset) represents everything that the character has actively
+developed a proficiency in. There is no limit to the size of a given characters skillset, but
+there are limits on how many skills can be active at a given time. These limits are dependent on
+the type of skill being discussed; combat skills, trade skills etc.
+
+
+Skill
+An individual skill is an abstract measure of a character's proficiency at performing a single 
+task, or a set of related tasks.
+Examples:
+  Slash Skill: an attack skill used when making a slashing attack with a weapon.
+the slash skill is used when attempting to make a slashing attack, regardless of weapon type, eg
+axe, mace, sword, etc.
+  Carpentry Skill: a measure of a characters skill at crafting items from wood
+general woodworking skill, used for everything from making a wooden shield, to a post and beam
+house
+
+Skills have a level between 1 and 10. 
+
+0: A skill level of zero corresponds to having no particular proficiency in this area. Interestin
+   things can happen if you attempt to use skills you don't have. Usually in the form of hurting
+   yourself.
+1: Beginner, with no particular apparent aptitude at the task. You've barely mastered the use of
+   the relevant words involved in what your doing, let alone the task itself.
+2: Novice, you are starting to gain the hang of how things work, and can complete tasks related
+   to this skill without outright ridicule. You're still really, really bad, though.
+3: Apprentice, you've mastered the basics. In terms of tradegoods, a skilled salesperson might
+   even be able to convince someone to buy an item you've crafted.
+5: Journeyman, you've done more that mastered the basics, but much of the complexity related to 
+   the skill as well. In terms of combat skills, a level 5 attack is cleanly executed and deadly,
+   with perhaps minor issues of style. In terms of tradeskills, your skill in this area is highly
+   marketable, and goods you produce are considered of good quality. Anyone from a soldier to a
+   knight would consider himself well equipped if he was carrying equipment made by a jounerman 
+   smith into battle. Although the knight most likely has more of it.
+7: Master, you're skill is rare and valuable. Attack skills performed by a master are executed 
+   with a style and grace only matched with their lethality. Items crafted by a master are of 
+   excellent quality, and prized by powerful Lords and Princes. No task associated with a skill 
+   is beyond the ability of a Master, although a Master would consider some tasks difficult and/or
+   dangerous.
+9: GrandMaster, A city would consider itself lucky if a grandmaster practiced his craft there.
+   Whole schools form around grandmasters, and a whole industry can form around such a school. 
+   The goods that a GrandMaster produces are of the highest quality, and are usually commissioned.
+   A sword crafted by a grandmaster would be saught after by Kings, Emperors, and Grand Master 
+   fencers. Few can appreciate the difference in the work of a grandmaster, but a grandmasters
+   work is considered invaluable to those who can.
+10: Legendary, A Kingdom would consider a craftsman of legendary skill a national treasure. An
+    enemy would consider a Legendary warrior's name as synonymous with death. Few have the time
+    or the potential to build a skill to legendary.
+    Items made by legendary craftsman fall into the same quality bracket as the works made by
+    grandmasters. What separates a GrandMaster and a Legendary craftsman is a lifetime of 
+    innovation and dedication.
+

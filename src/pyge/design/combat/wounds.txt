@@ -1,0 +1,35 @@
+
+
+
+
+Wound Type
+  determines what kind of negative effects are experienced due to the wound
+
+Wound Severity Level (1-10)
+  
+1 - light: barely qualifies as a wound. A cat's scratch, or barely visible bruise qualify as light
+           wounds. Might cause the recipient to recoil in pain. Nothing hurts like a scrape.
+2 - flesh: You'll notice a flesh wound, but will likely suffer little impediment.  A cut that 
+    	   causes minor bleeding and will likely qualify for some stitches.
+3 - minor: not lifethreatening, but a few minor wounds will kill. A cut that hits muscle or bone.
+4 - moderate: a solid hit that causes enough damage to immediately disable. A broken arm, or cut
+              that severs a tendon would count as moderate wounds. Like minor and serious wounds,
+              the danger of moderate wounds lies in the disability they cause.
+5 - serious: likely to be life threatening if not properly treated. Serious wounds are not 
+             immediately fatal, but are not to be taken lightely. A serious wound can 
+             totally incapacitate a character, or otherwise cause immediate and severe disability.
+6 - severe: will likely be fatal, but not immediately so. Severe wounds cut deep into flesh, and
+            shatter bones. Without medical attention (and often with), death will come from 
+            internal bleeding or infection. Severe wounds can often disable or incapacitate.
+7 - mortal: deadly, but will not kill immediately. A stab to the lung, a slashed throat, etc. A
+            mortal wound will usually kill within a few minutes
+8 - fatal: death comes within seconds, eg clean amputation, cutting of a major artery. Probably
+           leaves the victim time for some last words, "urgle" and "AH!" are popular choices.
+9 - devastating: instantaneous death, eg decapitation, crushed cranium.
+10- annihilating: instantaneous death, eg crushed by a blimp, stepped on by a giant. Leaves a
+    		  big smeary mess
+Wound Location
+ The location of a wound determines what kind of effect will be experienced by the character
+ -effects can very wildly, a serious wound to a limb will cause pain and disable the limb, a 
+  serious wound to the stomach will very likely totally incapacitate the victim with pain, a
+  serious wound to the head might stun, or knock out the recipient. 

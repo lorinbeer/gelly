@@ -1,0 +1,125 @@
+//================================================================================================
+//
+//
+//
+//
+//================================================================================================
+
+#include "actor.h"
+#include <iostream>
+//================================================================================================
+
+unsigned int topname=0;
+unsigned int NAME_GEN(){
+  return ++topname;
+}
+
+//================================================================================================
+int default_model_init( Vertel & model )
+{
+  if ( INIT_VERTEX_LIST( model, 4, 3 ) ) {
+    model[0][0] = 0.f;
+    model[0][1] = 0.f;
+    model[0][2] = 0.f;
+
+    model[1][0] = 0.f;
+    model[1][1] = 171.0f/600;
+    model[1][2] = 0.f;
+
+    model[2][0] = 101.0f/800;
+    model[2][1] = 171.0f/600;
+    model[2][2] = 0.f;
+
+
+    model[3][0] = 101.0f/800;
+    model[3][1] = 0.f;
+    model[3][2] = 0.f;
+    return 1;
+  }
+  else {
+    return 0;
+  }
+}
+int default_bounding_model_init( Vertel & model )
+{
+  if ( INIT_VERTEX_LIST( model, 4, 3 ) ) {
+    model[0][0] = 0.f;
+    model[0][1] = 0.f;
+    model[0][2] = 0.f;
+
+    model[1][0] = 0.f;
+    model[1][1] = 40.0f/600;
+    model[1][2] = 0.f;
+
+    model[2][0] = 40.0f/800;
+    model[2][1] = 40.0f/600;
+    model[2][2] = 0.f;
+
+
+    model[3][0] = 40.0f/800;
+    model[3][1] = 0.f;
+    model[3][2] = 0.f;
+    return 1;
+  }
+  else {
+    return 0;
+  }
+}
+//================================================================================================
+Actor::Actor(  char const * texpath/*, void*model */ ):
+  model(),
+  boundmodel(),
+  boundoffset(),
+  pos(),
+  name( NAME_GEN() ),
+  texid(0),
+  drawmode(0),
+  offset(0)
+{
+  default_model_init(model);
+  default_bounding_model_init(boundmodel);
+  INIT_VERTEX( boundoffset, 3 );
+  //boundoffset[0];// = 40.0/800.0;
+  boundoffset[1] = 200.0/600;
+  //boundoffset[2]
+  INIT_VERTEX( pos, 3 );
+  pos[0] = 0.5f;
+  //try
+  Graphics * gfx = Graphics::Instance();
+  texid = gfx->loadtexture( texpath ); 
+}
+//================================================================================================
+void Actor::draw(){
+  Graphics * gfx = Graphics::Instance();
+  gfx->draw( this->model, this->pos, this->texid );
+  //Vertex *temp= new Vertex();
+  // INIT_VERTEX(*temp,3);
+  //  temp[0]=pos[0]+boundoffset[0];
+  //  temp[1]=pos[1]+boundoffset[1];
+  gfx->draw( this->boundmodel, this->pos );
+}
+void Actor::selectdraw(){
+  Graphics * gfx = Graphics::Instance();
+  gfx->addselect( this->getdrawitem() );
+}
+//================================================================================================
+void Actor::setpos(Vertex const & npos){
+  if ( npos.size() == this->pos.size() ){
+    this->pos = npos;
+  }
+}
+void Actor::setpos(float x, float y, float z){
+  float npos[]= {x,y,z};
+  this->pos.assign(npos,npos+3);
+}
+//================================================================================================
+DRAW_ITEM *Actor::getdrawitem(){
+  DRAW_ITEM * drawitem = new DRAW_ITEM;
+  drawitem->name  = this->name;
+  //drawitem->model = &(this->model);
+  drawitem->model = &(this->boundmodel);
+  drawitem->pos   = &(this->pos);
+  return drawitem;
+}
+//================================================================================================
+

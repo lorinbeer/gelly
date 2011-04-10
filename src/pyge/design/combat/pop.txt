@@ -1,0 +1,35 @@
+Places of Power:
+
+Places of Power are proceduraly generated or statically defined locations on the game board which
+allow for the enhancement of normal actions and abilities, or unique moves and abilities.
+PoPs can be in relation to another game object, such as a character.
+
+
+The primary attribute for identifying PoPs is perception
+
+Martial PoP
+  flank: attacking an opponent from the side
+  rear:  attacking an opponent from behind
+  ledges: anything which provides a height advantage, attacking an opponent from above
+Magical PoP
+  Weigh Lines, Nodes, dimensional intersections, etc
+  nodes: concentrations of magical power, interfaces to access additional power. A magic user
+         positioned on a node can use the nodes power to enhance his own spell casting
+  weigh lines: lines of force connecting to nodes. Nodes may occure where weigh lines cross. A
+               magic user positioned on or near a weigh line can enhance a spell centered on a 
+               node connected to this weigh line. A spell enhanced in this way will have an effect
+               centered at a connected node (not anywhere within range). This can be used to 
+               attack enemies near a node, or enemies 
+  
+  
+
+  - can be used to enhance magic cast by positioning oneself on the node, until the node is
+    exhausted
+  - can be used from a distance to incredible effect, ie remotely detonating the nodes power,
+    requires proximity to the a weigh line attached to the node
+  - can be used to effect multiple enemies by sending spells through a nodes connected weigh lines
+
+
+DESIGN: interaction between magic users
+magic users on adjacent nodes
+magic user on node, another on connected weigh line

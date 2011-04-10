@@ -1,0 +1,3 @@
+
+
+CFLAGS += $(shell pkg-config --cflags sigc++-2.0)

@@ -1,0 +1,25 @@
+graphic engine update
+physics engine update
+
+dungeonmaster <-> pc
+guisys <-> actionbar <-> pc
+
+Deck
+ the 
+
+DungeonMaster
+ - singleton
+ - should act as a state machine
+
+- dungeonmaster should always be in the state of processing a turn
+
+- character objects have a queue of actions
+- when the character is asked to perform an action on it's turn, the queue is updated
+  - this should take place inside character.mind
+- if the character mind has an attached controller, what happens?
+  - the caller is told to wait
+  - the game loop continues, each iter. asking gm to take a turn
+  - eventually (one hopes) the player enters an action, which updates the related character 
+    objects action queue
+  - the player character has the ability to place the dm on hold, which is only reversable with
+    the activation of the "take turn" button

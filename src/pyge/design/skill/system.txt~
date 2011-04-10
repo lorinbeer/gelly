@@ -1,0 +1,20 @@
+Skill System
+
+
+Target Number=Challenge Rating
+  the difficulty of a given task
+
+
+- for many activated abilities, the target number is considered equal to the level of the skill
+  being attempted, that is, provided you are trained in the skill, using it is consistently
+  possible. These self contained skills are usually activated abilities, such as attacks and
+  spells.
+
+- other actions have target numbers considerably different from the skill. One example is 
+  rock climbing. The target number needed to climb a given rockface is dependent on the rockface
+  itself. A given mountain path or hill may have a challenge rating of 5. This means that anyone
+  who can walk can successfully climb the face. A steep, gravelly hill may have a challenge rating
+  of 15 or 16. Your mountaneering skill is subtracted from the challenge rating, leaving an 
+  energy cost. This cost is considered to be a "per distance" cost, as in, cost for moving on
+  this type of slope for a single round of combat. This means that a player must have a certain
+  energy capacity equal or greater than the challenge rating of the slope - his movement skill.

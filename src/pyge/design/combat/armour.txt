@@ -1,0 +1,96 @@
+
+Armour
+  worn by characters to protect against attacks
+  A piece of armour is described by the following stats:
+  Coverage: percentage of the body covered by the piece of armour
+  Flexibility: how well the armour transfers force to the wearer, as a percentage of the force
+               applied. The lower the better. Not used if an attack penetrates the armour
+  Toughness: how difficult the armour is to penetrate
+  Mass: how heavy the armour is
+  Encumberance: how much of the mass is felt by the wearer
+
+  second pass
+  zones: areas of the body, each area will have its own coverage statistic, which is used when
+         that area is targted, and is irrelevant otherwise, eg a character wearing a full helm
+         and padded armour is well protected from attacks targetting the head, but is vulnerable
+         elsewhere.
+
+
+Examples: how do we model various armours with our 3 stat system
+
+- coverage is easy, how much of the given region does the armour cover? A skullcap covers less 
+  than a full helm, a breastplate covers less that a breastplate with backplate, a maille shirt
+  covers less than a maille hauberk, etc
+- flexibility and toughness
+    - plate armour: 
+       -high toughness, low flexibility, hight mass, low (relative) encumberance
+    - maille armour:
+       -high toughness, high flexibility, high mass, high encumberance
+    - linothorax:
+       -medium toughness, low flexibility, low mass, low encumberance
+    - brigandine:
+       - medium toughness, medium flexibility, low mass, low encumberance
+    - leather:
+       -low toughness, low flexibility, low mass, low encumberance
+    
+
+
+
+Penetrating Armour
+ - all armour has gaps
+ - all armour transmits force to the wearer
+ - all armour can be penetrated given enough force
+
+so, to damage an armoured opponent, you may:
+ - attack around the armour, in gaps and areas of poor coverage
+ - attack through the armour, trasmiting force with blunt attacks
+ - penetrate the armour
+
+
+
+
+
+armour types
+  - composite - brigandine, studded leather, etc, usually a mixture of light metal plating, 
+    	        leather, ring armour, and even cloth (linothorax)
+		
+  - ring      - made from thousands of interlocking rings, with varying degrees of protective
+    	      	effectiveness. 
+
+  - plate     - metal plates
+
+cloth on metal
+  brigandine, coat of plates
+   cloth garment with metal plates sewn or rivited inside it
+
+metal on cloth
+  scale armour
+  splint armour
+  lamellar armour small plates (lames) which are laced together in parallel rows. Lamellar armour evolved from scale armour,[1] from which it differs by not needing a backing for the scales. It is made from pieces of 
+
+
+
+
+Sharp weapons:
+  eg katana
+  do a fine job against most cloth/leather armour types, but are useless against metal armour
+  like mail and plate
+  eg longsword
+  do an alright job against most cloth/leather armour types, transfer massive blunt against
+  flexible armour like mail, but are mostly useless against plate. However, alternate stances,
+  such as half-sword stance, greatly increase potential armour penetration
+  how to model: 
+
+weapons have 3 damage types
+ cutting: used when slashing, directly related to how sharp of an edge the weapon can hold, and
+          how well the weapon can be used in a slashing motion
+ piercing: used when stabbing, directly related to how shapor of a tip the weapon has, and haw
+           well the weapon can be used in a stabbing motion
+ blunt: used for blunt weapons, or when weapon fails to penetrate armour, directly relates to the
+        mass of a weapon
+
+so a katana has great cutting damage, but terrible piercing and terrible blunt
+longsword has good cutting, decent piercing, and decent blunt
+an estoc has negligible cutting, excellent piercing and good blunt
+a spear has no cutting, excellent piercing and good blunt
+a round mace has no cutting, no piercing, but great blunt

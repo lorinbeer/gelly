@@ -1,0 +1,8 @@
+
+
+
+
+
+Deck
+ the deck is the characters active action bar
+ contains all abilities the character has available to him in combat

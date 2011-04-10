@@ -1,0 +1,106 @@
+Traceback (most recent call last):
+  File "src/pyge/test.py", line 20, in <module>
+    pc = decorator.decorate(dungeon)
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 409, in decorate
+    self.__placewalls__(dungeon)
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 399, in __placewalls__
+    wall = Gitem( texture = "/home/lorin/projects/ge/art/planetcute/Wall Block Tall.png" )
+  File "/home/lorin/projects/gelly/src/pyge/gitem/gitem.py", line 27, in __init__
+    if texture:
+NameError: global name 'texture' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'drw' is not defined

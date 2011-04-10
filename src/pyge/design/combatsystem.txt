@@ -1,0 +1,203 @@
+combat system
+
+two actors, attacker, defender
+
+attacker attacks
+ attack is physically analyzed, 4 outcomes
+   - parry - deflect with potential counter attack
+   - dodge - physically move out of the way
+   - block - absorbs the blunt force with weapon
+   - hit   - strikes the defender
+
+in the first three cases,
+  - the attacker expends a certain amount of energy, determined by the action
+  - the defender expends a certain amount of energy, determined by the reaction
+in the last case,
+  - hit : the armour of the character must now take the brunt of the blow, damage is 
+          calculated based on how the armour interacts with the weapon
+	  - 
+
+
+
+
+
+last stand
+  an ability of pc's and equivalent mobs, prevents being one-shotted, but incures serious cost
+
+
+
+
+
+
+
+
+
+how combat will be fought
+ flinch,offbalance,knockdown
+
+- an attacker knocks down his opponent
+- this typically takes two actions, unless the opponent is much weaker than the attacker
+
+- knocked down opponent is highly vulnerable to attack, 
+  - last stand dodge is very expensive
+  - likely to suffer serious wounds
+  
+
+
+
+
+
+
+types of abilities
+
+cause a flinch
+bypass armour - an attack which attempts to wound the target directly by targetting gaps in an opponents armour
+
+
+
+
+Armour
+armour has a variety of stats
+coverage
+  - statistic of the character wearing armour.
+  - each piece of armour contributes to coverage cumulatively
+whenever an attemp is made to bypass armour, coverage is the primary statistic governing success
+  - the attack must hit in order for the bypass technique to work (ie cannot be dodged, blocked or parried)
+  - weapon crossection/size is relevant, for instance, axes require large gaps in order to bypass
+
+
+slash   
+stab    
+smash   
+
+
+flexibility 1.0:10.0
+  - measures how the armour transmits force to the wearer
+  - 10.0 totally flexible, if an attack does not penetrate the armour, then 100% of the force is transmitted to the wearer
+    in the form of blunt damage
+  - 1.0 totally inflexible, if the attakc does not penetrate the armour, then the force is transmitted to the wearer, but
+    mitigated by being spread over the entire surface area of the armour
+
+toughness
+  - measure of the energy the armour can absorb per unit area before failure (cracking, shattering, breaking, etc)
+  - if an attack beats toughness value of armour, it penetrates
+
+
+Armour Penetration
+ when an attack penetrates, there are several effects
+  - debuff to armour coverage, depending on attack
+  - inflict a wound on the target
+
+
+Status Effects
+
+off-balance
+  character is off-balance 
+
+
+
+
+
+
+
+
+
+abilities
+
+sunder armour
+quickdraw
+
+Flinch
+cheapshot - target a vulnerable body part (shins, groin, face) in an effort to put an opponent off-balance
+shove     - attack by ramming opponent, pushing him back and potentially putting him off-balance
+powerful swing - powerful attack which does extra damage, which if block, trips an opponent
+
+
+
+STATUS EFFECTS
+offguard - opponent is not in a position to defend against incoming attack
+sleep    - 
+confuse  - 
+
+Attack Action
+ - combat dict
+
+
+
+
+Damage System
+
+Damage Types
+  slash  
+  stab   
+  slam
+
+First Pass
+  - numeric damage system
+  - weapons 
+  - 
+
+Second Pass
+  - Damage dependent on area attacked
+
+
+Armour
+ - flexibility
+   - how the material transmits force through it
+   - high flexibility means little protection from crushing damage
+ - toughness
+   - how much energy the material can resist before rupture per unit area
+   - high toughness means the armour is difficult to penetrate
+
+Weapons
+ - mass
+ - reach
+ - basedamage - enlieu of blade type
+
+
+Hit
+ - once an attack scores a hit
+   - armour interaction
+     - how much energy does the armour absorb
+   - damage interaction
+     - of
+
+attacker continues to attack until decides to stop, or he runs out of energy
+leftover energy is what is available for defense
+
+
+1 attacker attacks
+2 defender defends
+  if defends fails
+3 armour coverage
+4 armour penetration
+
+
+DISTANCE AND REACH
+distance: between you and your target
+reach: the effective length of your weapon
+
+you must be within striking distance of your opponent in order to execute a melee attack
+
+
+priority
+a character has priority over another if he is within his opponent's minimum weapon range AND his 
+weapon's minimum range is less than his opponent's, or if your opponent is within range of your
+weapon, but you are outside of his.
+example
+  Attacker Gary is wielding a buckler and short swort is up against a Defender Don dual wielding a
+  longsword. The two square off, and Don automatically has priority: his longsword outranges 
+  Gary's short sword. Gary is in a bad spot, since any attempt to attack he makes suffers a 
+  penalty to energy, making it easy for Don to defend against his attacks. Meanwhile, Don can 
+  attack at no penalty. Gary knows that in order to win this fight, he will have to win priority
+  first, so he uses a weapon attack skill (3). Gary lunges forward, slapping at Don's sword with
+  his buckler while simultaneously striking at Don's neck with his short sword. The gambit works,
+  and Don is unable to defend against the attack. Thankfully, Don's chainmail coif protect him
+  from the blow to his neck, but Don loses priority to Gary.
+  Don, aware of priority rules himself, now finds the tables turned, and the advantage of his 
+  longsword reduced to a disadvantage. Don could try the same gambit that just worked against him,
+  but Gary's dual sword/shield combo make success extremely unlikely. Gary opts to change stances
+  at a cost of (1), and enters into *half-sword stance*. This reduces the effective range of his
+  longsword, but also reduces the minimum range and priority is equalized.
+  He is still at a disadvantage against Gary's sword shield combo in terms of available skills,
+  but at least he will not suffer an energy penalty when attemting an attack.

@@ -1,0 +1,29 @@
+Stats
+
+Strength - measure of maximum force that can be applied to a mass
+
+This is tricky, and there is plenty of room for criticism. Short of a full body biomechanical
+simulation, this is meant to serve as an adequate approximation. 
+A punch, spear thrust, or sword swing are all full body activities, and demonstrably different in
+form. For the purposes of this approximation, the acceleration and force of a boxers punch(1).
+We take the measurements from the experiments as representative of an average ability of a well
+trained (but not a global human maximum) athelete to accelerate a mass in a thrusting motion.
+Data 
+- SLBF: Sum of Lower Body Forces
+- 
+
+Interpretation
+ A straight punch has a final velocity of ~10m/s using maximal force
+ A hook punch has a final velocity of ~20m/s using maximal force
+
+Thrust:
+5000 kg*m/s^2 
+What if we pretend that a spear thrust has the same impact force as a punch?
+How do we modify for mass?
+
+WORK: joules, work done by F over distance
+   work done by 1 Newton over 1 m = joule
+
+Upper bound on human energy expenditure: 10
+
+(1) - Amateur Boxer Biomechanics and Punch Force, Wayne State University

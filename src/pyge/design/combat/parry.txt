@@ -1,0 +1,30 @@
+Parry
+  - loosely defined as any action which deflects an incoming attack with a weapon or shield
+    - this includes, blocks, deflections, redirections, etc
+  - potentially allows for a followup attack called a riposte during opponents turn
+
+
+Scheme:
+Several Schemes for parrying are possible
+
+  -Physical
+    models the physical interaction between the weapons given modelled stats of weapon
+    acceleration, final speed, materials, wielder strength etc to a level of fidelity which is
+    judged to be adequately realistic without being overly complicated
+    Potential Mechanics
+     parrying involves defending against an incoming attack with the characters 
+      equiped weapon
+       this involves a weapon speed vs weapon speed comparison
+        ie how fast the attackers weapon is moving vs how fast the defender can move
+	 his own weapon.
+	 - a parry can only begin once the opponents weapon is within the effective reach
+	   of the defenders weapon
+	    - various passive and active skills can change this
+  -Abstract
+    models physical interaction, but takes into account the abstract stats of characters, such as
+    "weapon skill" and "attack energy". These abstractions allow us to simplify combat modelling
+    by appealing to blackboxes representing physical models. These black boxes include the afore-
+    mentioned "skill". Other such stats might include "target number", which models the difficulty
+    of attempting a given task. The Target Number of a parrying a rapier with a short club might
+    be on the high end of the scale, while a rapier-rapier parry has a low Target Number.
+    Target Number  

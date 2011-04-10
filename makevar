@@ -1,0 +1,40 @@
+#=================================================================================================
+# makevar
+#  contains make variables
+#
+#=================================================================================================
+PROJ_ROOT = /home/lorin/projects/gelly
+PROJ_LIBS = $(PROJ_ROOT)/libs
+PROJ_INCL = $(PROJ_ROOT)/include
+OBJS_DIR  = $(PROJ_ROOT)/objs
+SRC_DIR   = src
+#=================================================================================================
+#source directories
+INCLUDE += -Isrc/graphics -Isrc/actor
+#=================================================================================================
+#Library and Compiler flags
+#=================================================================================================
+#SDL and -lSDL_image
+SDL_CFLAGS = $(shell pkg-config --cflags sdl)
+SDL_LIBS = $(shell pkg-config --libs sdl) -lSDL_image
+#=================================================================================================
+#Open GL and GLU
+GL_LIBS += -lGL -lGLU
+#=================================================================================================
+#sigc++
+SIGC_CFLAGS += $(shell pkg-config --cflags sigc++-2.0)
+SIGC_LIBS += $(shell pkg-config --libs sigc++-2.0)
+#=================================================================================================
+BERKELIUM_CFLAGS = -I$(PROJ_INCL)
+BERKELIUM_LIBS   = $(PROJ_LIBS)/liblibberkelium.so
+#=================================================================================================
+#python & BOOST
+PYB_CFLAGS = -I/usr/include/python2.6/
+PYB_LIBS += -lpython2.6 -lboost_python -I/usr/include $(PROJ_LIBS)/libboost_python.so.1.45.0
+
+
+#=================================================================================================
+#
+ALL_CFLAGS += $(SDL_CFLAGS) $(SIGC_CFLAGS) $(PYB_CFLAGS) $(BERKELIUM_CFLAGS)
+ALL_LIBS   += $(GL_LIBS) $(SDL_LIBS) $(SIGC_LIBS) $(PYB_LIBS) $(BERKELIUM_LIBS)
+#=================================================================================================
