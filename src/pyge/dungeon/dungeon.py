@@ -8,7 +8,7 @@ import sys
 sys.path.append("/home/lorin/projects/gelly/objs")
 #=================================================================================================
 from actor import Actor
-from fooactor import Vertex
+from actor import Vertex
 #from actor.boundedactor import BoundedActor
 from matrix.vector import Vector
 from other.euclid import Vector2

@@ -7,11 +7,11 @@
 #=================================================================================================
 include makevar
 #=================================================================================================
-
+all: test objs/pysdlutil.so
 #=================================================================================================
-test : main.o objs/graphics.o objs/fooactor.so objs/pysdlutil.so
+test : main.o objs/graphics.o objs/actor.so
 	g++ $(INCLUDE) $(ALL_CFLAGS) $(ALL_LIBS) -L$(OBJS_DIR) \
-	objs/main.o objs/graphics.o objs/fooactor.so -o test
+	objs/main.o objs/graphics.o objs/actor.so -o test
 #=================================================================================================
 main.o : src/main.cpp src/berkelium_util.hpp
 	g++ -c $(INCLUDE) $(ALL_CFLAGS) $(ALL_LIBS) \

@@ -35,7 +35,7 @@ def drw():
 
   dungeon.draw( (0,0) )
  # a.draw()
-  pos = cactor.Vertex()
+  pos = actor.Vertex()
 
 def drwsel():
   #print "draw select"

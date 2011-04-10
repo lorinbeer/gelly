@@ -17,7 +17,6 @@ using namespace boost::python;
 void   (Actor::*draw1)() = &Actor::draw;
 void   (Actor::*draw2)(Vertex const &) = &Actor::draw;
 
-
 void   (Actor::*getpos1)(Vertex&) = &Actor::getpos;
 void   (Actor::*getpos2)(float&,float&,float&) = &Actor::getpos;
 Vertex*(Actor::*getpos3)() = &Actor::getpos;
@@ -25,7 +24,7 @@ Vertex*(Actor::*getpos3)() = &Actor::getpos;
 void   (Actor::*setpos1)(Vertex const &) = &Actor::setpos;
 void   (Actor::*setpos2)(float,float,float) = &Actor::setpos;
 //================================================================================================
-BOOST_PYTHON_MODULE(fooactor)
+BOOST_PYTHON_MODULE(actor)
 {
   class_< Vertex >("Vertex")
     .def(vector_indexing_suite< Vertex  >())
