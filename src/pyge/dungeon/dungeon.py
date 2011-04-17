@@ -8,7 +8,7 @@ import sys
 sys.path.append("/home/lorin/projects/gelly/objs")
 #=================================================================================================
 from actor import Actor
-from actor import Vertex
+from actor import Vertex, IntVec
 #from actor.boundedactor import BoundedActor
 from matrix.vector import Vector
 from other.euclid import Vector2
@@ -84,7 +84,10 @@ class Tile( Actor ):
                        'e' : "/home/lorin/projects/ge/art/planetcute/Wood Block.png",
                        'x' : "/home/lorin/projects/ge/art/planetcute/Wood Block.png"}
 
-    
+    self._itemoffset = Vertex()
+    self._itemoffset.append (0.0)
+    self._itemoffset.append (0.0)
+    self._itemoffset[1] = 0.054
 #    super(Tile,self).__init__( model   = [ (0,0), (0,181), (100,181), (100,0) ],
 #                               texture = self.tiletypes[tilecode],
 #                               x = 100,
@@ -120,8 +123,8 @@ class Tile( Actor ):
     vpos.append( pos[1] )
     super(Tile,self).draw( vpos )#pos, (self.x,self.y) )
     for each in self.items:
-      vpos[0]=vpos[0]
-      vpos[1]=vpos[1]+0.05
+      vpos[0]=vpos[0]+self._itemoffset[0]
+      vpos[1]=vpos[1]+self._itemoffset[1]
       each.draw( vpos )#(pos[0],pos[1]),"object" )
  
 
@@ -161,14 +164,15 @@ class DungeonMap(object):
     """ 
 
     self.size = ( roguemap.x, roguemap.y )
+    self._x = roguemap.x
+    self._y = roguemap.y
     self.map = dict()
     self.characters = MultiDict( )  #all characters, pc's and npc's currently on the map
-    self.gitems     = MultiDict( )  #all game items currently on the map 
-    
+    self.gitems     = MultiDict( )  #all game items currently on the map
 
-    for i in range(0, self.size[0] ):
-      for j in range(0, self.size[1]):
-        self.map[(i,j)] = Tile( i, j, roguemap.arr[i][j] )
+    for i in range(0, roguemap.x ):
+      for j in range(0, roguemap.y ):
+        self.map[i,j] = Tile( i, j, roguemap.arr[i][j] )
         self.map[i,j].x = i
         self.map[i,j].y = j
 
@@ -179,44 +183,39 @@ class DungeonMap(object):
     self.center_tile = Vector( (0,0) )
     self.x_range = Vector2( )
     self.y_range = Vector2( )
-    
-  
-
-  def selectdraw(self,center):
-    """
-    """
-    xdrawstep = 101.0/800.0
-    ydrawstep =  81.0/600.0
-    yoffset   = -171.0/600.0
-    for x in range(0,10):
-      for y in range(0,10): 
-        xpos = float(x)*xdrawstep
-        ypos = 1.0 - (float(y)*ydrawstep) + yoffset
-        self.map[x,y].selectdraw( )
   #===============================================================================================
   def draw(self,center,select=False):
     """
       INPUT:
             -center: tile to render at center
     """
+    #=============================================================================================
     xdrawstep = 101.0/800.0
     ydrawstep =  81.0/600.0
     yoffset   = -171.0/600.0
-    viewport  = (4,4)   #the range of tiles that should be visible at any given time
-    x_range = (center[0]-viewport[0], center[0]-viewport[1])
-    y_range = (center[1]-viewport[1], center[1]-viewport[1])
-    if x_range[0] < 0: x_range = (0,viewport[0]*2)
-#    if x_range[1] > mapsize.x: x_range = (maxx - viewport[0]*2, maxx)
-    if y_range[0] < 0: y_range = (0, viewport[0]*2)
-#    if y_range[1] > mapsize.y: y_range = (maxy - viewport[1]*2, maxy)
-    for x in range(x_range[0],x_range[1]):
-      for y in range(y_range[0],y_range[1]):
-        xpos = float(x)*xdrawstep
-        ypos = 1.0 - (float(y)*ydrawstep) + yoffset
-        if select: 
-          self.map[x,y].selectdraw()
-        else:      
-          self.map[x,y].draw( ( xpos, ypos) )
+
+    screencenter=(0.45,0.4)
+    x_range = (center[0]-5, center[0]+5)
+    y_range = (center[1]-4, center[1]+4)
+
+    xstart = screencenter[0] - 4*xdrawstep
+    ystart = screencenter[1] - 2.5*ydrawstep
+
+    ycoord = ystart
+    for y in range( 0, 9):
+      xcoord = xstart
+      for x in range( 10, 0 ,-1):
+        tile= (x_range[0]+x,y_range[0]+y)
+        if tile[0]<0 or tile[1]<0 or tile[0]>=self._x or tile[0]>=self._y:
+          tile=False
+        if tile:
+          p = IntVec()
+          p.append( int(tile[0]) )
+          p.append( int(tile[1]) )
+          if select: self.map[tile].selectdraw( p )
+          else: self.map[tile].draw( (1.0-xcoord,1.0-ycoord) )
+        xcoord+=xdrawstep
+      ycoord+=ydrawstep
   #===============================================================================================
   def place(self,item,pos):
     """
@@ -235,6 +234,7 @@ class DungeonMap(object):
     if isinstance(item,Character):
       self.map[pos].place_item( item )
       self.characters[pos] = item
+      print "POSITIONING", pos
     elif isinstance(item,Gitem):
       self.map[pos].place_item( item )
       self.gitems[pos] = item
@@ -272,7 +272,6 @@ class DungeonMap(object):
       if item is on the map, return vector2 containing its coordinates, returns false otherwise
     """  
     for each in self.characters.items():
-#      print each
       if item == each[1]:
         return Vector2(each[0][0],each[0][1])
     return False

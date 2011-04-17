@@ -26,6 +26,10 @@ void   (Actor::*setpos2)(float,float,float) = &Actor::setpos;
 //================================================================================================
 BOOST_PYTHON_MODULE(actor)
 {
+  class_< std::vector< int > >("IntVec")
+    .def(vector_indexing_suite< std::vector< int > >() )
+    ;
+
   class_< Vertex >("Vertex")
     .def(vector_indexing_suite< Vertex  >())
     ;

@@ -1,0 +1,1057 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "src/pyge/test.py", line 33, in drw
+    dungeon.draw( pcloc )
+  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
+    p.append( tile[0] )
+TypeError: Attempting to append an invalid type

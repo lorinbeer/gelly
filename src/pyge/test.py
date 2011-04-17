@@ -1,13 +1,12 @@
-
+#=================================================================================================
 import sys
 sys.path.append("/home/lorin/projects/gelly/objs")
 import actor
 import pysdlutil
-
-from character.character import Character
-from character.controller import Selection
 #=================================================================================================
-# 
+from character.character import Character
+from character.controller import Selection, Controller
+#=================================================================================================
 from dungeon.dungeon import DungeonMap, DungeonDecorator
 from dungeon.dungeongenerator import DungeonGenerator
 from dungeon.dungeonmaster import DungeonMaster
@@ -16,15 +15,12 @@ from dungeon.dungeonmaster import DungeonMaster
 dg = DungeonGenerator(10,64)
 dungeon = dg.generate()
 
-#
 decorator = DungeonDecorator()
 pc = decorator.decorate(dungeon)
-#selection = pc.controller.selection
+controller = Controller( pc )
+selection = controller._selection
 
-#dungeonmaster = DungeonMaster(dungeon)
-
-
-
+dungeonmaster = DungeonMaster(dungeon)
 
 b = Character("Hardeep", 
               "/home/lorin/projects/ge/art/planetcute/Character Boy.png",
@@ -32,17 +28,18 @@ b = Character("Hardeep",
               [])
 
 def drw():
-
-  dungeon.draw( (0,0) )
- # a.draw()
+  pcloc= dungeon.loc( pc )
+  dungeon.draw( pcloc )
+  selection.draw()
   pos = actor.Vertex()
 
 def drwsel():
-  #print "draw select"
-  dungeon.draw( (0,0), True )
+  pcloc = dungeon.loc( pc )
+  dungeon.draw( pcloc, True )
 
-def keypress( key, mod ):
+def keypress( event ):
   """
     
   """
-  print "key pressed:", key, mod
+  controller.interpret( event, dungeon )
+  dungeonmaster.turn()

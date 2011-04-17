@@ -18,6 +18,7 @@
 //================================================================================================
 #include "graphics.h"
 #include "actor.h"
+#include "util/event.h"
 //================================================================================================
 using namespace Berkelium;
 using namespace boost::python;
@@ -30,11 +31,11 @@ object pymain;
 
 void foo( unsigned int button_id )
 {
-  printf( "Button: %i\n", button_id );
+  //printf( "Button: %i\n", button_id );
 }
 void bar( unsigned int actor_id )
 {
-  printf( "Actor %i selected\n",actor_id );
+  //printf( "Actor %i selected\n",actor_id );
 }
 //Initialize SDL
 int init_ge( )
@@ -98,7 +99,8 @@ int events( GLBerkeliumWindow * bkwindow )
   object keypress = pymain.attr("keypress");
   Vertex point;
   unsigned int hit=0;
-
+  MouseEvent *mouseevent=0;
+      std::vector< unsigned int > name;
   while ( SDL_PollEvent(&event) )
   {
     switch( event.type ){
@@ -123,14 +125,27 @@ int events( GLBerkeliumWindow * bkwindow )
       point[0]=x;
       point[1]=y;
       point[2]=0;
-      hit = Graphics::Instance()->select(point);
-      bar( hit );
+      hit = Graphics::Instance()->select(point, name );
+      mouseevent = new MouseEvent( name[0], name[1], 0, 0 );
+      try{
+
+      keypress( mouseevent );
+      }
+      catch( error_already_set ){
+        PyErr_Print();
+      }
+      //     bar( hit );
       break;
     case SDL_KEYDOWN:
       break;
     case SDL_KEYUP:
       try{
-	keypress( int(event.key.keysym.sym), int(event.key.keysym.mod) );
+	//keypress( int(event.key.keysym.sym), int(event.key.keysym.mod) );
+	KeyEvent elf;
+        elf.settype (SDL_EventType(event.type));
+        elf.setkey  (event.key.keysym.sym);
+        elf.setmod  (event.key.keysym.mod);
+        keypress( elf );
       }
       catch( error_already_set ) {
         std::cout << "Fuckup-eries" << std::endl;
@@ -168,9 +183,7 @@ int main()
   object test = import("test");
   
 
-  printf("hell yeah");
-
-
+ 
   //Actor actor;
   while (running)
   {

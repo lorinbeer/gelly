@@ -46,8 +46,11 @@ class RogueMap(object):
             
     """
     s = list()
-    for row in self.arr:
-      s.append( ''.join(row) )
+    for col in range(0,self.y):
+      rstr=[]
+      for row in self.arr:
+        rstr.append( row[col] )
+      s.append( ''.join(rstr) )
     return '\n'.join(s)
 
   #===============================================================================================
@@ -143,7 +146,7 @@ class DungeonGenerator( RogueMap ):
     self.arr[5][0] = 'x'
     self.arr[5][-1] ='e'
   
-    print self
+   # print self
 
 
     return DungeonMap( self ) #initialize the entire map

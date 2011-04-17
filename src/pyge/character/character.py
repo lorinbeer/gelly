@@ -86,8 +86,6 @@ class Character( Actor ):
     """
       
     """
-
-    
     model = [ (0,0), (0,181), (100,181), (100,0) ]
     bounding_rect = [ (0,0), (0,181), (100,181), (100,0) ]
     #super( Character, self ).__init__( model, imagefile, offset=(0,50) )
@@ -95,9 +93,15 @@ class Character( Actor ):
     #self.name = kwargs.get('name',"Unnamed")
     self.name = name
     self.mind = Mind( self ) 
+
+    self._controller = None
+
     self._context = context
-    #
+
     self.target = None
+
+
+    
 
     #body stats
     self.strength  =  10  #strength of character, in kg*m*s^-2

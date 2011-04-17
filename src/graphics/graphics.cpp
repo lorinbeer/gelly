@@ -46,7 +46,8 @@ Graphics::Graphics():
   this->display = SDL_SetVideoMode( this->width, this->height, 32, 
 				    SDL_HWSURFACE |SDL_GL_DOUBLEBUFFER | SDL_OPENGL );
 
-  glClearColor( 1.f, 1.f, 1.f, 1.f);
+  //  glClearColor( 1.f, 1.f, 1.f, 1.f);
+  glClearColor( 0.f, 0.f, 0.f, 0.f);
 
   glClearDepth(1.0f);
 
@@ -166,7 +167,8 @@ void Graphics::draw( Vertel const&model, Vertex const&pos, unsigned int texid )c
   glPopMatrix();
 }
 //================================================================================================
-unsigned int Graphics::select( Vertex const & point ){
+unsigned int Graphics::select( Vertex const & point, 
+			       std::vector< unsigned int > & name){
  
   GLuint buff[64] = {0};
   int hits;
@@ -185,7 +187,6 @@ unsigned int Graphics::select( Vertex const & point ){
   glOrtho(0.f, 1.f, 0.f, 1.f, 0.f, 1.f);
 
   glInitNames();
-  glPushName(-1);
 
   std::list< DRAW_ITEM * >::iterator i;
   for(i = this->selectdraw.begin(); i!=this->selectdraw.end(); i++){
@@ -197,16 +198,24 @@ unsigned int Graphics::select( Vertex const & point ){
     glLoadIdentity();
 
     glTranslatef( (*pos)[0], (*pos)[1], (*pos)[2] );
+    
+    //push the name vector on to the name stack
+    for( int j = 0; j < (*i)->name.size(); j++ ) {
+      glPushName( (*i)->name[j] );
+    }
 
-    glLoadName( (*i)->name );
- 
     glBegin( GL_POLYGON );
       for (int j=0; j<4; j++){
         glVertex3fv( &(*model)[j][0] );
-	//        std::cout << (*model)[j][0] << " "<< (*model)[j][1] << std::endl;
-      }
+    }
     glEnd();
     glPopMatrix();
+    
+    //pop this actor's name off the stack
+    for( int j = 0; j < (*i)->name.size(); j++ ) {
+      glPopName();
+    }
+
   }
   glMatrixMode(GL_PROJECTION);
   glPopMatrix();
@@ -217,17 +226,22 @@ unsigned int Graphics::select( Vertex const & point ){
   hits = glRenderMode( GL_RENDER );
   unsigned int ret=0;
   for(int i=0; i<hits; i++ ) {
-       printf( "Number:%d\n"
+    /*       printf( "Number:%d\n"
 	    "MIN z: %d\n"
 	    "MAX z: %d\n"
-	    "Name on stack: %d\n",
+	    "Name on stack: %d %d\n",
 	    buff[i*4],
 	    buff[i*4+1],
 	    buff[i*4+2],
-	    buff[i*4+3]
-	    );// << buff[i*4] << std::endl;
+            buff[i*4+3],
+	    buff[i*4+4]
+	    );// << buff[i*4] << std::endl; */
+  name.resize( buff[0], 0 );
+       name[0] = buff[i*4+3];
+       name[1] = buff[i*4+4];
     ret = buff[i*4+3];
   }
+  name.clear();
   selectdraw.clear();
   return ret;
 }

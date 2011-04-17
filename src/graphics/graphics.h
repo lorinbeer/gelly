@@ -46,7 +46,7 @@ unsigned int INIT_VERTEX_LIST( Vertel &verl, unsigned int size, unsigned int dim
 
 //================================================================================================
 struct DRAW_ITEM{
-  unsigned int name;
+  std::vector< int > name;
   Vertel const * model;
   Vertex const * pos;
 };
@@ -64,9 +64,6 @@ public:
   //  reload: if true, reload the texture from file, even if already loaded as a texture
   unsigned int loadtexture( const char * path, bool reload=false);
   //==============================================================================================
-  //==============================================================================================
-
-  //==============================================================================================
   // draw function
   void draw( unsigned int texid );
   //draw: model data only, with no texturing
@@ -75,7 +72,8 @@ public:
   void draw( Vertel const&model, Vertex const&pos, unsigned int texid )const;
   //==============================================================================================
   // render around point, returning names of any object intersected
-  unsigned int select( Vertex const & point );
+  unsigned int select( Vertex const & point,
+                       std::vector< unsigned int > & name );
   // add an object to select draw list
   void addselect( DRAW_ITEM * ditem ){ if(ditem) selectdraw.push_back( ditem ); }
   //==============================================================================================
@@ -89,9 +87,6 @@ private:
   std::list< DRAW_ITEM *> selectdraw;
   //==============================================================================================
   //data relevant to the display
-
-  //
-  
   unsigned int width;
   unsigned int height;
   SDL_Surface * display;

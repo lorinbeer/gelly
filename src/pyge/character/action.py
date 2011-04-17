@@ -52,7 +52,7 @@ class Action( object ):
                       'target':kwargs['target'],
                       'stage' : kwargs['stage'] }
         
-        from actor import AnimatedActor
+#        from actor import AnimatedActor
         loc = kwargs['stage'].loc( kwargs['target'] )
         if loc:
           loc = kwargs['stage'].map2screen( loc )
@@ -63,7 +63,7 @@ class Action( object ):
           loc = (0,0)
 
 #        self.effect = AnimatedActor('/home/lorin/projects/ge/art/cut_a' , 20, loc )
-        self.effect = AnimatedActor('/home/lorin/projects/ge/art/cut_a', 20, kwargs['target']._position )
+#        self.effect = AnimatedActor('/home/lorin/projects/ge/art/cut_a', 20, kwargs['target']._position )
         
       elif kwargs['verb'] == Action_Type['grab']:
         self.verb = Grab()

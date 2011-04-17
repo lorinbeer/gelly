@@ -4,7 +4,7 @@
 #
 #=================================================================================================
 #Source Code Files
-SRCS = sdl_enum_wrap.cpp
+SRCS = sdl_enum_wrap.cpp event.h
 HDRS = 
 OBJS = $(SRCS:.cpp=.o)
 OUT_PATH = ../../objs
@@ -14,17 +14,17 @@ include ../../makevar
 #add any module specific cflags and libs
 INCLUDE = 
 #=================================================================================================
-all: sdl_util.o pysdlutil.so
+all: sdl_enum.o pysdlutil.so
 #=================================================================================================
-pysdlutil.so: sdl_util.o
+pysdlutil.so: sdl_enum.o 
 	g++ -shared $(ALL_LIBS) $(ALL_CFLAGS) \
 	-L /home/lorin/projects/gelly \
-        $(OBJS_DIR)/sdl_util.o \
+        $(OBJS_DIR)/sdl_enum.o \
 	-o $(OUT_PATH)/pysdlutil.so
 #=================================================================================================
-sdl_util.o: sdl_enum_wrap.cpp
+sdl_enum.o: sdl_enum_wrap.cpp event.h
 	g++ -c -fpic $(CFLAGS) $(PYB_CFLAGS) \
-	sdl_enum_wrap.cpp -o $(OBJS_DIR)/sdl_util.o 
+	sdl_enum_wrap.cpp -o $(OBJS_DIR)/sdl_enum.o 
 #=================================================================================================
 clean:
 	-rm ../$(OBJS)

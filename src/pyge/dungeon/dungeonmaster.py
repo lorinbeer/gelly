@@ -65,7 +65,7 @@ class DungeonMaster(object):
     """
     #ask each character for an action
     effects = list()
-    print self._characters
+#    print self._characters
     while not self._hold:
       char = self._characters[self._current]
       char.update() #ready the character for this turn

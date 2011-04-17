@@ -7,6 +7,7 @@
 
 #include "actor.h"
 #include <iostream>
+#include <vector>
 //================================================================================================
 
 unsigned int topname=0;
@@ -94,11 +95,11 @@ Actor::Actor(  char const * texpath/*, void*model */ ):
 void Actor::draw(){
   Graphics * gfx = Graphics::Instance();
   gfx->draw( this->model, this->pos, this->texid );
-  //  gfx->draw( this->boundmodel, this->boundpos );
+  //gfx->draw( this->boundmodel, this->boundpos );
 }
-void Actor::selectdraw(){
+void Actor::selectdraw( std::vector< int > & _name ){
   Graphics * gfx = Graphics::Instance();
-  gfx->addselect( this->getdrawitem() );
+  gfx->addselect( this->getdrawitem(_name) );
 }
 //================================================================================================
 void Actor::setpos(Vertex const & npos){
@@ -118,9 +119,9 @@ void Actor::setpos(float x, float y, float z){
   this->boundpos[1] = this->pos[1]+ this->boundoffset[1];
 }
 //================================================================================================
-DRAW_ITEM *Actor::getdrawitem(){
+DRAW_ITEM *Actor::getdrawitem( std::vector< int > & _name ){
   DRAW_ITEM * drawitem = new DRAW_ITEM;
-  drawitem->name  = this->name;
+  drawitem->name  = _name;
   drawitem->model = &(this->boundmodel);
   drawitem->pos   = &(this->boundpos);
   return drawitem;
