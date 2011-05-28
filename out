@@ -1,1057 +1,195 @@
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "src/pyge/test.py", line 33, in drw
-    dungeon.draw( pcloc )
-  File "/home/lorin/projects/gelly/src/pyge/dungeon/dungeon.py", line 228, in draw
-    p.append( tile[0] )
-TypeError: Attempting to append an invalid type
+g++: /home/lorin/projects/gelly/libs/libboost_python.so.1.45.0: linker input file unused because linking not done
+g++: /home/lorin/projects/gelly/libs/liblibberkelium.so: linker input file unused because linking not done
+In file included from actor_wrap.cpp:9:
+animactor.h: In constructor ‘Animactor::Animactor(const std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&)’:
+animactor.h:31: error: no matching function for call to ‘Graphics::loadtexture(const std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)’
+../graphics/graphics.h:65: note: candidates are: unsigned int Graphics::loadtexture(const char*, bool)
+In file included from /usr/include/c++/4.4/x86_64-linux-gnu/bits/c++allocator.h:34,
+                 from /usr/include/c++/4.4/bits/allocator.h:48,
+                 from /usr/include/c++/4.4/string:43,
+                 from /usr/include/c++/4.4/bits/locale_classes.h:42,
+                 from /usr/include/c++/4.4/bits/ios_base.h:43,
+                 from /usr/include/c++/4.4/ios:43,
+                 from /usr/include/c++/4.4/ostream:40,
+                 from /usr/include/c++/4.4/iostream:40,
+                 from ../graphics/graphics.h:15,
+                 from actor.h:11,
+                 from actor_wrap.cpp:8:
+/usr/include/c++/4.4/ext/new_allocator.h: At global scope:
+/usr/include/c++/4.4/ext/new_allocator.h: In instantiation of ‘__gnu_cxx::new_allocator<std::string&>’:
+/usr/include/c++/4.4/bits/allocator.h:87:   instantiated from ‘std::allocator<std::string&>’
+/usr/include/c++/4.4/bits/stl_vector.h:71:   instantiated from ‘std::_Vector_base<std::string&, std::allocator<std::string&> >’
+/usr/include/c++/4.4/bits/stl_vector.h:171:   instantiated from ‘std::vector<std::string&, std::allocator<std::string&> >’
+/usr/local/include/boost/type_traits/is_enum.hpp:181:   instantiated from ‘boost::is_enum<std::vector<std::string&, std::allocator<std::string&> > >’
+/usr/local/include/boost/type_traits/is_scalar.hpp:29:   instantiated from ‘const bool boost::detail::is_scalar_impl<std::vector<std::string&, std::allocator<std::string&> > >::value’
+/usr/local/include/boost/type_traits/is_scalar.hpp:49:   instantiated from ‘boost::is_scalar<std::vector<std::string&, std::allocator<std::string&> > >’
+/usr/local/include/boost/mpl/aux_/nested_type_wknd.hpp:28:   instantiated from ‘boost::mpl::aux::nested_type_wknd<boost::is_scalar<std::vector<std::string&, std::allocator<std::string&> > > >’
+/usr/local/include/boost/mpl/aux_/preprocessed/gcc/or.hpp:19:   instantiated from ‘boost::mpl::aux::or_impl<false, boost::is_scalar<std::vector<std::string&, std::allocator<std::string&> > >, mpl_::bool_<false>, mpl_::bool_<false>, mpl_::bool_<false> >’
+/usr/local/include/boost/mpl/aux_/preprocessed/gcc/or.hpp:55:   instantiated from ‘boost::mpl::or_<boost::python::detail::copy_ctor_mutates_rhs<std::vector<std::string&, std::allocator<std::string&> > >, boost::is_scalar<std::vector<std::string&, std::allocator<std::string&> > >, mpl_::bool_<false>, mpl_::bool_<false>, mpl_::bool_<false> >’
+/usr/local/include/boost/mpl/if.hpp:67:   instantiated from ‘boost::mpl::if_<boost::mpl::or_<boost::python::detail::copy_ctor_mutates_rhs<std::vector<std::string&, std::allocator<std::string&> > >, boost::is_scalar<std::vector<std::string&, std::allocator<std::string&> > >, mpl_::bool_<false>, mpl_::bool_<false>, mpl_::bool_<false> >, std::vector<std::string&, std::allocator<std::string&> >, boost::python::objects::reference_to_value<std::vector<std::string&, std::allocator<std::string&> > > >’
+/usr/local/include/boost/python/object/forward.hpp:59:   instantiated from ‘boost::python::objects::forward<std::vector<std::string&, std::allocator<std::string&> > >’
+/usr/local/include/boost/preprocessor/iteration/detail/local.hpp:34:   instantiated from ‘boost::python::objects::make_holder<1>::apply<boost::python::objects::value_holder<Animactor>, boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > > >’
+/usr/local/include/boost/python/detail/make_keyword_range_fn.hpp:67:   instantiated from ‘boost::python::api::object boost::python::detail::make_keyword_range_constructor(const CallPolicies&, const boost::python::detail::keyword_range&, Holder*, ArgList*, Arity*) [with ArgList = boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > >, Arity = boost::mpl::size<boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > > >, Holder = boost::python::objects::value_holder<Animactor>, CallPolicies = boost::python::default_call_policies]’
+/usr/local/include/boost/python/init.hpp:330:   instantiated from ‘void boost::python::detail::def_init_aux(ClassT&, const Signature&, NArgs, const CallPoliciesT&, const char*, const boost::python::detail::keyword_range&) [with ClassT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>, CallPoliciesT = boost::python::default_call_policies, Signature = boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > >, NArgs = boost::mpl::size<boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > > >]’
+/usr/local/include/boost/python/init.hpp:399:   instantiated from ‘static void boost::python::detail::define_class_init_helper<0>::apply(ClassT&, const CallPoliciesT&, const Signature&, NArgs, const char*, const boost::python::detail::keyword_range&) [with ClassT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>, CallPoliciesT = boost::python::default_call_policies, Signature = boost::python::init_base<DerivedT>::visit(classT&) const [with classT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>, DerivedT = boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_>]::signature, NArgs = boost::mpl::size<boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > > >]’
+/usr/local/include/boost/python/init.hpp:171:   instantiated from ‘void boost::python::init_base<DerivedT>::visit(classT&) const [with classT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>, DerivedT = boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_>]’
+/usr/local/include/boost/python/def_visitor.hpp:31:   instantiated from ‘static void boost::python::def_visitor_access::visit(const V&, classT&) [with V = boost::python::def_visitor<boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_> >, classT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>]’
+/usr/local/include/boost/python/def_visitor.hpp:67:   instantiated from ‘void boost::python::def_visitor<DerivedVisitor>::visit(classT&) const [with classT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>, DerivedVisitor = boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_>]’
+/usr/local/include/boost/python/class.hpp:225:   instantiated from ‘boost::python::class_<T, X1, X2, X3>& boost::python::class_<T, X1, X2, X3>::def(const boost::python::def_visitor<Derived>&) [with Derived = boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_>, W = Animactor, X1 = boost::python::detail::not_specified, X2 = boost::python::detail::not_specified, X3 = boost::python::detail::not_specified]’
+/usr/local/include/boost/python/class.hpp:501:   instantiated from ‘void boost::python::class_<T, X1, X2, X3>::initialize(const DefVisitor&) [with DefVisitor = boost::python::init_base<boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_> >, W = Animactor, X1 = boost::python::detail::not_specified, X2 = boost::python::detail::not_specified, X3 = boost::python::detail::not_specified]’
+/usr/local/include/boost/python/class.hpp:208:   instantiated from ‘boost::python::class_<T, X1, X2, X3>::class_(const char*, const boost::python::init_base<DerivedT>&) [with DerivedT = boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_>, W = Animactor, X1 = boost::python::detail::not_specified, X2 = boost::python::detail::not_specified, X3 = boost::python::detail::not_specified]’
+actor_wrap.cpp:53:   instantiated from here
+/usr/include/c++/4.4/ext/new_allocator.h:56: error: forming pointer to reference type ‘std::string&’
+/usr/include/c++/4.4/ext/new_allocator.h:57: error: forming pointer to reference type ‘std::string&’
+/usr/include/c++/4.4/ext/new_allocator.h:76: error: forming pointer to reference type ‘std::string&’
+/usr/include/c++/4.4/ext/new_allocator.h:79: error: forming pointer to reference type ‘std::string&’
+/usr/include/c++/4.4/ext/new_allocator.h:84: error: forming pointer to reference type ‘std::string&’
+/usr/include/c++/4.4/ext/new_allocator.h:94: error: forming pointer to reference type ‘std::string&’
+/usr/include/c++/4.4/ext/new_allocator.h:104: error: forming pointer to reference type ‘std::string&’
+/usr/include/c++/4.4/ext/new_allocator.h:115: error: forming pointer to reference type ‘std::string&’
+In file included from /usr/include/c++/4.4/string:43,
+                 from /usr/include/c++/4.4/bits/locale_classes.h:42,
+                 from /usr/include/c++/4.4/bits/ios_base.h:43,
+                 from /usr/include/c++/4.4/ios:43,
+                 from /usr/include/c++/4.4/ostream:40,
+                 from /usr/include/c++/4.4/iostream:40,
+                 from ../graphics/graphics.h:15,
+                 from actor.h:11,
+                 from actor_wrap.cpp:8:
+/usr/include/c++/4.4/bits/allocator.h: In instantiation of ‘std::allocator<std::string&>’:
+/usr/include/c++/4.4/bits/stl_vector.h:71:   instantiated from ‘std::_Vector_base<std::string&, std::allocator<std::string&> >’
+/usr/include/c++/4.4/bits/stl_vector.h:171:   instantiated from ‘std::vector<std::string&, std::allocator<std::string&> >’
+/usr/local/include/boost/type_traits/is_enum.hpp:181:   instantiated from ‘boost::is_enum<std::vector<std::string&, std::allocator<std::string&> > >’
+/usr/local/include/boost/type_traits/is_scalar.hpp:29:   instantiated from ‘const bool boost::detail::is_scalar_impl<std::vector<std::string&, std::allocator<std::string&> > >::value’
+/usr/local/include/boost/type_traits/is_scalar.hpp:49:   instantiated from ‘boost::is_scalar<std::vector<std::string&, std::allocator<std::string&> > >’
+/usr/local/include/boost/mpl/aux_/nested_type_wknd.hpp:28:   instantiated from ‘boost::mpl::aux::nested_type_wknd<boost::is_scalar<std::vector<std::string&, std::allocator<std::string&> > > >’
+/usr/local/include/boost/mpl/aux_/preprocessed/gcc/or.hpp:19:   instantiated from ‘boost::mpl::aux::or_impl<false, boost::is_scalar<std::vector<std::string&, std::allocator<std::string&> > >, mpl_::bool_<false>, mpl_::bool_<false>, mpl_::bool_<false> >’
+/usr/local/include/boost/mpl/aux_/preprocessed/gcc/or.hpp:55:   instantiated from ‘boost::mpl::or_<boost::python::detail::copy_ctor_mutates_rhs<std::vector<std::string&, std::allocator<std::string&> > >, boost::is_scalar<std::vector<std::string&, std::allocator<std::string&> > >, mpl_::bool_<false>, mpl_::bool_<false>, mpl_::bool_<false> >’
+/usr/local/include/boost/mpl/if.hpp:67:   instantiated from ‘boost::mpl::if_<boost::mpl::or_<boost::python::detail::copy_ctor_mutates_rhs<std::vector<std::string&, std::allocator<std::string&> > >, boost::is_scalar<std::vector<std::string&, std::allocator<std::string&> > >, mpl_::bool_<false>, mpl_::bool_<false>, mpl_::bool_<false> >, std::vector<std::string&, std::allocator<std::string&> >, boost::python::objects::reference_to_value<std::vector<std::string&, std::allocator<std::string&> > > >’
+/usr/local/include/boost/python/object/forward.hpp:59:   instantiated from ‘boost::python::objects::forward<std::vector<std::string&, std::allocator<std::string&> > >’
+/usr/local/include/boost/preprocessor/iteration/detail/local.hpp:34:   instantiated from ‘boost::python::objects::make_holder<1>::apply<boost::python::objects::value_holder<Animactor>, boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > > >’
+/usr/local/include/boost/python/detail/make_keyword_range_fn.hpp:67:   instantiated from ‘boost::python::api::object boost::python::detail::make_keyword_range_constructor(const CallPolicies&, const boost::python::detail::keyword_range&, Holder*, ArgList*, Arity*) [with ArgList = boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > >, Arity = boost::mpl::size<boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > > >, Holder = boost::python::objects::value_holder<Animactor>, CallPolicies = boost::python::default_call_policies]’
+/usr/local/include/boost/python/init.hpp:330:   instantiated from ‘void boost::python::detail::def_init_aux(ClassT&, const Signature&, NArgs, const CallPoliciesT&, const char*, const boost::python::detail::keyword_range&) [with ClassT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>, CallPoliciesT = boost::python::default_call_policies, Signature = boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > >, NArgs = boost::mpl::size<boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > > >]’
+/usr/local/include/boost/python/init.hpp:399:   instantiated from ‘static void boost::python::detail::define_class_init_helper<0>::apply(ClassT&, const CallPoliciesT&, const Signature&, NArgs, const char*, const boost::python::detail::keyword_range&) [with ClassT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>, CallPoliciesT = boost::python::default_call_policies, Signature = boost::python::init_base<DerivedT>::visit(classT&) const [with classT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>, DerivedT = boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_>]::signature, NArgs = boost::mpl::size<boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > > >]’
+/usr/local/include/boost/python/init.hpp:171:   instantiated from ‘void boost::python::init_base<DerivedT>::visit(classT&) const [with classT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>, DerivedT = boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_>]’
+/usr/local/include/boost/python/def_visitor.hpp:31:   instantiated from ‘static void boost::python::def_visitor_access::visit(const V&, classT&) [with V = boost::python::def_visitor<boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_> >, classT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>]’
+/usr/local/include/boost/python/def_visitor.hpp:67:   instantiated from ‘void boost::python::def_visitor<DerivedVisitor>::visit(classT&) const [with classT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>, DerivedVisitor = boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_>]’
+/usr/local/include/boost/python/class.hpp:225:   instantiated from ‘boost::python::class_<T, X1, X2, X3>& boost::python::class_<T, X1, X2, X3>::def(const boost::python::def_visitor<Derived>&) [with Derived = boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_>, W = Animactor, X1 = boost::python::detail::not_specified, X2 = boost::python::detail::not_specified, X3 = boost::python::detail::not_specified]’
+/usr/local/include/boost/python/class.hpp:501:   instantiated from ‘void boost::python::class_<T, X1, X2, X3>::initialize(const DefVisitor&) [with DefVisitor = boost::python::init_base<boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_> >, W = Animactor, X1 = boost::python::detail::not_specified, X2 = boost::python::detail::not_specified, X3 = boost::python::detail::not_specified]’
+/usr/local/include/boost/python/class.hpp:208:   instantiated from ‘boost::python::class_<T, X1, X2, X3>::class_(const char*, const boost::python::init_base<DerivedT>&) [with DerivedT = boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_>, W = Animactor, X1 = boost::python::detail::not_specified, X2 = boost::python::detail::not_specified, X3 = boost::python::detail::not_specified]’
+actor_wrap.cpp:53:   instantiated from here
+/usr/include/c++/4.4/bits/allocator.h:91: error: forming pointer to reference type ‘std::string&’
+/usr/include/c++/4.4/bits/allocator.h:92: error: forming pointer to reference type ‘std::string&’
+In file included from /usr/include/c++/4.4/vector:65,
+                 from ../graphics/graphics.h:16,
+                 from actor.h:11,
+                 from actor_wrap.cpp:8:
+/usr/include/c++/4.4/bits/stl_vector.h: In instantiation of ‘std::vector<std::string&, std::allocator<std::string&> >’:
+/usr/local/include/boost/type_traits/is_enum.hpp:181:   instantiated from ‘boost::is_enum<std::vector<std::string&, std::allocator<std::string&> > >’
+/usr/local/include/boost/type_traits/is_scalar.hpp:29:   instantiated from ‘const bool boost::detail::is_scalar_impl<std::vector<std::string&, std::allocator<std::string&> > >::value’
+/usr/local/include/boost/type_traits/is_scalar.hpp:49:   instantiated from ‘boost::is_scalar<std::vector<std::string&, std::allocator<std::string&> > >’
+/usr/local/include/boost/mpl/aux_/nested_type_wknd.hpp:28:   instantiated from ‘boost::mpl::aux::nested_type_wknd<boost::is_scalar<std::vector<std::string&, std::allocator<std::string&> > > >’
+/usr/local/include/boost/mpl/aux_/preprocessed/gcc/or.hpp:19:   instantiated from ‘boost::mpl::aux::or_impl<false, boost::is_scalar<std::vector<std::string&, std::allocator<std::string&> > >, mpl_::bool_<false>, mpl_::bool_<false>, mpl_::bool_<false> >’
+/usr/local/include/boost/mpl/aux_/preprocessed/gcc/or.hpp:55:   instantiated from ‘boost::mpl::or_<boost::python::detail::copy_ctor_mutates_rhs<std::vector<std::string&, std::allocator<std::string&> > >, boost::is_scalar<std::vector<std::string&, std::allocator<std::string&> > >, mpl_::bool_<false>, mpl_::bool_<false>, mpl_::bool_<false> >’
+/usr/local/include/boost/mpl/if.hpp:67:   instantiated from ‘boost::mpl::if_<boost::mpl::or_<boost::python::detail::copy_ctor_mutates_rhs<std::vector<std::string&, std::allocator<std::string&> > >, boost::is_scalar<std::vector<std::string&, std::allocator<std::string&> > >, mpl_::bool_<false>, mpl_::bool_<false>, mpl_::bool_<false> >, std::vector<std::string&, std::allocator<std::string&> >, boost::python::objects::reference_to_value<std::vector<std::string&, std::allocator<std::string&> > > >’
+/usr/local/include/boost/python/object/forward.hpp:59:   instantiated from ‘boost::python::objects::forward<std::vector<std::string&, std::allocator<std::string&> > >’
+/usr/local/include/boost/preprocessor/iteration/detail/local.hpp:34:   instantiated from ‘boost::python::objects::make_holder<1>::apply<boost::python::objects::value_holder<Animactor>, boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > > >’
+/usr/local/include/boost/python/detail/make_keyword_range_fn.hpp:67:   instantiated from ‘boost::python::api::object boost::python::detail::make_keyword_range_constructor(const CallPolicies&, const boost::python::detail::keyword_range&, Holder*, ArgList*, Arity*) [with ArgList = boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > >, Arity = boost::mpl::size<boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > > >, Holder = boost::python::objects::value_holder<Animactor>, CallPolicies = boost::python::default_call_policies]’
+/usr/local/include/boost/python/init.hpp:330:   instantiated from ‘void boost::python::detail::def_init_aux(ClassT&, const Signature&, NArgs, const CallPoliciesT&, const char*, const boost::python::detail::keyword_range&) [with ClassT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>, CallPoliciesT = boost::python::default_call_policies, Signature = boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > >, NArgs = boost::mpl::size<boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > > >]’
+/usr/local/include/boost/python/init.hpp:399:   instantiated from ‘static void boost::python::detail::define_class_init_helper<0>::apply(ClassT&, const CallPoliciesT&, const Signature&, NArgs, const char*, const boost::python::detail::keyword_range&) [with ClassT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>, CallPoliciesT = boost::python::default_call_policies, Signature = boost::python::init_base<DerivedT>::visit(classT&) const [with classT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>, DerivedT = boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_>]::signature, NArgs = boost::mpl::size<boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > > >]’
+/usr/local/include/boost/python/init.hpp:171:   instantiated from ‘void boost::python::init_base<DerivedT>::visit(classT&) const [with classT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>, DerivedT = boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_>]’
+/usr/local/include/boost/python/def_visitor.hpp:31:   instantiated from ‘static void boost::python::def_visitor_access::visit(const V&, classT&) [with V = boost::python::def_visitor<boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_> >, classT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>]’
+/usr/local/include/boost/python/def_visitor.hpp:67:   instantiated from ‘void boost::python::def_visitor<DerivedVisitor>::visit(classT&) const [with classT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>, DerivedVisitor = boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_>]’
+/usr/local/include/boost/python/class.hpp:225:   instantiated from ‘boost::python::class_<T, X1, X2, X3>& boost::python::class_<T, X1, X2, X3>::def(const boost::python::def_visitor<Derived>&) [with Derived = boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_>, W = Animactor, X1 = boost::python::detail::not_specified, X2 = boost::python::detail::not_specified, X3 = boost::python::detail::not_specified]’
+/usr/local/include/boost/python/class.hpp:501:   instantiated from ‘void boost::python::class_<T, X1, X2, X3>::initialize(const DefVisitor&) [with DefVisitor = boost::python::init_base<boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_> >, W = Animactor, X1 = boost::python::detail::not_specified, X2 = boost::python::detail::not_specified, X3 = boost::python::detail::not_specified]’
+/usr/local/include/boost/python/class.hpp:208:   instantiated from ‘boost::python::class_<T, X1, X2, X3>::class_(const char*, const boost::python::init_base<DerivedT>&) [with DerivedT = boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_>, W = Animactor, X1 = boost::python::detail::not_specified, X2 = boost::python::detail::not_specified, X3 = boost::python::detail::not_specified]’
+actor_wrap.cpp:53:   instantiated from here
+/usr/include/c++/4.4/bits/stl_vector.h:196: error: no members matching ‘std::_Vector_base<std::string&, std::allocator<std::string&> >::_M_allocate’ in ‘struct std::_Vector_base<std::string&, std::allocator<std::string&> >’
+/usr/include/c++/4.4/bits/stl_vector.h:197: error: no members matching ‘std::_Vector_base<std::string&, std::allocator<std::string&> >::_M_deallocate’ in ‘struct std::_Vector_base<std::string&, std::allocator<std::string&> >’
+In file included from /usr/local/include/boost/preprocessor/iteration/detail/iter/forward1.hpp:52,
+                 from /usr/local/include/boost/python/object/value_holder.hpp:50,
+                 from /usr/local/include/boost/python/object/class_metadata.hpp:11,
+                 from /usr/local/include/boost/python/class.hpp:23,
+                 from /usr/local/include/boost/python.hpp:18,
+                 from actor_wrap.cpp:10:
+/usr/local/include/boost/python/object/value_holder.hpp: In constructor ‘boost::python::objects::value_holder<Value>::value_holder(PyObject*, A0) [with A0 = boost::python::objects::reference_to_value<std::vector<std::string&, std::allocator<std::string&> > >, Value = Animactor]’:
+/usr/local/include/boost/python/object/make_holder.hpp:94:   instantiated from ‘static void boost::python::objects::make_holder<1>::apply<Holder, ArgList>::execute(PyObject*, typename boost::mpl::deref<typename boost::mpl::begin<ArgList>::type>::type) [with Holder = boost::python::objects::value_holder<Animactor>, ArgList = boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > >]’
+/usr/local/include/boost/python/detail/make_keyword_range_fn.hpp:67:   instantiated from ‘boost::python::api::object boost::python::detail::make_keyword_range_constructor(const CallPolicies&, const boost::python::detail::keyword_range&, Holder*, ArgList*, Arity*) [with ArgList = boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > >, Arity = boost::mpl::size<boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > > >, Holder = boost::python::objects::value_holder<Animactor>, CallPolicies = boost::python::default_call_policies]’
+/usr/local/include/boost/python/init.hpp:330:   instantiated from ‘void boost::python::detail::def_init_aux(ClassT&, const Signature&, NArgs, const CallPoliciesT&, const char*, const boost::python::detail::keyword_range&) [with ClassT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>, CallPoliciesT = boost::python::default_call_policies, Signature = boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > >, NArgs = boost::mpl::size<boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > > >]’
+/usr/local/include/boost/python/init.hpp:399:   instantiated from ‘static void boost::python::detail::define_class_init_helper<0>::apply(ClassT&, const CallPoliciesT&, const Signature&, NArgs, const char*, const boost::python::detail::keyword_range&) [with ClassT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>, CallPoliciesT = boost::python::default_call_policies, Signature = boost::python::init_base<DerivedT>::visit(classT&) const [with classT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>, DerivedT = boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_>]::signature, NArgs = boost::mpl::size<boost::mpl::vector1<std::vector<std::string&, std::allocator<std::string&> > > >]’
+/usr/local/include/boost/python/init.hpp:171:   instantiated from ‘void boost::python::init_base<DerivedT>::visit(classT&) const [with classT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>, DerivedT = boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_>]’
+/usr/local/include/boost/python/def_visitor.hpp:31:   instantiated from ‘static void boost::python::def_visitor_access::visit(const V&, classT&) [with V = boost::python::def_visitor<boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_> >, classT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>]’
+/usr/local/include/boost/python/def_visitor.hpp:67:   instantiated from ‘void boost::python::def_visitor<DerivedVisitor>::visit(classT&) const [with classT = boost::python::class_<Animactor, boost::python::detail::not_specified, boost::python::detail::not_specified, boost::python::detail::not_specified>, DerivedVisitor = boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_>]’
+/usr/local/include/boost/python/class.hpp:225:   instantiated from ‘boost::python::class_<T, X1, X2, X3>& boost::python::class_<T, X1, X2, X3>::def(const boost::python::def_visitor<Derived>&) [with Derived = boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_>, W = Animactor, X1 = boost::python::detail::not_specified, X2 = boost::python::detail::not_specified, X3 = boost::python::detail::not_specified]’
+/usr/local/include/boost/python/class.hpp:501:   instantiated from ‘void boost::python::class_<T, X1, X2, X3>::initialize(const DefVisitor&) [with DefVisitor = boost::python::init_base<boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_> >, W = Animactor, X1 = boost::python::detail::not_specified, X2 = boost::python::detail::not_specified, X3 = boost::python::detail::not_specified]’
+/usr/local/include/boost/python/class.hpp:208:   instantiated from ‘boost::python::class_<T, X1, X2, X3>::class_(const char*, const boost::python::init_base<DerivedT>&) [with DerivedT = boost::python::init<std::vector<std::string&, std::allocator<std::string&> >, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_, mpl_::void_>, W = Animactor, X1 = boost::python::detail::not_specified, X2 = boost::python::detail::not_specified, X3 = boost::python::detail::not_specified]’
+actor_wrap.cpp:53:   instantiated from here
+/usr/local/include/boost/python/object/value_holder.hpp:137: error: no matching function for call to ‘Animactor::Animactor(const std::vector<std::string&, std::allocator<std::string&> >&)’
+animactor.h:22: note: candidates are: Animactor::Animactor(const std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&)
+animactor.h:19: note:                 Animactor::Animactor(const Animactor&)
+In file included from /usr/include/c++/4.4/vector:65,
+                 from ../graphics/graphics.h:16,
+                 from actor.h:11,
+                 from actor_wrap.cpp:8:
+/usr/include/c++/4.4/bits/stl_vector.h: In copy constructor ‘std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&) [with _Tp = std::string&, _Alloc = std::allocator<std::string&>]’:
+/usr/local/include/boost/python/detail/invoke.hpp:81:   instantiated from ‘PyObject* boost::python::detail::invoke(boost::python::detail::invoke_tag_<true, false>, const RC&, F&, AC0&, AC1&) [with RC = boost::python::detail::caller_arity::impl::operator()::result_converter, F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), AC0 = boost::python::detail::caller_arity<2u>::impl<F, Policies, Sig>::operator()(PyObject*, PyObject*) [with F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), Policies = boost::python::default_call_policies, Sig = boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > >]::c_t0, AC1 = boost::python::detail::caller_arity<2u>::impl<F, Policies, Sig>::operator()(PyObject*, PyObject*) [with F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), Policies = boost::python::default_call_policies, Sig = boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > >]::c_t1]’
+/usr/local/include/boost/python/detail/caller.hpp:223:   instantiated from ‘PyObject* boost::python::detail::caller_arity<2u>::impl<F, Policies, Sig>::operator()(PyObject*, PyObject*) [with F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), Policies = boost::python::default_call_policies, Sig = boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > >]’
+/usr/local/include/boost/python/object/py_function.hpp:38:   instantiated from ‘PyObject* boost::python::objects::caller_py_function_impl<Caller>::operator()(PyObject*, PyObject*) [with Caller = boost::python::detail::caller<void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), boost::python::default_call_policies, boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > > >]’
+actor_wrap.cpp:56:   instantiated from here
+/usr/include/c++/4.4/bits/stl_vector.h:243: error: ‘const class std::vector<std::string&, std::allocator<std::string&> >’ has no member named ‘begin’
+/usr/include/c++/4.4/bits/stl_vector.h:243: error: ‘const class std::vector<std::string&, std::allocator<std::string&> >’ has no member named ‘end’
+/usr/include/c++/4.4/bits/stl_vector.h:243: error: ‘struct std::_Vector_base<std::string&, std::allocator<std::string&> >::_Vector_impl’ has no member named ‘_M_start’
+/usr/local/include/boost/python/detail/invoke.hpp:81:   instantiated from ‘PyObject* boost::python::detail::invoke(boost::python::detail::invoke_tag_<true, false>, const RC&, F&, AC0&, AC1&) [with RC = boost::python::detail::caller_arity::impl::operator()::result_converter, F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), AC0 = boost::python::detail::caller_arity<2u>::impl<F, Policies, Sig>::operator()(PyObject*, PyObject*) [with F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), Policies = boost::python::default_call_policies, Sig = boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > >]::c_t0, AC1 = boost::python::detail::caller_arity<2u>::impl<F, Policies, Sig>::operator()(PyObject*, PyObject*) [with F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), Policies = boost::python::default_call_policies, Sig = boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > >]::c_t1]’
+/usr/local/include/boost/python/detail/caller.hpp:223:   instantiated from ‘PyObject* boost::python::detail::caller_arity<2u>::impl<F, Policies, Sig>::operator()(PyObject*, PyObject*) [with F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), Policies = boost::python::default_call_policies, Sig = boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > >]’
+/usr/local/include/boost/python/object/py_function.hpp:38:   instantiated from ‘PyObject* boost::python::objects::caller_py_function_impl<Caller>::operator()(PyObject*, PyObject*) [with Caller = boost::python::detail::caller<void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), boost::python::default_call_policies, boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > > >]’
+actor_wrap.cpp:56:   instantiated from here
+/usr/include/c++/4.4/bits/stl_vector.h:243: error: ‘struct std::_Vector_base<std::string&, std::allocator<std::string&> >::_Vector_impl’ has no member named ‘_M_finish’
+/usr/include/c++/4.4/bits/stl_vector.h: In destructor ‘std::vector<_Tp, _Alloc>::~vector() [with _Tp = std::string&, _Alloc = std::allocator<std::string&>]’:
+/usr/local/include/boost/python/detail/invoke.hpp:81:   instantiated from ‘PyObject* boost::python::detail::invoke(boost::python::detail::invoke_tag_<true, false>, const RC&, F&, AC0&, AC1&) [with RC = boost::python::detail::caller_arity::impl::operator()::result_converter, F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), AC0 = boost::python::detail::caller_arity<2u>::impl<F, Policies, Sig>::operator()(PyObject*, PyObject*) [with F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), Policies = boost::python::default_call_policies, Sig = boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > >]::c_t0, AC1 = boost::python::detail::caller_arity<2u>::impl<F, Policies, Sig>::operator()(PyObject*, PyObject*) [with F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), Policies = boost::python::default_call_policies, Sig = boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > >]::c_t1]’
+/usr/local/include/boost/python/detail/caller.hpp:223:   instantiated from ‘PyObject* boost::python::detail::caller_arity<2u>::impl<F, Policies, Sig>::operator()(PyObject*, PyObject*) [with F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), Policies = boost::python::default_call_policies, Sig = boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > >]’
+/usr/local/include/boost/python/object/py_function.hpp:38:   instantiated from ‘PyObject* boost::python::objects::caller_py_function_impl<Caller>::operator()(PyObject*, PyObject*) [with Caller = boost::python::detail::caller<void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), boost::python::default_call_policies, boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > > >]’
+actor_wrap.cpp:56:   instantiated from here
+/usr/include/c++/4.4/bits/stl_vector.h:313: error: ‘struct std::_Vector_base<std::string&, std::allocator<std::string&> >::_Vector_impl’ has no member named ‘_M_start’
+/usr/include/c++/4.4/bits/stl_vector.h:313: error: ‘struct std::_Vector_base<std::string&, std::allocator<std::string&> >::_Vector_impl’ has no member named ‘_M_finish’
+/usr/include/c++/4.4/bits/stl_vector.h: In member function ‘size_t std::vector<_Tp, _Alloc>::size() const [with _Tp = std::string&, _Alloc = std::allocator<std::string&>]’:
+/usr/include/c++/4.4/bits/stl_vector.h:242:   instantiated from ‘std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&) [with _Tp = std::string&, _Alloc = std::allocator<std::string&>]’
+/usr/local/include/boost/python/detail/invoke.hpp:81:   instantiated from ‘PyObject* boost::python::detail::invoke(boost::python::detail::invoke_tag_<true, false>, const RC&, F&, AC0&, AC1&) [with RC = boost::python::detail::caller_arity::impl::operator()::result_converter, F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), AC0 = boost::python::detail::caller_arity<2u>::impl<F, Policies, Sig>::operator()(PyObject*, PyObject*) [with F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), Policies = boost::python::default_call_policies, Sig = boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > >]::c_t0, AC1 = boost::python::detail::caller_arity<2u>::impl<F, Policies, Sig>::operator()(PyObject*, PyObject*) [with F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), Policies = boost::python::default_call_policies, Sig = boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > >]::c_t1]’
+/usr/local/include/boost/python/detail/caller.hpp:223:   instantiated from ‘PyObject* boost::python::detail::caller_arity<2u>::impl<F, Policies, Sig>::operator()(PyObject*, PyObject*) [with F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), Policies = boost::python::default_call_policies, Sig = boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > >]’
+/usr/local/include/boost/python/object/py_function.hpp:38:   instantiated from ‘PyObject* boost::python::objects::caller_py_function_impl<Caller>::operator()(PyObject*, PyObject*) [with Caller = boost::python::detail::caller<void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), boost::python::default_call_policies, boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > > >]’
+actor_wrap.cpp:56:   instantiated from here
+/usr/include/c++/4.4/bits/stl_vector.h:533: error: ‘const struct std::_Vector_base<std::string&, std::allocator<std::string&> >::_Vector_impl’ has no member named ‘_M_start’
+/usr/include/c++/4.4/bits/stl_vector.h:533: error: ‘const struct std::_Vector_base<std::string&, std::allocator<std::string&> >::_Vector_impl’ has no member named ‘_M_finish’
+/usr/include/c++/4.4/bits/stl_vector.h: In constructor ‘std::_Vector_base<_Tp, _Alloc>::_Vector_base(size_t, const _Alloc&) [with _Tp = std::string&, _Alloc = std::allocator<std::string&>]’:
+/usr/include/c++/4.4/bits/stl_vector.h:242:   instantiated from ‘std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&) [with _Tp = std::string&, _Alloc = std::allocator<std::string&>]’
+/usr/local/include/boost/python/detail/invoke.hpp:81:   instantiated from ‘PyObject* boost::python::detail::invoke(boost::python::detail::invoke_tag_<true, false>, const RC&, F&, AC0&, AC1&) [with RC = boost::python::detail::caller_arity::impl::operator()::result_converter, F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), AC0 = boost::python::detail::caller_arity<2u>::impl<F, Policies, Sig>::operator()(PyObject*, PyObject*) [with F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), Policies = boost::python::default_call_policies, Sig = boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > >]::c_t0, AC1 = boost::python::detail::caller_arity<2u>::impl<F, Policies, Sig>::operator()(PyObject*, PyObject*) [with F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), Policies = boost::python::default_call_policies, Sig = boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > >]::c_t1]’
+/usr/local/include/boost/python/detail/caller.hpp:223:   instantiated from ‘PyObject* boost::python::detail::caller_arity<2u>::impl<F, Policies, Sig>::operator()(PyObject*, PyObject*) [with F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), Policies = boost::python::default_call_policies, Sig = boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > >]’
+/usr/local/include/boost/python/object/py_function.hpp:38:   instantiated from ‘PyObject* boost::python::objects::caller_py_function_impl<Caller>::operator()(PyObject*, PyObject*) [with Caller = boost::python::detail::caller<void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), boost::python::default_call_policies, boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > > >]’
+actor_wrap.cpp:56:   instantiated from here
+/usr/include/c++/4.4/bits/stl_vector.h:113: error: ‘struct std::_Vector_base<std::string&, std::allocator<std::string&> >’ has no member named ‘_M_allocate’
+/usr/include/c++/4.4/bits/stl_vector.h:113: error: ‘struct std::_Vector_base<std::string&, std::allocator<std::string&> >::_Vector_impl’ has no member named ‘_M_start’
+/usr/include/c++/4.4/bits/stl_vector.h:114: error: ‘struct std::_Vector_base<std::string&, std::allocator<std::string&> >::_Vector_impl’ has no member named ‘_M_start’
+/usr/include/c++/4.4/bits/stl_vector.h:114: error: ‘struct std::_Vector_base<std::string&, std::allocator<std::string&> >::_Vector_impl’ has no member named ‘_M_finish’
+/usr/include/c++/4.4/bits/stl_vector.h:115: error: ‘struct std::_Vector_base<std::string&, std::allocator<std::string&> >::_Vector_impl’ has no member named ‘_M_start’
+/usr/include/c++/4.4/bits/stl_vector.h:115: error: ‘struct std::_Vector_base<std::string&, std::allocator<std::string&> >::_Vector_impl’ has no member named ‘_M_end_of_storage’
+/usr/include/c++/4.4/bits/stl_vector.h: In destructor ‘std::_Vector_base<_Tp, _Alloc>::~_Vector_base() [with _Tp = std::string&, _Alloc = std::allocator<std::string&>]’:
+/usr/include/c++/4.4/bits/stl_vector.h:242:   instantiated from ‘std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&) [with _Tp = std::string&, _Alloc = std::allocator<std::string&>]’
+/usr/local/include/boost/python/detail/invoke.hpp:81:   instantiated from ‘PyObject* boost::python::detail::invoke(boost::python::detail::invoke_tag_<true, false>, const RC&, F&, AC0&, AC1&) [with RC = boost::python::detail::caller_arity::impl::operator()::result_converter, F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), AC0 = boost::python::detail::caller_arity<2u>::impl<F, Policies, Sig>::operator()(PyObject*, PyObject*) [with F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), Policies = boost::python::default_call_policies, Sig = boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > >]::c_t0, AC1 = boost::python::detail::caller_arity<2u>::impl<F, Policies, Sig>::operator()(PyObject*, PyObject*) [with F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), Policies = boost::python::default_call_policies, Sig = boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > >]::c_t1]’
+/usr/local/include/boost/python/detail/caller.hpp:223:   instantiated from ‘PyObject* boost::python::detail::caller_arity<2u>::impl<F, Policies, Sig>::operator()(PyObject*, PyObject*) [with F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), Policies = boost::python::default_call_policies, Sig = boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > >]’
+/usr/local/include/boost/python/object/py_function.hpp:38:   instantiated from ‘PyObject* boost::python::objects::caller_py_function_impl<Caller>::operator()(PyObject*, PyObject*) [with Caller = boost::python::detail::caller<void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), boost::python::default_call_policies, boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > > >]’
+actor_wrap.cpp:56:   instantiated from here
+/usr/include/c++/4.4/bits/stl_vector.h:132: error: ‘struct std::_Vector_base<std::string&, std::allocator<std::string&> >::_Vector_impl’ has no member named ‘_M_start’
+/usr/include/c++/4.4/bits/stl_vector.h:132: error: ‘struct std::_Vector_base<std::string&, std::allocator<std::string&> >::_Vector_impl’ has no member named ‘_M_start’
+/usr/include/c++/4.4/bits/stl_vector.h:132: error: ‘struct std::_Vector_base<std::string&, std::allocator<std::string&> >::_Vector_impl’ has no member named ‘_M_end_of_storage’
+/usr/include/c++/4.4/bits/stl_vector.h:132: error: ‘_M_deallocate’ was not declared in this scope
+/usr/include/c++/4.4/bits/stl_vector.h: In constructor ‘std::_Vector_base<_Tp, _Alloc>::_Vector_impl::_Vector_impl(const typename _Alloc::rebind<_Tp>::other&) [with _Tp = std::string&, _Alloc = std::allocator<std::string&>]’:
+/usr/include/c++/4.4/bits/stl_vector.h:111:   instantiated from ‘std::_Vector_base<_Tp, _Alloc>::_Vector_base(size_t, const _Alloc&) [with _Tp = std::string&, _Alloc = std::allocator<std::string&>]’
+/usr/include/c++/4.4/bits/stl_vector.h:242:   instantiated from ‘std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&) [with _Tp = std::string&, _Alloc = std::allocator<std::string&>]’
+/usr/local/include/boost/python/detail/invoke.hpp:81:   instantiated from ‘PyObject* boost::python::detail::invoke(boost::python::detail::invoke_tag_<true, false>, const RC&, F&, AC0&, AC1&) [with RC = boost::python::detail::caller_arity::impl::operator()::result_converter, F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), AC0 = boost::python::detail::caller_arity<2u>::impl<F, Policies, Sig>::operator()(PyObject*, PyObject*) [with F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), Policies = boost::python::default_call_policies, Sig = boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > >]::c_t0, AC1 = boost::python::detail::caller_arity<2u>::impl<F, Policies, Sig>::operator()(PyObject*, PyObject*) [with F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), Policies = boost::python::default_call_policies, Sig = boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > >]::c_t1]’
+/usr/local/include/boost/python/detail/caller.hpp:223:   instantiated from ‘PyObject* boost::python::detail::caller_arity<2u>::impl<F, Policies, Sig>::operator()(PyObject*, PyObject*) [with F = void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), Policies = boost::python::default_call_policies, Sig = boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > >]’
+/usr/local/include/boost/python/object/py_function.hpp:38:   instantiated from ‘PyObject* boost::python::objects::caller_py_function_impl<Caller>::operator()(PyObject*, PyObject*) [with Caller = boost::python::detail::caller<void (*)(PyObject*, std::vector<std::string&, std::allocator<std::string&> >), boost::python::default_call_policies, boost::mpl::vector3<void, PyObject*, std::vector<std::string&, std::allocator<std::string&> > > >]’
+actor_wrap.cpp:56:   instantiated from here
+/usr/include/c++/4.4/bits/stl_vector.h:85: error: using invalid field ‘std::_Vector_base<_Tp, _Alloc>::_Vector_impl::_M_start’
+/usr/include/c++/4.4/bits/stl_vector.h:85: error: using invalid field ‘std::_Vector_base<_Tp, _Alloc>::_Vector_impl::_M_finish’
+/usr/include/c++/4.4/bits/stl_vector.h:85: error: using invalid field ‘std::_Vector_base<_Tp, _Alloc>::_Vector_impl::_M_end_of_storage’
+make[1]: *** [actor_wrap.o] Error 1
+make: *** [objs/actor.so] Error 2

@@ -27,7 +27,7 @@ _actor.o: actor.cpp actor.h
 	g++ -c -fpic $(INCLUDE) \
 	actor.cpp -o $(OBJS_DIR)/_actor.o 
 #=================================================================================================
-actor_wrap.o: actor_wrap.cpp actor.h actor.cpp
+actor_wrap.o: actor_wrap.cpp actor.h actor.cpp animactor.h
 	g++ -c -fpic $(INCLUDE) $(CFLAGS) $(PYB_CFLAGS) \
 	actor_wrap.cpp -o $(OBJS_DIR)/actor_wrap.o
 #=================================================================================================

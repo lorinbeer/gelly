@@ -6,20 +6,23 @@
 //
 //================================================================================================
 #ifndef _ACTOR_H_
-#define _ACTOR_H
+#define _ACTOR_H_
 //================================================================================================
 #include "graphics.h"
 //================================================================================================
+
 
 //================================================================================================
 class Actor
 {
 public:
   //==============================================================================================
-  Actor( char const * texpath=0 );
+  Actor();
+  Actor( std::string & texpath ){;}
+  Actor( const char * const, const Vertel & _model, const Vertel & _bound );
   //==============================================================================================
-  void draw();
-  void draw( Vertex const & npos ){ this->setpos(npos); draw(); }
+  virtual void draw();
+  virtual void draw( const Vertex & npos ){ this->setpos(npos); draw(); }
   //==============================================================================================
   //getpos overloaded function
   void     getpos( Vertex & cpos ){ cpos = this->pos; }
@@ -34,7 +37,7 @@ public:
   DRAW_ITEM * getdrawitem( std::vector< int > & _name );
   void selectdraw( std::vector< int > & _name );
   //==============================================================================================
-private:
+protected:
   //==============================================================================================
   Vertel model;
   Vertel boundmodel;

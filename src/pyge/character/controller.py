@@ -6,13 +6,14 @@
  #pygame includes
 import sys
 sys.path.append("/home/lorin/projects/gelly/objs ")
-from actor import Actor
+from actor import Actor, Vertel
 from actor import Vertex
 from pysdlutil import SDLKey, SDL_EventType, Event
 
 
 from character import Character
-from action import Action, Action_Type
+from action import Action
+from skill import Skill, SkillFactory
 
 
 from matrix.vector import Vector
@@ -29,7 +30,17 @@ class Selection( Actor ):
     self._pos = Vertex()
     self._pos.append( -1.0 )
     self._pos.append( -1.0 )
-    super( Selection, self ).__init__( self._image_file )#, offset=(0,50))
+    _model = Vertel()
+    _model.set( [ ( 0.0, 0.0, 0.0 ), 
+                  ( 0.0, 171.0/600.0, 0.0 ), 
+                  ( 101.0/800.0, 171.0/600.0,0.0 ),
+                  ( 101.0/800.0 , 0.0, 0.0 ) ] )
+    _bound = Vertel()
+    _bound.set( [ ( 0.0, 0.0, 0.0 ),
+                  ( 0.0, 100.0/600, 0.0 ),
+                  ( 100.0/800.0, 100.0/600, 0.0 ),
+                  ( 100.0/800, 0.0, 0.0 ) ] )
+    super( Selection, self ).__init__( self._image_file, _model, _bound )#, offset=(0,50))
   #===============================================================================================
   def select(self, tile_actor ):
     """
@@ -96,13 +107,42 @@ class Controller(object):
         direc = Vector2(-1,0)
       #===========================================================================================
       
-      #==========================================================================================
+      #===========================================================================================
       elif keyevent.key == SDLKey.SDLK_a:
-        self._character.mind.qaction.append ( Action( verb  = Action_Type['attack'],
-                                                     actor = self._character,
-                                                     target= self._character.target,
-                                                     stage = dungeon ) )
-
+        action = Action( actor  = self._character,
+                         atype  = 'attack',
+                         target = self._character._target,
+                         skill  = self._character.deck[0],
+                         stage  = self._character._context,
+                         energy = 4 )
+        self._character.mind.appendaction( action )
+      #===========================================================================================
+      elif keyevent.key == SDLKey.SDLK_1:
+        #self._character.mind.appendaction( self.makeaction(0) )
+        print "gelly UI: button 1 pressed"
+      elif keyevent.key == SDLKey.SDLK_2:
+        #self._character.mind.appendaction( self.makeaction(1) )
+        print "gelly UI: button 2 pressed"
+      elif keyevent.key == SDLKey.SDLK_3:
+        #self._character.mind.appendaction( self.makeaction(2) )
+        print "gelly UI: button 3 pressed"
+      elif keyevent.key == SDLKey.SDLK_4:
+        #self._character.mind.appendaction( self.makeaction(3) )
+        print "gelly UI: button 4 pressed"
+      elif keyevent.key == SDLKey.SDLK_5:
+        #self._character.mind.appendaction( self.makeaction(4) )
+        print "gelly UI: button 5 pressed"
+      elif keyevent.key == SDLKey.SDLK_6:
+        self._character.mind.appendaction( self.makeaction(5) )
+      elif keyevent.key == SDLKey.SDLK_7:
+        self._character.mind.appendaction( self.makeaction(6) )
+      elif keyevent.key == SDLKey.SDLK_8:
+        self._character.mind.appendaction( self.makeaction(7) )
+      elif keyevent.key == SDLKey.SDLK_9:
+        self._character.mind.appendaction( self.makeaction(8) )
+      elif keyevent.key == SDLKey.SDLK_0:
+        self._character.mind.appendaction( self.makeaction(9) )
+      #===========================================================================================
 #      elif keyevent.scancode == 33: #p key
  #       loc = dungeon.loc(self.character)
  #       self.character.mind.qaction.append( Action( verb  = Action_Type['grab'],
@@ -115,10 +155,11 @@ class Controller(object):
                      #                       stage = dungeon,
                      #                       actor = self.character ) )
     if  direc:
-      self._character.mind.qaction.append( Action( verb = Action_Type['move'],
+      self._character.mind.appendaction(  Action( atype = 'move',
                                           stage = dungeon,
                                           actor = self._character,
-                                          target = direc) )
+                                          target = direc,
+                                          energy = 1 ) )
     return False
   #===============================================================================================
   def interpretmouseevent(self, mevent, dungeon ):
@@ -126,4 +167,29 @@ class Controller(object):
       
     """
     if mevent.type == SDL_EventType.MOUSEBUTTONUP:
-      self._selection.select( dungeon.map[mevent.x, mevent.y] )
+      tile = dungeon.map[mevent.x, mevent.y]
+      self._selection.select( tile )
+      for item in tile.items:
+        if isinstance(item,Character):
+          self._character.settarget( item )
+          print self._character, "targets", self._character.mind._target
+  #===============================================================================================
+  def makeaction(self, skillnumb):
+    """
+    """
+#    action = Action( actor  = self._character,
+#                     atype  = 'attack',
+#                     target = self._character._target,
+#                     skill  = self._character.deck[0],
+#                     stage  = self._character._context,
+#                     energy = 4 )
+#    print skillnumb, self._character.deck[skillnumb]._type
+#    action = Action( actor  = self._character,
+#                     atype  = self._character.deck[skillnumb]._type,
+#                     target = self._character._target,
+#                     skill  = self._character.deck[skillnumb],
+#                     stage  = self._character._context,
+#                     energy = 4 )
+#    return action
+  #===============================================================================================
+ 

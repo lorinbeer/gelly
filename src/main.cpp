@@ -31,7 +31,32 @@ object pymain;
 
 void foo( unsigned int button_id )
 {
-  //printf( "Button: %i\n", button_id );
+  object gbl = pymain.attr("__dict__");
+  object local = exec("locals()",gbl,gbl);
+  object keypress = pymain.attr("keypress");
+  //until there is a need for more, ui button events are handled in the same way as key events
+  KeyEvent elf;
+
+  elf.settype (SDL_EventType(SDL_KEYUP));
+  switch (button_id){
+  case 1: elf.setkey (SDLK_1);
+    break;
+  case 2: elf.setkey (SDLK_2);
+    //printf("%i", button_id);
+    break;
+  case 3: elf.setkey (SDLK_3);
+    break;
+  case 4: elf.setkey (SDLK_4);
+    break;
+  }
+  try {
+    keypress( elf );
+  }
+  catch( error_already_set ) {
+    std::cout << "Fuckup-eries" << std::endl;
+    PyErr_Print();
+  }
+
 }
 void bar( unsigned int actor_id )
 {
@@ -193,10 +218,7 @@ int main()
     //   glClearColor((128.0f / 255.0f), 1.0f, 1.0f, 1.0f); //Cyan color
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     //    if( ticks >= framerate ){
-
-
  
-
   
   try{
     object global = pymain.attr("__dict__");

@@ -8,7 +8,7 @@
 
 #from character import Character
 
-from character.action import Action, Action_Type
+from character.action import Action
 
 from battlemaster import BattleMaster
 
@@ -31,9 +31,7 @@ class DungeonMaster(object):
     for each in dungeon.characters.values( ):
       self._characters.append( each )
     self._current = 0
-    #=============================================================================================
-    #internal state flags
-    self._hold = False #indicates 'paused' state of DM
+    self._effects = []
     #=============================================================================================
   #===============================================================================================
   def resolve_action( self, action ):
@@ -44,18 +42,21 @@ class DungeonMaster(object):
       target - the target of the action
     """
     print "Dungeon Master: Resolve Action"
-    if action._actiontype == Action_Type['attack']:
-      self.battlemaster.resolve_combat( action.args['actor'], 
-                                        None, 
-                                        action.args['target'],
-                                        action.args['stage']  )
-      return action.effect
-    else:
-      return action.act( )
+    if action.type == 'attack':
+      self.battlemaster.resolve_combat( action )
+      print "RESOLVING ATTACK", action.type
+      print action.skill.effect
+      return action.skill.effect
+    elif action.type == 'move':
+      self.resolve_move( action )
+  #===============================================================================================
+  def resolve_move( self, mact ):
+    """
+    """
+    mact.stage.move_character( mact.actor, mact.target )
   #===============================================================================================
   def resume( self ):
     """
-      
     """
     self._hold = False
   #===============================================================================================
@@ -63,23 +64,32 @@ class DungeonMaster(object):
     """
       calculate a full game turn
     """
-    #ask each character for an action
-    effects = list()
-#    print self._characters
-    while not self._hold:
-      char = self._characters[self._current]
+    effects = []
+    while True:
+      char = self._characters[self._current] 
       char.update() #ready the character for this turn
+      
       action = char.mind.getaction() #request an action from the current character
       if action: #npc's will always return an action, might have to wait on pc's
-        effects.append( self.resolve_action( action ) )
+        effect = self.resolve_action( action )
+        if effect:
+          self._effects.append( effect )
       else: #pc's will return false if no action is in the queue
         return effects#in this case, we return, waiting for character to perform an action
       self._current += 1 #move to the next character
       if self._current >= len(self._characters): #circular increment
-        self._current = 0 #loop back to the first
+        self._current = 0
         break
-    print self._current
-    return effects
+
+#ugly hackishness, placing each effect at the coordinates of the current characters target
+    for e in self._effects:
+      if char.mind._target:
+        loc = self.dungeon.loc( char.mind._target )
+      else:
+        loc = self.dungeon.loc( char )
+        loc = (loc[0],loc[1]+1)
+      self.dungeon.place( e, loc )
+    
 
   #===============================================================================================
   def update( self ):
@@ -89,10 +99,14 @@ class DungeonMaster(object):
       handles checks for dead characters/objects
     """
     for character in self._characters:
-      print character, character._health
       if character._health <= 0:
         character._alive = False
     self.prune()
+    for i,e in enumerate(self._effects):
+      if not e.alive:
+        self.dungeon.remove(e)  #remove the effect from the dungeon
+        self._effects.pop(i)    #we no longer need to track this effect
+        e.reset()   #reset the effect, so it's ready for it's next use
   #===============================================================================================
   def prune( self ):
     """
@@ -102,4 +116,11 @@ class DungeonMaster(object):
     self._characters = [character for character in self._characters if character not in prune]
     for character in prune:
       self.dungeon.remove( character )
+  #===============================================================================================
+  def foo( self ):
+    """
+      
+    """
+    for effect,pos in effects:
+      self.dungeon.place( effect, pos )
 #=================================================================================================

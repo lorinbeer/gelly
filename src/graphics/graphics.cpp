@@ -169,11 +169,10 @@ void Graphics::draw( Vertel const&model, Vertex const&pos, unsigned int texid )c
 //================================================================================================
 unsigned int Graphics::select( Vertex const & point, 
 			       std::vector< unsigned int > & name){
- 
+
   GLuint buff[64] = {0};
   int hits;
   GLint viewport[4];
-
 
   glSelectBuffer(64,buff);
   glRenderMode( GL_SELECT );

@@ -10,7 +10,7 @@
 import sys
 sys.path.append("/home/lorin/projects/gelly/obs")
 #=================================================================================================
-from actor import Actor
+from actor import Actor, Vertel
 from mind  import Mind
 from energy import Energy
 from skillbook import SkillBook
@@ -23,8 +23,7 @@ class Equipment( dict ):
     #groin #rl upper leg #rl knee #rl lower leg #rl foot #mainhand #offhand #
   """
   def __init__(self):
-    """
-      
+    """     
     """
     #
     super( Equipment, self).__init__()
@@ -77,6 +76,41 @@ class Stat( object ):
     """
     self._behave = stat_type
 #=================================================================================================
+class Deck( list ):
+  """
+    An active skill list, holding those skills which a character can activate in combat
+    
+    A Deck object is not a generalized container, as is designed to only contain objects which
+    implement a Skill type interface
+  """
+  #===============================================================================================
+  def __init__(self, **kwargs):
+    """
+      INPUT:
+        maxsize (int)  - maximum number of skills allowed in the deck at any one time
+        skills  (list) - the skills to initialize the deck with, if any
+                         only copies up to maxsize skills from this list
+    """
+    super(Deck,self).__init__()
+    self._maxsize = kwargs.get( 'maxsize', 4 );
+    skills = kwargs.get('skills', [])
+    for i in range(0,4):
+      if i < len( kwargs['skills']):
+        self.append( kwargs['skills'][i] )
+      else:
+        self.append( None )
+  #===============================================================================================
+  def set(self, index, skill):
+    """
+      
+    """
+    self[index] = skill
+  #===============================================================================================
+#=================================================================================================
+#=================================================================================================
+
+#=================================================================================================
+#=================================================================================================
 class Character( Actor ):
   """
     
@@ -89,7 +123,17 @@ class Character( Actor ):
     model = [ (0,0), (0,181), (100,181), (100,0) ]
     bounding_rect = [ (0,0), (0,181), (100,181), (100,0) ]
     #super( Character, self ).__init__( model, imagefile, offset=(0,50) )
-    super( Character, self ).__init__( imagefile )
+    _model = Vertel()
+    _model.set( [ ( 0.0, 0.0, 0.0 ), 
+                    ( 0.0, 171.0/600.0, 0.0 ), 
+                    ( 101.0/800.0, 171.0/600.0,0.0 ),
+                    ( 101.0/800.0 , 0.0, 0.0 ) ] )
+    _bound = Vertel()
+    _bound.set( [ ( 0.0, 0.0, 0.0 ),
+                    ( 0.0, 100.0/600, 0.0 ),
+                    ( 100.0/800.0, 100.0/600, 0.0 ),
+                    ( 100.0/800, 0.0, 0.0 ) ] )
+    super( Character, self ).__init__( imagefile, _model, _bound )
     #self.name = kwargs.get('name',"Unnamed")
     self.name = name
     self.mind = Mind( self ) 
@@ -98,10 +142,7 @@ class Character( Actor ):
 
     self._context = context
 
-    self.target = None
-
-
-    
+    self._target = None
 
     #body stats
     self.strength  =  10  #strength of character, in kg*m*s^-2
@@ -113,13 +154,14 @@ class Character( Actor ):
     self._mass   = 50   #mass of character, in kg
     self._health = 100  #
 
-    self._energy = Energy()
+    self.energy = Energy()
 
     self._alive  = True #alive bit, used to drop a character object references
 
     #skills
-    self._skillbook  = SkillBook(skills=skills) 
-    self._skilldeck = None
+    self.skillbook  = SkillBook(skills=skills) 
+    self.deck       = Deck( maxsize = 4,
+                            skills  = [] )
 
     #equipment
     self._equipment = Equipment()     #equipment is currently held by the character
@@ -150,18 +192,18 @@ class Character( Actor ):
       recharge is the turn update function, called recharge to avoid ambiguity with the animated
       actor's update function. Recharge is called at the beginning of a character's turn.
     """
-    self._energy.rechargehand() #draw a new hand of energy from the pool
+    self.energy.rechargehand() #draw a new hand of energy from the pool
     #todo decrement cooldown on abilities by 1
   #===============================================================================================
   def use(self, energy, attempt=False):
     """
       remove the specified amount of energy from this characters' hand
     """
-    return self._energy.subhand(energy,attempt)
+    return self.energy.subhand(energy,attempt)
   #===============================================================================================
   def hand(self):
     """return the current energy left in this characters' hand"""
-    return self._energy._hand
+    return self.energy._hand
   #===============================================================================================
   def pool(self):
     """return the current energy left in this characters' pool"""
@@ -174,7 +216,7 @@ class Character( Actor ):
       whether a character is capable of performing a given action or not is dependent on the
       energy cost of the action, and any relevant status effects on the character
     """
-    if self._energy._hand >= action.getenergy():
+    if self.energy._hand >= action.getenergy():
       return True
   #===============================================================================================
   def update(self, step=1):
@@ -185,4 +227,13 @@ class Character( Actor ):
     self._health -= len(self._wounds)*25
     return self._health
   #===============================================================================================
+  def settarget(self, item ):
+    """
+    """
+    self._target = item
+    self.mind._target = item
+  def gettarget(self):
+    """
+    """
+    return self._target
 #=================================================================================================

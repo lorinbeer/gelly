@@ -23,6 +23,13 @@ protected:
 //================================================================================================
 class MouseEvent: public Event{
 public:
+  MouseEvent():
+    Event( SDL_MOUSEBUTTONUP ),
+    x(0),
+    y(0),
+    button(0),
+    state(0){;}
+
   MouseEvent( unsigned int _x,
 	     unsigned int _y,
 	     unsigned int _button,

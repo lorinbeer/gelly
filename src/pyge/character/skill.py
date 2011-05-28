@@ -20,125 +20,69 @@
 #=================================================================================================
 
 #=================================================================================================
-
-from action import Action
-
 #=================================================================================================
-class SkillInterface(object):pass
-
-
-
+import sys
+sys.path.append( "/home/lorin/projects/gelly/objs" )
+from actor import Animactor
+from action import Action
+from effect import Effect
+#=================================================================================================
+#=================================================================================================
 class Skill(object):
   """
     Describes a specific ability available to characters and game objects.
 
     This description defines the skill's level (the relative strength of the ability), the cost 
     to use, requirements to learn, rules limiting how/when the skill is used, the effect the use 
-    of the skill has, etc. 
-                
+    of the skill has, etc.   
   """
-  default_lvl_range = (0,5)
-  default_threshold = 2.0
+
+  levelrange = (0,5)
+
   def __init__( self, **kwargs ):
-    """
-      Initialize the Skill Template. Only the skills name is necessary, all other fields revert to
-      default values as defined by the Skill ruleset.
-      INPUT:
-        name : string representation of this skill's name
-        level : the level of this skill
-                default: to lower bound of skill level range, defined as a static member
-        threshold: minimum energy cost to activate this skill as a number
-                   default: default_threshold, static member of this class
-        prerequisite: list of skills which must be learned to unlock this skill
-                      this skill with level= level-1 is always considered a prerequisite
-        
-        requirements: list of conditions necessary for this skill to be used as a list of clauses
-                      each clause describes a specific state, usually of the character using the
-                      skill or the skills target. ie rules for when and how the skill can be used
-        damagetype: string damage type. Only relevant for attack skills                    
+    """  
     """
     try:
-      self._name = kwargs['name'] #all skills must a name
-      #self._lvlrange = kwargs.get('levelrange',default_lvl_range)
-      self._level = kwargs.get('level',Skill.default_lvl_range[0] )
-      self._stype = kwargs.get('stype',Action.actype['null'])
-      self._threshold = kwargs.get('threshold',Skill.default_threshold)
-      self._damagetype = kwargs.get('damagetype',None)
-      self._prerequisite = kwargs.get('prerequisite',self._name)
-      
-      #set up the maximum energy formula
-#      self._meformula = {} 
-#      for clause in kwargs.get( 'maxenergy', [ ('skill' , 1.0) ] ):
-#        self._meformula[ clause[0] ] = clause[1]
-      self._energy = self._threshold #
-      self._maxenergy = self.calcmaxenergy()
-      self._requirements = kwargs.get('requirements',None)
-      self._effect = kwargs.get('effect',None)
+      self.name       = kwargs['name']  #all skills must have a name
+      self.type       = kwargs['atype'] #all skills must have an action type
+      self.level = kwargs['level']
+      self.threshold = kwargs.get('threshold')
+#      self.damagetype = kwargs.get('damagetype',None) 
+      self.effect = kwargs.get('effect',None)
     except KeyError:
       print "Neccesary argument for class Skill not present"
+      print kwargs
       raise KeyError
   #===============================================================================================
-  def name(): return self._name
-  def level(): return self._level
+  def maxenergy(self):
+    """
+    """
+    return self.level + self.threshold
   #===============================================================================================
-  def calcmaxenergy( self , **kwargs ):
+  def match(self, targetnumber ): 
     """
-      Calculate and update the maximum energy stat of this skill
-      Currently is calculated with me = threshold+level
+      calculate energy as a function of a (hypothetical) target number.
+      If this skill can't be raised by the neccesary amount of energy, return false
+      
     """
-    return  self._threshold + self._level
-#    self._maxenergy = 0.0
-#    for key,value in self._meformula.values():
-#      self._maxenergy += kwargs[key]
-#    self._maxenergy 
+    return targetnumber+1
   #===============================================================================================
-  def get_effect(self):
+  def targetnumber(self,energy):
     """
-      Return the effect of this skills use
+      calculate the Target Number as a function of the energy to use with this skill. 
+      Since a Skill object does not track energy, it must be supplied.
     """
-    return self._effect
-  #===============================================================================================
-  def setenergy(self,energy):
-    """
-      Set the amount of energy to use with this skill
-
-      Behaviour: if energy does not meet threshold, return 0
-                 if threshold<=energy<=max_energy, energy to use with this skill is set to argument
-                 if energy exceeds max energy, energy to use with this skill is set to max_energy
-      INPUT : energy, integer value
-      OUTPUT: value set to energy, as per behaviour
-    """
-    if energy < self._threshold: #energy does not meet threshold
-      return 0  #do nothing
-    elif energy <= self._maxenergy: #energy within allowed range
-      self._energy = energy 
-    else: #energy exceeds maximum
-      self._energy = self._maxenergy 
-    return self._energy
-  #===============================================================================================
-  def getenergy(self): 
-    """return the current value of energy"""
-    return self._energy
-  #===============================================================================================
-  def targetnumber(self):
-    """
-      Target Number
-    """
-    return self._energy #+ self._
-  #===============================================================================================
-  def skilltype(self):
-    """
-      Return the skilltype of this skill
-    """
-    return self._stype
+    if energy > self.threshold and energy < self.maxenergy():
+      return energy-1
+    return 0;
   #===============================================================================================
   def __str__(self):
     """
     """
-    return "%s" % (self._stype)
+    return "%s" % (self.name)
 #=================================================================================================
 
-
+import os
 
 class SkillFactory(object):
   """
@@ -167,43 +111,86 @@ class SkillFactory(object):
     """
     """
     #read the data file to register the basic skill types
-    self._effectypes={'Null': [Null], }
-    self._skilltemplates={'slash': {'levelrange':(0,5), 
-                                    'threshold' : 2,
-                                    'maxenergy' : None,
-                                    'prereqs'   : None,
-                                    'effect'    : None },
-                          'thrust': {'levelrange':(0,5),
-                                     'threshold' : 2,
-                                     'maxenergy' : None,
-                                     'prereqs'   : None,
-                                     'effect'    : None },
-                          'strike': {'levelrange':(0,5),
-                                     'threshold' : None,
-                                     'maxenergy' : None,
-                                     'prereqs'   : None,
-                                     'effect'    : None },
-                          'spin': {'levelrange':(0,5),
-                                     'threshold' : None,
-                                     'maxenergy' : None,
-                                     'prereqs'   : None,
-                                     'effect'    : None },
-                          }
-
-
-  def skill(self,sid):
-    """
-    """
-    if sid not in self._skilltemplates: return False
+    self._gfxeffects={'null' : None,
+                      'slash': { 'assetpath' :"/home/lorin/projects/ge/art/cut_a",
+                                 'framepaths': [] }
+                     }
     
-    s = Skill()
-    setattr
-    s.name = self._skills[sid]
+    print "init skill factory"
+    for k,d in self._gfxeffects.items():
+      if d:
+        framenames = os.listdir( d['assetpath'] )
+        framenames.sort()
+        for frame in framenames:
+          path = str(os.path.join( d['assetpath'], frame ))
+    
+          d['framepaths'].append( path )
+    print self._gfxeffects['slash']['framepaths']
+    eek = Effect( self._gfxeffects['slash']['assetpath'] )
+    print eek.done
+    self._skilltemplate={ 'slash': {'atype' : 'attack',
+                                    
+                                    'levelrange':(0,5), 
+                                    'threshold' : 2,
+                                    'maxenergy' : 5,
+                                    'prereqs'   : None,
+                                    'effect' : eek
+                                   },
+                          'thrust': {'atype' : 'attack',
+                                     
+                                     'levelrange':(0,5),
+                                     'threshold' : 2,
+                                     'maxenergy' : 5,
+                                     'prereqs'   : None,
+                                     'effect'    : None },
+                          'strike': {'atype' : 'attack',
+
+                                     'levelrange':(0,5),
+                                     'threshold' : None,
+                                     'maxenergy' : 5,
+                                     'prereqs'   : None,
+                                     'effect'    : None },
+                          'spin':   {'atype'     : 'attack',
+
+                                     'levelrange':(0,5),
+                                     'threshold' : None,
+                                     'maxenergy' : 5,
+                                     'prereqs'   : None,
+                                     'effect'    : None },
+                          #DEFENCE SKILLS
+                          'parry': { 'atype'     : 'parry',                           
+                                     'levelrange':(0,5),
+                                     'threshold' : None,
+                                     'maxenergy' : 3,
+                                     'prereqs'   : None,
+                                     'effect'    : None },
+
+                          'dodge': { 'atype'     : 'dodge',
+                                     'levelrange':(0,5),
+                                     'threshold' : None,
+                                     'maxenergy' : 3,
+                                     'prereqs'   : None,
+                                     'effect'    : None }
+                                   
+                          }
+    print "done init skill factory"
+  #===============================================================================================
+  def makeskill(self,sid,level=0):
+    """
+    """
+    if sid not in self._skilltemplate: return False
+    sk = self._skilltemplate[sid]
+    sk['name']=sid
+    sk['level']=level
+    return Skill( **(sk) )
+    print "FOOOKAAAH"
+#
+  #===============================================================================================
   def register_skill(self, template, **kwargs ):
     """
       Register a new skill with the factory.
     """
-    
+  #===============================================================================================
   def register_template(self):
     """
       Register a new skill template with the factory.
@@ -212,27 +199,4 @@ class SkillFactory(object):
       Registering a new template should only be done if the current space of skills that can be
       created with existing templates does not cover a new desired skill
     """
-
-#=================================================================================================
-class Ability(object):
-  """
-    represents a specialized action useable by a game object to interact with the game environment
-  """
-  def __init__(self, character, base_id):
-    """
-      character : the character to which this ability belongs
-      base_id   : the db id tag of this ability, used to load base attributes
-    """
-    
-    #query db to initialize the object
-     #name of this ability
-    self._name   = None
-     #effect that this ability has if successful, can be status effects, debuffs, etc
-    self._effect = None 
-     #modifiers that this ability has to the flow of combat, 
-    
-     #ability multipliers
-    self.multipier = dict()
-     #ability summands
-    self.summand = dict()
-#=================================================================================================
+  #===============================================================================================

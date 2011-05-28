@@ -7,12 +7,13 @@
 import sys
 sys.path.append("/home/lorin/projects/gelly/objs")
 #=================================================================================================
-from actor import Actor
-from actor import Vertex, IntVec
+from actor import Actor, Animactor
+from actor import Vertex, Vertel, IntVec
 #from actor.boundedactor import BoundedActor
 from matrix.vector import Vector
 from other.euclid import Vector2
 
+from character.effect import Effect
 
 from itertools import chain,product
 #=================================================================================================
@@ -93,7 +94,17 @@ class Tile( Actor ):
 #                               x = 100,
 #                               y = 85,
 #                               boundoffset = (0,44) )
-    super(Tile,self).__init__( self.tiletypes[tilecode] )
+    _model = Vertel()
+    _model.set( [ ( 0.0, 0.0, 0.0 ), 
+                  ( 0.0, 171.0/600.0, 0.0 ), 
+                  ( 101.0/800.0, 171.0/600.0,0.0 ),
+                  ( 101.0/800.0 , 0.0, 0.0 ) ] )
+    _bound = Vertel() 
+    _bound.set( [ ( 0.0, 0.0, 0.0 ),
+                  ( 0.0, 100.0/600.0, 0.0 ),
+                  ( 100.0/800.0, 100.0/600, 0.0 ),
+                  ( 100.0/800, 0.0, 0.0 ) ] )
+    super(Tile,self).__init__( self.tiletypes[tilecode], _model, _bound )
 
     
 
@@ -125,8 +136,12 @@ class Tile( Actor ):
     for each in self.items:
       vpos[0]=vpos[0]+self._itemoffset[0]
       vpos[1]=vpos[1]+self._itemoffset[1]
-      each.draw( vpos )#(pos[0],pos[1]),"object" )
- 
+      if not isinstance(each, Animactor):
+        each.draw( vpos )#(pos[0],pos[1]),"object" )
+      else:
+        print "draw effect"
+        print self.x, self.y, vpos[0], vpos[1]
+        each.draw( vpos )
 
   def place_item( self, item ):
     """
@@ -169,6 +184,7 @@ class DungeonMap(object):
     self.map = dict()
     self.characters = MultiDict( )  #all characters, pc's and npc's currently on the map
     self.gitems     = MultiDict( )  #all game items currently on the map
+    self.effects    = MultiDict( )  #all graphic effect objects active on the map
 
     for i in range(0, roguemap.x ):
       for j in range(0, roguemap.y ):
@@ -238,7 +254,10 @@ class DungeonMap(object):
     elif isinstance(item,Gitem):
       self.map[pos].place_item( item )
       self.gitems[pos] = item
-    print "item %(name)s placed" % {'name': item.name }
+    elif isinstance(item,Effect):
+      self.map[pos].place_item( item )
+      self.effects[pos] = item
+    print "item %(name)s placed" % {'name': item }
   #===============================================================================================
   def move_character( self, character, dest, mode='relative' ):
     """
@@ -262,18 +281,18 @@ class DungeonMap(object):
 #          loc   = each[0]
 
     if True:
-      self.characters[loc.x,loc.y].remove(character)
-      self.map[loc.x,loc.y].remove_item( character ) #remove item from tile
+      self.characters[loc[0],loc[1]].remove(character)
+      self.map[loc[0],loc[1]].remove_item( character ) #remove item from tile
       self.map[dest.x,dest.y].place_item( character ) #place item on new tile
       self.characters[dest.x,dest.y] = character #insert item into characters at new loc
   #===============================================================================================
   def loc(self,item):
     """
-      if item is on the map, return vector2 containing its coordinates, returns false otherwise
+      if item is on the map, return tuple containing its coordinates, returns false otherwise
     """  
     for each in self.characters.items():
       if item == each[1]:
-        return Vector2(each[0][0],each[0][1])
+        return (each[0][0],each[0][1])
     return False
   
   #===============================================================================================
@@ -281,8 +300,8 @@ class DungeonMap(object):
     """
       removes the item from the map,
     """
-    from character import Character
-    from gitem import Gitem
+    from character.character import Character
+    from gitem.gitem import Gitem
     #rare instance of type checking, justified here given that we have organized the different
     #types of items the map can hold into different MultiDicts. This is for efficiency and
     #readability. By typechecking we can provide a unified interface for item manipulation.
@@ -296,6 +315,11 @@ class DungeonMap(object):
         if item == gitem[1]:
           self.gitems[ gitem[0] ].remove ( item )
           self.map[ gitem[0] ].remove_item( item )
+    if isinstance(item,Effect):
+      for loc,effect in self.effects.items():
+        if item == effect:
+          self.effects[loc].remove( item )
+          self.map[ loc ].remove_item( item )
   #===============================================================================================
   def calc_range(self,center,screen_range,x_range,y_range):
     """
@@ -344,6 +368,7 @@ class DungeonMap(object):
 #
 #===============================================================================================
 from gitem.gitem import Gitem
+from character.skill import SkillFactory
 class DungeonDecorator(object):
   """
     Decorates a dungeon with a collection of preset objects, such as characters, items, etc
@@ -362,7 +387,7 @@ class DungeonDecorator(object):
 #                        offset = (0,46) )
           wall = Gitem( texture = "/home/lorin/projects/ge/art/planetcute/Wall Block Tall.png" )
           dungeon.place( wall, (i,j) )
-    
+
   def decorate(self,dungeon):
     """
     """
@@ -373,55 +398,47 @@ class DungeonDecorator(object):
     self.__placewalls__(dungeon)
 
 
-  #  attack = Skill( name= 'slash',
-     #               level= 3,
-     #               threshold= 2,
-   #                 damagetype= 'cut',
-      #              effect= Action.actype['attack'] )
-
-
-
-
-
-
-
-
+    sg = SkillFactory()
+    skillslash = sg.makeskill( 'slash' )
 
     gitemFac = GitemFactory()
     image_pc = "/home/lorin/projects/ge/art/planetcute/Character Horn Girl.png"
     pc = Character("Angelina", image_pc, dungeon)
- #   pc.color = Colors("blue")
     pc.width = 0
     knife = gitemFac.makegitem()
     print pc._equipment.equip( knife )
-#    pc.controller = Controller(pc)
     pc.mind._disabled = True
-
-
+    pc.skillbook.learn( skillslash )
+    pc.deck.set( 0, skillslash )
 
 
     image_mob = "/home/lorin/projects/ge/art/planetcute/Enemy Bug.png"
     mob = Character("Goblin", image_mob, dungeon)
-#    mob.color = Colors("red")
-    mob.width = 0
     mob.health = 25
-    knife = gitemFac.makegitem()
-    print mob._equipment.equip( knife )
-    #place character
+
     dungeon.place( pc,  (5, 0) )
     dungeon.place( mob, (5,15) )
 
 
-    #knife = gitemFac.makegitem()
-    #dungeon.place(knife, (5,5) )
 
-    #knife = gitemFac.makegitem()
-    #dungeon.place(knife, (1,2) )
+ #   image_mob = "/home/lorin/projects/ge/art/planetcute/Character Horn Girl.png"
+ #   mob = Character("badgirl", image_mob, dungeon)
+ #   mob.health = 25
+ #    dungeon.place( mob, (5,25) )
+
+
+ #   image_mob = "/home/lorin/projects/ge/art/planetcute/Character Boy.png"
+ #   mob = Character("badboy", image_mob, dungeon)
+ #   mob.health = 25
+ #   dungeon.place( mob, (5,35) )
+
+
+
+
 
     #give each character a weapon
     knife = gitemFac.makegitem()
     pc.weapon = knife
     knife = gitemFac.makegitem()
     mob.weapon = knife
-    print pc._equipment['rhand']
-    return pc#,mob  #only return the player character
+    return pc

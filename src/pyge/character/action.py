@@ -1,28 +1,29 @@
 #=================================================================================================
 # Action Class
-#  Represents a verb, acted out by a character. 
-#  The action class is authored by some agent, such as class Mind instance, or a user
-#
+#    The Action class is authored by some agent, and encapsulates all the information neccesary
+#    to perform the desired action
 #
 #=================================================================================================
-
-
-
 #=================================================================================================
 
-Action_Type = {'null':0,'move':1,'attack':2, 'defence': 3, 'grab':4,'drop':5}
-
+#=================================================================================================
 #=================================================================================================
 class Action( object ):
   """
-    represents a verb
+   Represents a verb
+   
+    The action class is authored by some agent, and encapsulates all the information neccesary
+    to perform the desired action
   """
-  actns = ['null', 'move', 'attack', 'defence', 'parry', 'dodge', 'grab', 'drop' ]
-  actype = {}
-  for i,act in enumerate(actns):
-    actype[act] = i
-  #actype = {'null':0,'move':1,'attack':2, 'defence': 3, 'grab':4,'drop':5}
-
+  _actions = { 'null'   : [],
+            'move'   : ['actor','target','stage','energy'],  #move actor to target on stage
+            'attack' : ['actor','target','skill','stage','energy'], #actor attacks with skill on stage
+            'defence': ['actor','skill','energy'], #actor defends with skill at energy
+#           'parry'  : ['actor','skill','energy'], 
+#           'dodge'  : ['actor','skill','energy'],
+            'grab'   : ['actor','target','tile','stage'],
+            'drop'   : ['actor','stage'] }
+  #===============================================================================================
   def __init__(self, **kwargs ):
     """
       verb  - what kind of action this object represents, use Action.actype dict to specific
@@ -31,80 +32,63 @@ class Action( object ):
       target- the target object of the action
     """
     self.effect = False
-    if 'verb' in kwargs.keys():
-      if kwargs['verb'] == Action_Type['null']:
-        self.verb = Null()
-        self._actiontype = Action_Type['null']
-        self.args = { }
-
-      if kwargs['verb'] == Action_Type['move']:     #if move action
-        self.verb = Move()
-        self._actiontype = Action_Type['move']
-        self.args = { 'stage' :kwargs['stage'],
-                      'actor' :kwargs['actor'],
-                      'target':kwargs['target'] }
-
-      elif kwargs['verb'] == Action_Type['attack']: #if attack action
-        self.verb = Attack()
-        self._actiontype = Action_Type['attack']
-        self.args = { 'actor' :kwargs['actor'],
-                     # 'attack':kwargs['attack'],
-                      'target':kwargs['target'],
-                      'stage' : kwargs['stage'] }
-        
-#        from actor import AnimatedActor
-        loc = kwargs['stage'].loc( kwargs['target'] )
-        if loc:
-          loc = kwargs['stage'].map2screen( loc )
-          loc=( loc[0]-50, loc[1]-40 )
-
-
-        if not loc:
-          loc = (0,0)
-
-#        self.effect = AnimatedActor('/home/lorin/projects/ge/art/cut_a' , 20, loc )
-#        self.effect = AnimatedActor('/home/lorin/projects/ge/art/cut_a', 20, kwargs['target']._position )
-        
-      elif kwargs['verb'] == Action_Type['grab']:
-        self.verb = Grab()
-        self._actiontype = Action_Type['grab']
-        self.args = { 'stage' :kwargs['stage'],
-                      'actor' :kwargs['actor'] }
-                    #  'target':kwargs['target'],
-                    #  'tile'  :kwargs['tile'] }
-      elif kwargs['verb'] == Action_Type['drop']:
-        self.verb = Drop()
-        self._actiontype = Action_Type['drop']
-        self.args = { 'stage' :kwargs['stage'],
-                      'actor':kwargs['actor'] }
+    if 'atype' not in kwargs.keys(): 
+      #default initialization to 'null' action
+      self.__initnull__()
     else:
-      raise some_exception
+      try:
+        #passed a valid type
+        self.type = kwargs['atype']
+        for arg in self._actions[ self.type ]:
+          setattr( self, arg, kwargs[arg] )
+        self._effect = kwargs.get( 'effect', None )
+      except KeyError:
+        #TODO redirect to error log
+        print "Missing a necessary argument for Action, or Invalid Action type"
+        print kwargs
+  #===============================================================================================
+  def __initnull__(self):
+    """
+    default initialization to 'null' object
+    """
+    self.type = 'null'
+    self.energy = 0
+    self.args = { }  
+  #===============================================================================================
+  def skilltype(self):
+    """
+      utility function for accessing an action's skilltype
+    """
+    return self.skill.skilltype()
+  #===============================================================================================
+  def targetnumber(self):
+    return self.skill.targetnumber( self.energy )
+  def match(self, targetnumber):
+    return self.skill.match( targetnumber )
+  #===============================================================================================
+  def setenergy(self, **kwargs ):
+    """
+      given an energy value, attempt to set this skill's energy value to match
+      given a target number, attempts to set this skill's energy to match the target numebr
+      this can fail if:
+        the energy value exceeds the skills max energy
+        the character does not have enough energy
+    """
+    if self.type == 'null':
+      return False
+    if "targetnumber" in kwargs:
+      energy = self.tntoenergy( kwargs["targetnumber"] )
+    else:
+      energy = kwargs["energy"]
+    if self.actor.hand() >= energy and self.skill.maxenergy <= energy:
+      self.energy = energy
+    return True
     
-    
 
-  
-  #for now, just assumes we are performing a move action
-  def act(self):
-    """
-    """
-    
-    self.verb(self.args)
-    return self.effect
+#=================================================================================================
 
 
-class ActionFactory(object):
-  """
-  """
-  action_types = {'move': 0, 'attack': 1  }
-
-  def make_action(self,action_type):
-    """
-    """
-    new_action = Action()
-    return new_action
-
-
-
+#=================================================================================================
 
 class Move(object):
   """
@@ -112,7 +96,7 @@ class Move(object):
   def __call__(self, args):
     """
     """
-    args['stage'].move_character( args['actor'], args['target'])        
+
 
 class Attack(object):
 

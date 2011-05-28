@@ -66,7 +66,7 @@ int default_bounding_model_init( Vertel & model )
   }
 }
 //================================================================================================
-Actor::Actor(  char const * texpath/*, void*model */ ):
+Actor::Actor():
   model(),
   boundmodel(),
   boundoffset(),
@@ -82,14 +82,35 @@ Actor::Actor(  char const * texpath/*, void*model */ ):
   INIT_VERTEX( boundoffset, 3 );
   INIT_VERTEX( boundpos   , 3 );
   INIT_VERTEX( pos, 3 );
-  boundoffset[1] = 42.0/600.0;
+}
+//================================================================================================
 
+//================================================================================================
+Actor::Actor( const char * const texpath, const Vertel & _model, const Vertel & _bound ):
+  model(),
+  boundmodel(),
+  boundoffset(),
+  boundpos(),
+  pos(),
+  name( NAME_GEN() ),
+  texid(0),
+  drawmode(0),
+  offset(0)
+{
+  //  default_model_init(model);
+  model = _model;
+  boundmodel = _bound;
+  //  default_bounding_model_init(boundmodel);
+  INIT_VERTEX( boundoffset, 3 );
+  INIT_VERTEX( boundpos   , 3 );
+  INIT_VERTEX( pos, 3 );
+  boundoffset[1] = 42.0/600.0;
   boundpos[0] = pos[0]+boundoffset[0];
   boundpos[1] = pos[1]+boundoffset[1];
-
-  //try
-  Graphics * gfx = Graphics::Instance();
-  texid = gfx->loadtexture( texpath ); 
+  if ( true ){
+    Graphics * gfx = Graphics::Instance();
+    texid = gfx->loadtexture( texpath ); 
+  }
 }
 //================================================================================================
 void Actor::draw(){
@@ -102,7 +123,7 @@ void Actor::selectdraw( std::vector< int > & _name ){
   gfx->addselect( this->getdrawitem(_name) );
 }
 //================================================================================================
-void Actor::setpos(Vertex const & npos){
+void Actor::setpos(const Vertex & npos){
   /*  if ( npos.size() == this->pos.size() ){
     this->pos = npos;
     }*/

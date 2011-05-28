@@ -12,7 +12,9 @@ import random
 
 from dungeon.dungeon import DungeonMap
 
-from action import Action, Action_Type
+from action import Action
+
+from skill import Skill, SkillFactory
 
 from math import sqrt,fabs
 
@@ -33,52 +35,60 @@ class Mind(object):
     """
       ego - reference to the 'self' that this Mind is attached to
     """
-    self.ego = ego
-    self.qaction = list()
-    from skill import Skill
-    defence = Skill(name= 'parry',
-                    level= 1,
-                    threshold= 2,
-                    stype = Action.actype['parry'],
-                    effect= Action.actype['defence'])
-    defence.setenergy(4)
-    self._reaction = [defence,defence,None]
+    self._ego = ego
+    self._actionqueue = list()
+    self._target = None
+    
+    
+    sf = SkillFactory()
+    parry = sf.makeskill('parry')
+    dodge = sf.makeskill('dodge')
+ 
+    self._fofid = 1;
+    self._reactions = [parry,dodge,None]
     self._disabled = False
   #==============================================================================================
   def getaction(self):
     """
-      returns an action for this character to perform
+      returns the action(s) this character wishes to perform this turn
     """
-    if len(self.qaction):return self.qaction.pop(0)
+    if len(self._actionqueue):return self._actionqueue.pop(0)
     elif self._disabled: return False
     else:
-      self.plan( self.ego._context )
-      return self.qaction.pop(0)
+      self.plan( self._ego._context )
+      return self._actionqueue.pop(0)
   #==============================================================================================
-  def getreaction(self):
+  def appendaction( self, action ):
+    """
+    """
+    self._actionqueue.append(action)
+  #==============================================================================================
+  def getreaction(self, **kwargs):
     """
       returns a defense action for this character to perform
     """
-    return self._reaction[ random.randint(0,2) ]
+    if 'attack' in kwargs:
+      print "we should analyse the attack"
+    reaction = self._reactions[ random.randint(0,2) ]
+    if reaction:
+      return Action( atype = "defence",
+                     actor = self._ego,
+                     skill = reaction,          
+                     energy = 0 )
+    return Action() #if no reaction, return a null action 
   #==============================================================================================
   def plan(self, dungeon):
     """
       given the environment the ego is currently in, author an Action object
+    """
 
-
-
-      """
-    #identify a target and ego on the map
-#    print 'mind of %(name)s' %{'name': self.ego.name }
-
-
-    if not self.ego._alive:  
+    if not self._ego._alive:  
       action = False#Action( verb = Action.actions['null'] )
       self.qaction.append( action )
       return
 
     for each in dungeon.characters.items():
-      if each[1].name != self.ego.name:
+      if each[1].name != self._ego.name:
         target = each[1]
         targetloc = Vector2( each[0][0], each[0][1] )
       else:
@@ -97,17 +107,28 @@ class Mind(object):
 #    print myloc
 
     if dirVec.magnitude() < 4:
-      action = Action( verb = Action_Type['null'] )
+      action = Action()
     else:
       dirVec = dirVec.normalized() #normalize and round to get a unit vector towards the target
       dirVec.x = round(dirVec.x)   
       dirVec.y = round(dirVec.y)
 
-      action = Action( verb   = Action_Type['move'],
-                     actor  = self.ego,
-                     stage  = dungeon,
-                     target = dirVec )
-    self.qaction.append( action )
+
+      action = Action( atype   = 'move',
+                       actor  = self._ego,
+                       stage  = dungeon,
+                       target = dirVec,
+                       energy = 1 )
+      print "MIND ACTION", action
+    self._actionqueue.append( action )
+#=================================================================================================
+  def FriendOrFoe( self, target ):
+    """
+      Attempt to identify a character as an ally or target
+    """
+    if self._fofid != target.mind._fofid:
+      return True;
+    return False
 #=================================================================================================
   def rand_move( currentposition ):
     """
@@ -122,14 +143,22 @@ class Mind(object):
       elif randdir[i] > 9:
         randdir[i] = 9
     return randdir
-
-
-#find a target
-#calculate a direction vector towards the target
-#calculate the tile which corresponds to the direction vector
-#move to that square
+#=================================================================================================
+#=================================================================================================
+# MIND Algorithms
 #
-
-
-#pick a target
-#calculate distance to target
+#
+#  MOVE
+#
+#
+#  FOF - subsystem to id allies and targets
+#    first pass
+#    - id code
+#    - a character object broadcasts
+#
+#    - matching ID codes
+#      - a child inherits the id code of its parents
+#      - a generator can assign id codes arbitrarily
+#  
+#=================================================================================================
+#=================================================================================================

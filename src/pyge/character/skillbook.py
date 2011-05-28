@@ -26,7 +26,10 @@ class SkillBook(MultiDict):
     #the result is a dictionary of lists of skills, keyed by the skill. Each key represents all
     #skills of name key. The list should be sorted with increasing level.
   #===============================================================================================
-
+  def learn( self, skill ):
+    """
+    """
+    self[ skill.name ]=skill
   #===============================================================================================
 
 

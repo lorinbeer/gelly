@@ -47,95 +47,46 @@ class BattleMaster(object):
 #    self._agi_force_mult = 0.0 #0.0 kg*m/s^2 per agi point, used to calc movement speed
 #
   #===============================================================================================
-  #===============================================================================================
-  #
-  # Private Functions
-  #
-  #===============================================================================================
-  #===============================================================================================
-  def __impactforce__(self, strength ):
+  def resolve_combat( self, attack ):
     """
-      returns the force behind a weapon at the moment of impact based on the strength attribute
-
-      this is distinct from __attackforce__, which calculates the force used to accel a weapon
-
-      this function essentially a characters strength attribute to Force in kg*m/s^2, for the
-      purposes of calculating the force behind the weapon at the moment of impact
-      which can then be given to the physics system for calculating further values
-    """
-    return self._str_impact_force_mult * float(strength)
-  #===============================================================================================
-  def __attackforce__(self, strength ):
-    """
-      returns the force a character is able to exert on a weapon while attacking
-
-      this is distinct from __impactforce__, which calculates the force of a blow
-
-      this function translates a characters strength attribute to Force in kg*m/s^2,
-      which can then be given to the physics system for calculating further values
-    """
-    return self._str_attack_force_mult * float(strength)
-  #===============================================================================================
-  #===============================================================================================
-  #
-  # Public Interface
-  #
-  #===============================================================================================
-  #===============================================================================================
-  def resolve_combat(self, attacker, attack, defender, dungeon):
-    """
-
-    attacker - the character performing the attack
-    skill    - the skill the attacker is using
-    attack   - the attack being performed
-    defender - the target of the attack
+    resolve a combat action
+      attack - any object with a properly implemented Action interface
     """
     print "Battle Master: Resolve Combat"
-    print "Attacker Energy: %s " % (attacker._energy)
-    print "Defender Energy: %s " % (defender._energy)
-      ###TODO###
-        #for now, all attacks are assumed to be slash attacks, and all defense are parries
-    attack = Skill( name= 'slash',
-                    level= 3,
-                    threshold= 2,
-                    damagetype= 'cut',
-                    effect= Action.actype['attack'] )
-    attack.setenergy(4)
-      ###/TODO###
-    cd = {}
-
-
+    #first insure that the action has a valid target
+    if not attack.target:
+      print "Attack Action has no target, attacking the air in front of you..."
+      print "Attack is a success! Three Cheers! Now target something."
+      return
+    #=============================================================================================
     #Check for relevant status effects which might effect the flow of combat
     # these should be moved to a config file
     # config file should contain classes of status effects
- 
-
-
+#     cd = {}
 #      if False:
 #        for stat,mult in ability.multiplier.items():
 #          if stat in combatdict:
-#            combatdict[stat] *= mult        
+#            combadict[stat] *= mult        
 #        for stat,summand in ability.summand.items():
 #          if stat in combatdict:
 #            combatdict[stat] += summand 
+  #===============================================================================================
+    #resolve the defence, and apply the results
+    result = self.resolve_defense( attack )
+    attack.actor.use ( attack.energy ) #attacker uses the attack, energy is subtracted
+    attack.target.use( result['defence'].energy )#defender uses the defence, null actions remove 0
 
-
-    #Defense
-    defresult = self.resolve_defense( attacker, attack, defender, cd )
-    attacker.use( attack._energy )
-    defender.use( defresult['cost'] )
-    defender._wounds.append(defresult['wound'] )
-    print "Defense Result: ", defresult
-
-  #=============================================================================================
-  def resolve_defense(self, attacker, attack, defender, cd):
+    if result['wounds']:
+      attack.target._wounds.append( result['wounds'] )
+    print "Attacker Energy: %s " % (attack.actor.energy)
+    print "Defender Energy: %s " % (attack.target.energy)
+    print "Defense Result: ", result
+ #================================================================================================
+  def resolve_defense(self, attack ):
     """
-      calculate the result of a defender's defense (re)action to an attack
+      calculate the result of a target's defense (re)action to the attack action
       INPUT:
-           -attacker: attacking character 
-           -defender: defending character
-           -attack: the attack object the attacker is using
-           -cd:
+           -attack: the attack action being performed
       OUTPUT: dictionary with the following keys
                reaction: the reaction 'chosen' by the defender (parry, dodge or block)
                success: True/False if the reaction was successful/unsuccessful
@@ -144,38 +95,30 @@ class BattleMaster(object):
                cost: the energy cost to the defender given the chosen action 
                wound: the wound (if any) caused by the attack
     """
-
-
-    defencecost = 0
-    success = False
+    defence = attack.target.mind.getreaction()
+    success = False 
     wound = None
-    
-    defence = defender.mind.getreaction() #retrieve defense action from defender
-    
-    #1. handle attemts to attack or parry
-    if defence:
-      if defence.skilltype() == Action.actype['parry']: # and self.can_parry( defender, attack ):
-        (success, defencecost) = self.parry( attack, defence) #resolve parry
-      elif defence.skilltype() == Action.actype['dodge']:
-        (success, defencecost) = self.dodge() #resolve dodge
-    #2. handle a possibly successful defence action
-    #   if use returns false, it means the user had insuficient energy in hand for the action
-    if success and not defender.use( defencecost, True ):
-      print "DEFENCE FAIL"
-      success = False
 
+    #1. handle defence
+    if not (not defence or defence.type=='null'): #if the target defends
+      if defence.match( attack.targetnumber() ):  #2. handle a possibly successful defence action
+      #   if it is possible to set the defences energy to match the attack's target number
+        success = True #then defence is a success
+        print "attacker energy",attack.actor.energy()
+        #TODO pass the successful defence to the attack object, and see what it says
+        #some skills have a trigger on successful defences
     #3. handle unsuccessful defence by resolving armour penetration and any resulting  wounds
     if not success: #resolve_block, can always block, just like you can always get hit it the face
+      #TODO work out armour coverage
+      #
       if False: #self.armour_hit( cd['dcov']  ):
-        self.armour_penetration( defender , attack )
+        self.armour_penetration( attack )
       print "FUCKED IN THE FACE!"
-      wound = self.wound_resolution( defender=defender , attack=attack )
-        #self.wound = wound_resolution( character , 
+      wound = self.wound_resolution( attack )
+    result = { 'defence': defence,
+               'success': success,
+               'wounds'  : wound }
 
-    result = { 'reaction': defence,
-               'success' : success,
-               'cost'    : defencecost,
-               'wound'   : wound }
 
     return result
   #===============================================================================================
@@ -206,14 +149,21 @@ class BattleMaster(object):
   def parry( self, attack, defence ):
     """
       Determine the result of an attack vs defense skill test
+      sets the energy cost of the defence
 
       OUTPUT: tuple containing pass/fail result of parry, and cost
+
+      ALGORITHM
+       every attack skill has a function which calculates a target number as a function of
+       energy
+       in order to succeed, a defender must be able to spend at least 
     """
-    #can attack be parried?
-    atkTN = attack.targetnumber()
-    if atkTN <= defence.targetnumber(): #defence moves' TN will is max that skill is capable of
-      return True, atkTN #defence is successful, return the cost to the defender 
-    return False, atkTN  #defence is unsuccessful, but the defender still incurs a cost
+    #check parry rules to make sure everything is kosher
+    targetnumber = attack.skill.targetnumber( attack.energy ) #the number to beat
+    defence.energy = targetnumber #set the energy cost of the defence
+    if targetnumber <= defence.skill.targetnumber( attack.target._energy ): 
+      return True #defence is successful
+    return False  #defence is unsuccessful
   #===============================================================================================
   def can_dodge( self, character, attack ):
     """
@@ -257,13 +207,13 @@ class BattleMaster(object):
     roll = random.randint(1,100) #roll a d100
     if roll > dcoverage: return True
   #===============================================================================================
-  def armour_penetration( self, character, attack ):
+  def armour_penetration( self, action ):
     """
     """
     return False
   
   #===============================================================================================
-  def wound_resolution ( self , **kwargs  ):
+  def wound_resolution ( self , action  ):
     """
       given a context (wound table, location, strength of hit, type of hit and weapon), returns the wound inflicted.
 

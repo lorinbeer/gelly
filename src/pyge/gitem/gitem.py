@@ -5,10 +5,8 @@
 #=================================================================================================
 import sys
 sys.path.append("/home/lorin/projects/gelly/objs")
-from actor import Actor
+from actor import Actor, Animactor, Vertel
 #=================================================================================================
-
-
 class Gitem( Actor ):
   """
     Represents in game items
@@ -25,7 +23,17 @@ class Gitem( Actor ):
 #                                  kwargs.get('offset',(0,0) )
     self.texture = kwargs.get('texture',None)
     if self.texture:
-      super( Gitem, self ).__init__(self.texture)
+      _model = Vertel()
+      _model.set( [ ( 0.0, 0.0, 0.0 ), 
+                    ( 0.0, 171.0/600.0, 0.0 ), 
+                    ( 101.0/800.0, 171.0/600.0,0.0 ),
+                    ( 101.0/800.0 , 0.0, 0.0 ) ] )
+      _bound = Vertel()
+      _bound.set( [ ( 0.0, 0.0, 0.0 ),
+                    ( 0.0, 100.0/800, 0.0 ),
+                    ( 100.0/600.0, 100.0/800, 0.0 ),
+                    ( 100.0/600, 0.0, 0.0 ) ] )
+      super( Gitem, self ).__init__(self.texture, _model, _bound )
 
     self.type = None
     self.name = 'item name'
@@ -37,12 +45,13 @@ class Gitem( Actor ):
     if self.texture:
       pos[1]+=0.016
       super( Gitem, self ).draw(pos)
-    
+  #===============================================================================================
   def __str__(self):
     """
     """
     return 'item: %(name)s' %{'name':self.name}
 
+#=================================================================================================
 
 class GitemFactory( object ):
   """
