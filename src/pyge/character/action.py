@@ -5,8 +5,13 @@
 #
 #=================================================================================================
 #=================================================================================================
-
-#=================================================================================================
+def conjugate(skill,**kwargs):
+  """
+    helper function to Action/Skill classes
+    upclasses a skill to an action
+  """
+  print "conjugate",skill
+  
 #=================================================================================================
 class Action( object ):
   """
@@ -16,13 +21,11 @@ class Action( object ):
     to perform the desired action
   """
   _actions = { 'null'   : [],
-            'move'   : ['actor','target','stage','energy'],  #move actor to target on stage
-            'attack' : ['actor','target','skill','stage','energy'], #actor attacks with skill on stage
-            'defence': ['actor','skill','energy'], #actor defends with skill at energy
-#           'parry'  : ['actor','skill','energy'], 
-#           'dodge'  : ['actor','skill','energy'],
-            'grab'   : ['actor','target','tile','stage'],
-            'drop'   : ['actor','stage'] }
+               'move'   : ['actor','target','stage','energy'],  #move actor to target on stage
+               'attack' : ['actor','target','skill','stage','energy'], #actor attacks with skill on stage 
+               'defence': ['actor','skill','energy'], #actor defends with skill at energy
+               'grab'   : ['actor','target','tile','stage'],
+               'drop'   : ['actor','stage'] }
   #===============================================================================================
   def __init__(self, **kwargs ):
     """
@@ -31,6 +34,7 @@ class Action( object ):
       actor - in this context, simply the active agent in the formula
       target- the target object of the action
     """
+    self._null = False
     self.effect = False
     if 'atype' not in kwargs.keys(): 
       #default initialization to 'null' action
@@ -42,6 +46,7 @@ class Action( object ):
         for arg in self._actions[ self.type ]:
           setattr( self, arg, kwargs[arg] )
         self._effect = kwargs.get( 'effect', None )
+        self._beat = True
       except KeyError:
         #TODO redirect to error log
         print "Missing a necessary argument for Action, or Invalid Action type"
@@ -52,21 +57,30 @@ class Action( object ):
     default initialization to 'null' object
     """
     self.type = 'null'
+    self._null = True
+    self._beat = True
     self.energy = 0
     self.args = { }  
+      
   #===============================================================================================
   def skilltype(self):
-    """
-      utility function for accessing an action's skilltype
-    """
+    """utility function for accessing an action's skilltype"""
     return self.skill.skilltype()
   #===============================================================================================
   def targetnumber(self):
     return self.skill.targetnumber( self.energy )
+  def maxenergy(self):
+    return self.skill.maxenergy()
   def match(self, targetnumber):
     return self.skill.match( targetnumber )
+  def beat(self, targetnumber):
+    return self.skill.match( targetnumber )
+  def onsuccess(self):
+    return self.skill.onsuccess()
+  def onfail(self):
+    return self.skill.__onfail_form__(self,None)
   #===============================================================================================
-  def setenergy(self, **kwargs ):
+  def setenergy(self, energy ):
     """
       given an energy value, attempt to set this skill's energy value to match
       given a target number, attempts to set this skill's energy to match the target numebr
@@ -76,14 +90,15 @@ class Action( object ):
     """
     if self.type == 'null':
       return False
-    if "targetnumber" in kwargs:
-      energy = self.tntoenergy( kwargs["targetnumber"] )
-    else:
-      energy = kwargs["energy"]
-    if self.actor.hand() >= energy and self.skill.maxenergy <= energy:
+    if self.actor.hand() >= energy and self.maxenergy() <= energy:
       self.energy = energy
-    return True
-    
+      return True
+    return False
+  #===============================================================================================
+  def null(self):
+    """returns true if this is a null type Action"""
+    if self._null: return True
+    return False
 
 #=================================================================================================
 

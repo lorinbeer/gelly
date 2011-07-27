@@ -285,7 +285,7 @@ public:
      : width(_w),
        height(_h),
        needs_full_refresh(true),
-       uiButtonSig(0)
+       m_uiSignal(0)
     {
         // Create texture to hold rendered view
         glGenTextures(1, &web_texture);
@@ -302,8 +302,8 @@ public:
         bk_window->resize(width, height);
         bk_window->setTransparent(_usetrans);
 	
-	uiButtonSig = new sigc::signal<void,int>();
-    }
+	m_uiSignal = new sigc::signal<void,std::string*>();
+   }
   //==============================================================================================
   ~GLBerkeliumWindow() {
     delete scroll_buffer;
@@ -375,29 +375,36 @@ public:
         }
     }
   //==============================================================================================
-
+  virtual void onConsoleMessage( Berkelium::Window * win,
+				 Berkelium::WideString message,
+				 Berkelium::WideString sourceId,
+				 int line_no) 
+  {
+    printf("console.log: %ls\n", message.data() );
+  }
   //==============================================================================================
-    virtual void onExternalHost(
+  virtual void onExternalHost(
         Berkelium::Window *win,
         Berkelium::WideString message,
         Berkelium::URLString origin,
         Berkelium::URLString target)
-    {
-      //std::cout << "*** onExternalHost at URL from "<<origin<<" to "<<target<<":"<<std::endl;
-      //std::wcout << message<<std::endl;
-        //TODO: check that we can cast the wchar* message to char*
-        //      the only messages we want to receive from the ui layer will be ints anyways
-        unsigned int control_id = atoi( (char *)message.data() );
-        this->uiButtonSig->emit( control_id );
-	//	std::cout << "Button :" << control_id << " pressed/n";
-    }
-  //==============================================================================================
-  // 
-  //  func_ptr: pointer to void function which accepts no arguments
-  //
-  void connect( void (*func_ptr)(unsigned int)  )
   {
-    this->uiButtonSig->connect( sigc::ptr_fun( func_ptr ) );
+    //someone thought it would be a good idea to use wchar_t. It wasn't.
+    //apparently it's chromium's fault
+    char * cstr = new char[ message.length()+1 ];
+    std::string * msg = 0;
+    const wchar_t * wmsg = message.data();
+    //we only expect ascii characters, this assupmtion will get us into trouble eventually
+    for( int i = 0; i < message.length(); i++) {
+      cstr[i] = (char)wmsg[i];
+    }
+    msg = new std::string( cstr, message.length() ); //
+    this->m_uiSignal->emit( msg  );
+  }
+  //==============================================================================================
+  //
+  void uiConnectSignal( void (*func_ptr)(std::string*)  ){
+    this->m_uiSignal->connect( sigc::ptr_fun( func_ptr ) );
   }
   //==============================================================================================
 
@@ -413,22 +420,11 @@ private:
   bool needs_full_refresh;
   // Buffer used to store data for scrolling
   char* scroll_buffer;
+
   //==============================================================================================
-  sigc::signal<void,int> * uiButtonSig; 
+  //callback signals 
+  sigc::signal<void,std::string*> * m_uiSignal; 
   //==============================================================================================
 };
 
-#endif 
-//_BERKELIUM_GLUT_UTIL_HPP_
-  /*
-  virtual void onRunFileChooser(Window *win, int mode, WideString title, FileString defaultFile){
-   std::wcout << L"*** onRunFileChooser type " << mode << L", title " << title << L":" << std::endl;
-#ifdef _WIN32
-        std::wcout <<
-#else
-        std::cout <<
-#endif
-            defaultFile << std::endl;
-
-        win->filesSelected(NULL);
-    } */
+#endif //_BERKELIUM_GLUT_UTIL_HPP_

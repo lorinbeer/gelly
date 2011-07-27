@@ -37,24 +37,18 @@ class BattleMaster(object):
   """
     Primary implementation of the combat system.
     Contains functions for resolving combat actions, and calculating intermediate values.
+
+    Combat system is designed implemented like a pipeline, with small atomic functions, and 
+    backtrack 
   """
-  def __init__(self):
-    """
-      initialize internal BattleMaster settings
-    """
-    self._str_attack_force_mult = 20.0 #20.0 kg*m/s^2 per str point, used to calculate wpn accel
-    self._str_impact_force_mult = 50.0 #50.0 kg*m/s^2 per str point, used to calculate impact F
-#    self._agi_force_mult = 0.0 #0.0 kg*m/s^2 per agi point, used to calc movement speed
-#
   #===============================================================================================
   def resolve_combat( self, attack ):
     """
     resolve a combat action
       attack - any object with a properly implemented Action interface
     """
-    print "Battle Master: Resolve Combat"
-    #first insure that the action has a valid target
     if not attack.target:
+      #request that character target something
       print "Attack Action has no target, attacking the air in front of you..."
       print "Attack is a success! Three Cheers! Now target something."
       return
@@ -74,13 +68,12 @@ class BattleMaster(object):
     #resolve the defence, and apply the results
     result = self.resolve_defense( attack )
     attack.actor.use ( attack.energy ) #attacker uses the attack, energy is subtracted
-    attack.target.use( result['defence'].energy )#defender uses the defence, null actions remove 0
+    attack.target.use( result['def'].energy )#defender uses the defence, null actions remove 0
 
-    if result['wounds']:
-      attack.target._wounds.append( result['wounds'] )
+    if result['wou']:
+      attack.target._wounds.append( result['wou'] )
     print "Attacker Energy: %s " % (attack.actor.energy)
     print "Defender Energy: %s " % (attack.target.energy)
-    print "Defense Result: ", result
  #================================================================================================
   def resolve_defense(self, attack ):
     """
@@ -95,34 +88,31 @@ class BattleMaster(object):
                cost: the energy cost to the defender given the chosen action 
                wound: the wound (if any) caused by the attack
     """
-    defence = attack.target.mind.getreaction()
-    success = False 
-    wound = None
-
-    #1. handle defence
-    if not (not defence or defence.type=='null'): #if the target defends
-      if defence.match( attack.targetnumber() ):  #2. handle a possibly successful defence action
-      #   if it is possible to set the defences energy to match the attack's target number
-        success = True #then defence is a success
-        print "attacker energy",attack.actor.energy()
-        #TODO pass the successful defence to the attack object, and see what it says
-        #some skills have a trigger on successful defences
-    #3. handle unsuccessful defence by resolving armour penetration and any resulting  wounds
-    if not success: #resolve_block, can always block, just like you can always get hit it the face
-      #TODO work out armour coverage
-      #
-      if False: #self.armour_hit( cd['dcov']  ):
-        self.armour_penetration( attack )
-      print "FUCKED IN THE FACE!"
-      wound = self.wound_resolution( attack )
-    result = { 'defence': defence,
-               'success': success,
-               'wounds'  : wound }
-
-
-    return result
-  #===============================================================================================
- 
+    try:
+      defence = attack.target.mind.getreaction()
+      success = False
+      wound   = None
+      result = { 'def' : defence }
+      if not defence.null():  #if the defence is a valid action
+        # 1.1 the target has chosen to defend, now check that he is capable
+        val  = defence.beat( attack.targetnumber() )
+        if defence._beat and val: #if we are trying to beat the attack, and we can beat the attack
+          success = defence.setenergy( val )
+        else:
+          val = defence.beat( attack.targetnumber() )
+          success = defence.setenergy( val )
+      #send defence to attack object, to test for any triggers
+      if not success:#resolve_block, can always block,just like you can always get hit it the face
+        if not defence.null(): defence.onfail()
+        #TODO ARMOUR COVERAGE
+        if False:
+          self.armour_penetration( attack )
+        wound = self.wound_resolution( attack )
+      result['suc'] = success
+      result['wou'] = wound
+      return result
+    except KeyError:
+      print "keyerror"
   #===============================================================================================
   def can_parry(self, character, attack ):
     """

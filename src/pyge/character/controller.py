@@ -8,16 +8,25 @@ import sys
 sys.path.append("/home/lorin/projects/gelly/objs ")
 from actor import Actor, Vertel
 from actor import Vertex
-from pysdlutil import SDLKey, SDL_EventType, Event
-
+from pysdlutil import SDLKey, Gelly_EventType, Event
 
 from character import Character
 from action import Action
 from skill import Skill, SkillFactory
 
+from util.vector import Vector
 
-from matrix.vector import Vector
-from other.euclid import Vector2
+import ast
+#=================================================================================================
+
+
+#=================================================================================================
+#=================================================================================================
+def setskillcb():
+  print "setskill cb"
+  return "{ nightmare:ride }"
+
+#=================================================================================================
 #=================================================================================================
 class Selection( Actor ):
   """
@@ -61,6 +70,16 @@ class Selection( Actor ):
 #=================================================================================================
 #=================================================================================================
 
+#Messages
+#  the controller can receive string messages encoding some manipulation of the game state
+# Actionbar Messages
+#  target action bar, and instruct the character to execute the designated action
+#
+#    actionbar:execute:<int>
+#    actionbar:slotchange:<int>
+#    actionbar:skillchange:<int>
+
+#Return Messages
 
 #=================================================================================================
 #=================================================================================================
@@ -75,73 +94,77 @@ class Controller(object):
       character - the character object that this Controller is associated with
     """
     #will load command settings from a file
-    self._character = character
+    self.character = character
     self._selection = Selection()
+    self._jscallbackdict = {'setskill':setskillcb}
   #===============================================================================================
   def interpret(self, event, dungeon ):
     """
       interpret the event in terms of the associated character object, returning an action which
       can be used to apply the desired effect to the game state
     """
-    if event.type == SDL_EventType.KEYUP:
+    if event.type == Gelly_EventType.MSGEVENT: print event.message
+    if event.type == Gelly_EventType.KEYUP:
       return self.interpretkeyevent(event,dungeon)
-    elif event.type == SDL_EventType.MOUSEBUTTONUP:
+    elif event.type == Gelly_EventType.MOUSEBUTTONUP:
       return self.interpretmouseevent(event,dungeon)
+    elif event.type == Gelly_EventType.MSGEVENT:
+      return self.interpretmessage(event,dungeon)
     return False
   #===============================================================================================
   def interpretkeyevent(self, keyevent, dungeon):
     """
     """
-    if keyevent.type == SDL_EventType.KEYUP:
+    if keyevent.type == Gelly_EventType.KEYUP:
       direc = False
       #===========================================================================================
       # direction keys, directely interpreted as move actions
       #===========================================================================================
       if keyevent.key == SDLKey.SDLK_UP:
-         direc = Vector2(0,-1)
+         direc = Vector((0,-1))
       elif keyevent.key == SDLKey.SDLK_DOWN:
-        direc = Vector2(0,1)
+        direc = Vector((0,1))
       elif keyevent.key == SDLKey.SDLK_RIGHT:
-        direc = Vector2( 1,0)
+        direc = Vector(( 1,0))
       elif keyevent.key == SDLKey.SDLK_LEFT:
-        direc = Vector2(-1,0)
+        direc = Vector((-1,0))
       #===========================================================================================
       
       #===========================================================================================
       elif keyevent.key == SDLKey.SDLK_a:
-        action = Action( actor  = self._character,
+        action = Action( actor  = self.character,
                          atype  = 'attack',
-                         target = self._character._target,
-                         skill  = self._character.deck[0],
-                         stage  = self._character._context,
-                         energy = 4 )
-        self._character.mind.appendaction( action )
+                         target = self.character._target,
+                         skill  = self.character.deck[0],
+                         stage  = self.character._context,
+                         energy = 3 )
+        self.character.mind.appendaction( action )
       #===========================================================================================
       elif keyevent.key == SDLKey.SDLK_1:
-        #self._character.mind.appendaction( self.makeaction(0) )
+        #self.character.mind.appendaction( self.makeaction(0) )
         print "gelly UI: button 1 pressed"
       elif keyevent.key == SDLKey.SDLK_2:
-        #self._character.mind.appendaction( self.makeaction(1) )
+        #self.character.mind.appendaction( self.makeaction(1) )
         print "gelly UI: button 2 pressed"
       elif keyevent.key == SDLKey.SDLK_3:
-        #self._character.mind.appendaction( self.makeaction(2) )
+        #self.character.mind.appendaction( self.makeaction(2) )
         print "gelly UI: button 3 pressed"
       elif keyevent.key == SDLKey.SDLK_4:
-        #self._character.mind.appendaction( self.makeaction(3) )
+        #self.character.mind.appendaction( self.makeaction(3) )
         print "gelly UI: button 4 pressed"
       elif keyevent.key == SDLKey.SDLK_5:
-        #self._character.mind.appendaction( self.makeaction(4) )
+        #self.character.mind.appendaction( self.makeaction(4) )
         print "gelly UI: button 5 pressed"
       elif keyevent.key == SDLKey.SDLK_6:
-        self._character.mind.appendaction( self.makeaction(5) )
+        self.character.mind.appendaction( self.makeaction(5) )
       elif keyevent.key == SDLKey.SDLK_7:
-        self._character.mind.appendaction( self.makeaction(6) )
+        self.character.mind.appendaction( self.makeaction(6) )
       elif keyevent.key == SDLKey.SDLK_8:
-        self._character.mind.appendaction( self.makeaction(7) )
+        self.character.mind.appendaction( self.makeaction(7) )
       elif keyevent.key == SDLKey.SDLK_9:
-        self._character.mind.appendaction( self.makeaction(8) )
+        self.character.mind.appendaction( self.makeaction(8) )
       elif keyevent.key == SDLKey.SDLK_0:
-        self._character.mind.appendaction( self.makeaction(9) )
+        self.character.mind.appendaction( self.makeaction(9) )
       #===========================================================================================
 #      elif keyevent.scancode == 33: #p key
  #       loc = dungeon.loc(self.character)
@@ -155,9 +178,9 @@ class Controller(object):
                      #                       stage = dungeon,
                      #                       actor = self.character ) )
     if  direc:
-      self._character.mind.appendaction(  Action( atype = 'move',
+      self.character.mind.appendaction(  Action( atype = 'move',
                                           stage = dungeon,
-                                          actor = self._character,
+                                          actor = self.character,
                                           target = direc,
                                           energy = 1 ) )
     return False
@@ -166,13 +189,41 @@ class Controller(object):
     """
       
     """
-    if mevent.type == SDL_EventType.MOUSEBUTTONUP:
+    if mevent.type == Gelly_EventType.MOUSEBUTTONUP:
       tile = dungeon.map[mevent.x, mevent.y]
       self._selection.select( tile )
       for item in tile.items:
         if isinstance(item,Character):
-          self._character.settarget( item )
-          print self._character, "targets", self._character.mind._target
+          self.character.settarget( item )
+          print self.character, "targets", self.character.mind._target
+  #===============================================================================================
+  def interpretmessage(self, mevent, dungeon ):
+      """
+      handles messages from any external source
+      """
+      print "MESSAGE",mevent.target, mevent.action, mevent.message
+      try:
+        message = ast.literal_eval( mevent.message ) #parse the message component, should yield a dict
+        target = getattr(self,mevent.target) #attempt to isolate the target
+        action = getattr( target, mevent.action ) #attempt to isolate the action on the target
+        action(**message)
+        print "testing action"
+        print action
+        if mevent.action == "setskill":
+          return setskillcb()
+      except Exception:
+        print "something fucked up in interpretmessage"
+  #===============================================================================================
+  def interpretjsonmessage(self, mevent, dungeon ):
+    """
+      TODO: json message handling
+    """
+    return False
+  def interpretxmlmessage(self, mevent, dungeon ):
+    """
+      TODO: xml message handling
+    """
+    return False
   #===============================================================================================
   def makeaction(self, skillnumb):
     """
@@ -192,4 +243,3 @@ class Controller(object):
 #                     energy = 4 )
 #    return action
   #===============================================================================================
- 

@@ -9,7 +9,6 @@
 #from character import Character
 
 from character.action import Action
-
 from battlemaster import BattleMaster
 
 #=================================================================================================
@@ -35,25 +34,18 @@ class DungeonMaster(object):
     #=============================================================================================
   #===============================================================================================
   def resolve_action( self, action ):
-    """
-      
-      actor - the acting object, whatever is attempting the action 
-      action - the action to be performed
-      target - the target of the action
-    """
-    print "Dungeon Master: Resolve Action"
+    """ """
     if action.type == 'attack':
       self.battlemaster.resolve_combat( action )
-      print "RESOLVING ATTACK", action.type
-      print action.skill.effect
+#      self.update()
       return action.skill.effect
     elif action.type == 'move':
-      self.resolve_move( action )
+      self.resolvemove( action )
   #===============================================================================================
-  def resolve_move( self, mact ):
+  def resolvemove( self, moveaction ):
     """
     """
-    mact.stage.move_character( mact.actor, mact.target )
+    moveaction.stage.movecharacter( moveaction.actor, moveaction.target )
   #===============================================================================================
   def resume( self ):
     """
@@ -66,22 +58,34 @@ class DungeonMaster(object):
     """
     effects = []
     while True:
+
+      if self._current >= len(self._characters): #circular increment
+        self._current = 0
+
       char = self._characters[self._current] 
-      char.update() #ready the character for this turn
-      
+
+      #EMIT EVENT TURN START
+      #EVENT System
+      char.listen()
+      if not char._alive: 
+        self.update()
+        return
+
       action = char.mind.getaction() #request an action from the current character
       if action: #npc's will always return an action, might have to wait on pc's
         effect = self.resolve_action( action )
         if effect:
           self._effects.append( effect )
       else: #pc's will return false if no action is in the queue
-        return effects#in this case, we return, waiting for character to perform an action
-      self._current += 1 #move to the next character
-      if self._current >= len(self._characters): #circular increment
-        self._current = 0
         break
+       # return effects#in this case, we return, waiting for character to perform an action
+      self._current += 1 #move to the next character
+
+
+
 
 #ugly hackishness, placing each effect at the coordinates of the current characters target
+    print self._effects
     for e in self._effects:
       if char.mind._target:
         loc = self.dungeon.loc( char.mind._target )
@@ -89,8 +93,6 @@ class DungeonMaster(object):
         loc = self.dungeon.loc( char )
         loc = (loc[0],loc[1]+1)
       self.dungeon.place( e, loc )
-    
-
   #===============================================================================================
   def update( self ):
     """
@@ -99,7 +101,7 @@ class DungeonMaster(object):
       handles checks for dead characters/objects
     """
     for character in self._characters:
-      if character._health <= 0:
+      if character.health <= 0:
         character._alive = False
     self.prune()
     for i,e in enumerate(self._effects):

@@ -9,9 +9,8 @@ sys.path.append("/home/lorin/projects/gelly/objs")
 #=================================================================================================
 from actor import Actor, Animactor
 from actor import Vertex, Vertel, IntVec
-#from actor.boundedactor import BoundedActor
-from matrix.vector import Vector
-from other.euclid import Vector2
+from util.vector import Vector
+
 
 from character.effect import Effect
 
@@ -19,7 +18,6 @@ from itertools import chain,product
 #=================================================================================================
 
 #=================================================================================================
-
 class MultiDict(dict):
   """
     dict subclass which stores key/value pairs of the form tuple/object
@@ -58,19 +56,13 @@ class MultiDict(dict):
   def items(self):
     """
     """
-#    for k,v in product( super(MultiDict,self).keys(), self.values() ): print k,v
-#    for k,v in product( super(MultiDict,self).keys(), self.values() ): yield k,v
-#   for k,l in 
     for k,l in super(MultiDict,self).items():
       for each in l:
         yield k,each                    
-#
-    
+#   
 #=================================================================================================
   #to support multiple values per key, we need to overload the delete item function
 #=================================================================================================
-
-
 class Tile( Actor ):
   """
   """
@@ -106,17 +98,10 @@ class Tile( Actor ):
                   ( 100.0/800, 0.0, 0.0 ) ] )
     super(Tile,self).__init__( self.tiletypes[tilecode], _model, _bound )
 
-    
-
-### subclassed directly from Actor ###
-#    model = [ (0,0), (0,181), (100,181), (100,0) ]
-#    super(Tile,self).__init__( model, self.tiletypes[tilecode] )
-
 
     self.x = x
     self.y = y
     self.items = list()
-    
     self.full = False
 
   def loc(self):
@@ -126,9 +111,6 @@ class Tile( Actor ):
     """
       draw
     """
-#    if self._tilecode == '#':
-#      pos = (pos[0],pos[1]+40)
-    #super(Tile,self).draw(pos, (self.x,self.y) )
     vpos = Vertex()
     vpos.append( pos[0] )
     vpos.append( pos[1] )
@@ -139,8 +121,6 @@ class Tile( Actor ):
       if not isinstance(each, Animactor):
         each.draw( vpos )#(pos[0],pos[1]),"object" )
       else:
-        print "draw effect"
-        print self.x, self.y, vpos[0], vpos[1]
         each.draw( vpos )
 
   def place_item( self, item ):
@@ -169,6 +149,15 @@ class Tile( Actor ):
       str0 = str0+str1+'\n'
     return str0
 
+  def setWall(self, full):
+    """
+    """
+    self.full = full
+
+  def isWall(self):
+    return False
+  def isOccupied(self):
+    return True
 
 #=================================================================================================
 class DungeonMap(object):
@@ -197,8 +186,8 @@ class DungeonMap(object):
     self.screen_size   = Vector( (800,600) )
     self.screen_center = Vector( (0,0) )
     self.center_tile = Vector( (0,0) )
-    self.x_range = Vector2( )
-    self.y_range = Vector2( )
+    self.x_range = Vector( )
+    self.y_range = Vector( )
   #===============================================================================================
   def draw(self,center,select=False):
     """
@@ -244,7 +233,8 @@ class DungeonMap(object):
     
  #   itemsOnTile = self.characters[pos]
  #   i = itemsOnTile.index( character )
-
+    if isinstance(pos,Vector):
+      pos = pos.hash()
     if self.map[pos].full: return False
 
     if isinstance(item,Character):
@@ -259,32 +249,25 @@ class DungeonMap(object):
       self.effects[pos] = item
     print "item %(name)s placed" % {'name': item }
   #===============================================================================================
-  def move_character( self, character, dest, mode='relative' ):
+  def movecharacter( self, character, dest, mode='relative' ):
     """
-      moves a character currently on the map to another location on the map
+      reposition a character currently on the map to another location on the map
 
-      item: item to move
-      dest: coord destination as a Vector2 object
-      mode: relative, or absolute, default is relative
+      if you wish to place a character on the map, use placecharacter instead
+      
+      this function returns false only if the character is not on the map, or if the destination tile is full
+      a full tile generally means a wall
+      @param character to move
+      @param dest tuple coordinate representing destination/offset, depending on mode
+      @param mode: de: relative, or absolute, default is relative
     """
-    loc = self.loc(character)
-    if mode == 'relative':
-      dest = dest+loc
-
-    if self.map[(dest.x,dest.y)].full: return 0
-
-#    if 0 <= dest.x and dest.x < self.size[0] and 0 <= dest.y and dest.y < self.size[1]:  
-#      found = False
-#      for each in self.characters.items():
-#        if each[1] == character:
-#          found = True
-#          loc   = each[0]
-
-    if True:
-      self.characters[loc[0],loc[1]].remove(character)
-      self.map[loc[0],loc[1]].remove_item( character ) #remove item from tile
-      self.map[dest.x,dest.y].place_item( character ) #place item on new tile
-      self.characters[dest.x,dest.y] = character #insert item into characters at new loc
+    loc = self.loc(character) #get the location of the character
+    if mode == 'relative': dest = dest+loc #calculate destination based on mode
+    if loc and not self.map[dest.hash()].full:
+      self.characters[loc.hash()].remove(character) #remove character the character list
+      self.map[loc.hash()].remove_item( character ) #remove item from tile
+      self.map[dest.hash()].place_item( character ) #place item on new tile
+      self.characters[dest.hash()] = character #insert item into characters at new loc
   #===============================================================================================
   def loc(self,item):
     """
@@ -292,7 +275,7 @@ class DungeonMap(object):
     """  
     for each in self.characters.items():
       if item == each[1]:
-        return (each[0][0],each[0][1])
+        return Vector(each[0])
     return False
   
   #===============================================================================================
@@ -346,7 +329,6 @@ class DungeonMap(object):
     xelements = self.screen_size[0] / self.tile_size[0]
     yelements = self.screen_size[1] / self.tile_size[1]
 
-    print pos
     print self.center_tile
     offset = Vector(pos) - self.center_tile
     print offset
@@ -387,6 +369,7 @@ class DungeonDecorator(object):
 #                        offset = (0,46) )
           wall = Gitem( texture = "/home/lorin/projects/ge/art/planetcute/Wall Block Tall.png" )
           dungeon.place( wall, (i,j) )
+          dungeon.map[(i,j)].setWall(True) #inform this tile that it is a wall
 
   def decorate(self,dungeon):
     """
@@ -403,21 +386,24 @@ class DungeonDecorator(object):
 
     gitemFac = GitemFactory()
     image_pc = "/home/lorin/projects/ge/art/planetcute/Character Horn Girl.png"
-    pc = Character("Angelina", image_pc, dungeon)
+    pc = Character("Angelina", image_pc, dungeon, [], 1)
     pc.width = 0
     knife = gitemFac.makegitem()
-    print pc._equipment.equip( knife )
     pc.mind._disabled = True
     pc.skillbook.learn( skillslash )
-    pc.deck.set( 0, skillslash )
-
+    pc.setskill( slot='SLOT_1', skill=skillslash.name )
 
     image_mob = "/home/lorin/projects/ge/art/planetcute/Enemy Bug.png"
-    mob = Character("Goblin", image_mob, dungeon)
+    mob = Character("Goblin", image_mob, dungeon,[],-1)
     mob.health = 25
+
+    image_mob2 = "/home/lorin/projects/ge/art/planetcute/Character Boy.png"
+    mob2 = Character("Boy", image_mob2, dungeon,[],-1)
+    mob2.health = 50
 
     dungeon.place( pc,  (5, 0) )
     dungeon.place( mob, (5,15) )
+    dungeon.place( mob2, (5, 25) )
 
 
 

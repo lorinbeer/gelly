@@ -1,0 +1,52 @@
+html {
+  overflow:hidden;
+}
+
+#actionbar {
+  position: absolute;
+  bottom : 0em;
+}
+
+.gelly-button {
+  width  : 85px;
+  height : 85px;
+  float : left;
+  margin: 0.1em;
+}
+
+.gelly-button-border {
+  width : 85px;
+  position : absolute;
+}
+
+.gelly-button-icon {
+  width : 85px;
+  position : absolute;
+}
+
+.gelly-panel {
+  border : black solid medium;
+  border-radius: 15px;
+  padding : 0.5em;
+  background : darkslategrey;
+  box-shadow: 5px 5px 5px #ccc;
+  z-index:-1;
+}
+
+.gelly-form {
+  padding : 0.5em;
+}
+
+.gelly-context-menu {
+  padding : 0.5em;
+  width : 10em;
+  z-index:10; 
+}
+
+.gelly-context-menu-item {
+  
+}
+
+.gelly-context-menu-item-mouse-over {
+  outline : black solid medium;
+}

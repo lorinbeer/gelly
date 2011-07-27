@@ -47,6 +47,9 @@ void pysetvertel( Vertel & self, list & vertexlist ) {
   }
 }
 //================================================================================================
+//Python Animated Actor Class
+// acts as an interface between the C++ Animactor class, and a python client
+// extracts c-types from python arguments for use with Animactor
 class PyAnimactor
 {
   public:
@@ -66,8 +69,10 @@ class PyAnimactor
   void draw( Vertex const & npos ){
     this->wanimactor->draw( npos );
   }
-  
 
+  //GET&SET for currentframe
+  int getcurrentframe(){ return this->wanimactor->currentframe; }
+  void setcurrentframe(int frame){ this->wanimactor->currentframe = frame; }
   bool getdone(){ return this->wanimactor->done; }
   void setdone( bool nstate ) { this->wanimactor->done = nstate; }
 
@@ -108,6 +113,7 @@ BOOST_PYTHON_MODULE(actor)
   class_<PyAnimactor>("Animactor", init<list&,Vertel&>() )
     // .def( "update", &Animactor::update )
     .add_property( "done", &PyAnimactor::getdone, &PyAnimactor::setdone )
+    .add_property( "currentframe", &PyAnimactor::getcurrentframe, &PyAnimactor::setcurrentframe )
     .def( "draw", &PyAnimactor::draw )
   ;
 }

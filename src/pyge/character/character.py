@@ -14,6 +14,7 @@ from actor import Actor, Vertel
 from mind  import Mind
 from energy import Energy
 from skillbook import SkillBook
+from action import Action
 from inventory import Inventory
 from buffable import Buffable
 #=================================================================================================
@@ -76,7 +77,11 @@ class Stat( object ):
     """
     self._behave = stat_type
 #=================================================================================================
-class Deck( list ):
+#=================================================================================================
+
+#=================================================================================================
+#=================================================================================================
+class Deck( dict ):
   """
     An active skill list, holding those skills which a character can activate in combat
     
@@ -87,24 +92,52 @@ class Deck( list ):
   def __init__(self, **kwargs):
     """
       INPUT:
-        maxsize (int)  - maximum number of skills allowed in the deck at any one time
-        skills  (list) - the skills to initialize the deck with, if any
-                         only copies up to maxsize skills from this list
+        maxsize    (int)  - maximum number of skills allowed in the deck at any one time
+        skillslots (list) - the slots to initialize the deck with  the skills to initialize the 
+                            deck with, if any only copies up to maxsize skills from this list
     """
     super(Deck,self).__init__()
-    self._maxsize = kwargs.get( 'maxsize', 4 );
-    skills = kwargs.get('skills', [])
-    for i in range(0,4):
-      if i < len( kwargs['skills']):
-        self.append( kwargs['skills'][i] )
-      else:
-        self.append( None )
+    self._maxsize = kwargs.get('maxsize',6)
+    self.slots = {}
+    self.skills = self
+    slots = kwargs.get('slots', [])
+    skills = kwargs.get('skills',[])
+    for i in range(0,self._maxsize):
+      key = 'SLOT_%i'%(i)
+      if i < len(slots):  self.slots[key] = slots[i]
+      else: self.slots[key] = 'default'
+      if i < len(skills): self[key] = skills[i]
+      else: self[key] = None
   #===============================================================================================
-  def set(self, index, skill):
+  def getslot(self,key):
     """
-      
     """
-    self[index] = skill
+    return self.slots[key]
+  #===============================================================================================
+  def getskill(self,key):
+    """
+    """
+    return self[key]
+  #===============================================================================================
+  def setskill(self,**kwargs):
+    """
+    """
+    try:
+      print kwargs
+      print  'KSILL<',kwargs['skill']
+      self[kwargs['slot']] = kwargs['skill']
+    except KeyError:
+      print "KeyError: missing argument"
+  #===============================================================================================
+  def setslot(self,**kwargs):
+    """
+    """
+    try:
+      self.slots[kwargs['slot']] = kwargs['type']
+    except KeyError:
+      print "KeyError: missing argument"
+    print self.slots
+    print self.skills
   #===============================================================================================
 #=================================================================================================
 #=================================================================================================
@@ -113,12 +146,10 @@ class Deck( list ):
 #=================================================================================================
 class Character( Actor ):
   """
-    
   """
   #===============================================================================================
-  def __init__(self,name,imagefile,context,skills=[]):
+  def __init__(self,name,imagefile,context,skills=[],factionid=0):
     """
-      
     """
     model = [ (0,0), (0,181), (100,181), (100,0) ]
     bounding_rect = [ (0,0), (0,181), (100,181), (100,0) ]
@@ -136,7 +167,7 @@ class Character( Actor ):
     super( Character, self ).__init__( imagefile, _model, _bound )
     #self.name = kwargs.get('name',"Unnamed")
     self.name = name
-    self.mind = Mind( self ) 
+    self.mind = Mind( ego=self, factionid=factionid ) 
 
     self._controller = None
 
@@ -152,7 +183,7 @@ class Character( Actor ):
                           #endurance: MAX energy output in watts in kg*m^2*s^-3
     self._reach = 1.0     #arm length
     self._mass   = 50   #mass of character, in kg
-    self._health = 100  #
+    self.health = 100  #
 
     self.energy = Energy()
 
@@ -160,8 +191,7 @@ class Character( Actor ):
 
     #skills
     self.skillbook  = SkillBook(skills=skills) 
-    self.deck       = Deck( maxsize = 4,
-                            skills  = [] )
+    self.deck       = Deck(maxsize=4, slots=['default']*6 )
 
     #equipment
     self._equipment = Equipment()     #equipment is currently held by the character
@@ -172,6 +202,43 @@ class Character( Actor ):
     self.buff = Buffable(self) #allows the character to be buffed (stat and status effects)
     self.status_effects = []
     self._wounds = []
+  #===============================================================================================
+  # Helper functions which link related members of a Character object, such as the skll book and
+  # skill deck
+  #===============================================================================================
+  def setslot(self,**kwargs):
+    """
+      helper function, sets deck slot type
+    """
+    self.deck.setslot(**kwargs)
+  def setskill(self,**kwargs):
+    """
+      helper function, sets deck slot with skill from skillbook
+    """
+    self.deck.setskill(slot=kwargs['slot'],skill=self.skillbook[kwargs['skill']])
+  def queueskill(self,**kwargs):
+    """
+      helper function, queues a skill as the next action from the deck
+      
+    """
+    print "Character queue skill"
+    try:
+      skill = self.deck[kwargs['slot']]
+      if skill:
+        self.mind.appendaction( Action( actor  = self,
+                                        atype  = skill.type,
+                                        target = self.mind._target,
+                                        skill  = skill,
+                                        stage  = self._context,
+                                        energy = 3 ) )
+        
+      else:
+        print "No Skill set for deck slot:", kwargs['slot']
+    except KeyError:
+      print "KeyError in Character:",self.name," queueskill"
+      print "  Either 'slot':'val' not present in arguments, or 'slot' not in deck"
+      print "  Keys in deck", self.deck.keys()
+      print "  kwargs:", kwargs
   #===============================================================================================
   def reach(self):
     """
@@ -224,8 +291,9 @@ class Character( Actor ):
     """
     #call super class update
     self.recharge(step)
-    self._health -= len(self._wounds)*25
-    return self._health
+    self.health -= len(self._wounds)*25
+    #mind.plan
+    return self.health
   #===============================================================================================
   def settarget(self, item ):
     """
@@ -236,4 +304,18 @@ class Character( Actor ):
     """
     """
     return self._target
+  #===============================================================================================
+  def listen(self):
+    """
+      TODO: Make character an event listener
+      TODO: this should be an event handler
+            currently just updates wound and energy
+    """
+    #call super class update
+    self.recharge(1)
+    self.health -= len(self._wounds)*25
+    #mind.plan
+    if not self.mind.targetalive(): self.mind._target = None
+    return self.health
+  #===============================================================================================
 #=================================================================================================

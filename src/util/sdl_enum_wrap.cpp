@@ -17,7 +17,6 @@ SDLKey identify(SDLKey x) { return x; }
 BOOST_PYTHON_MODULE(pysdlutil)
 {
 
-
   class_< Event >("Event")
     .add_property("type", &Event::gettype, &Event::settype)
     ;
@@ -32,6 +31,12 @@ BOOST_PYTHON_MODULE(pysdlutil)
     .add_property("type", &KeyEvent::gettype, &KeyEvent::settype)
     .add_property("key", &KeyEvent::getkey, &KeyEvent::setkey)
     .add_property("mod", &KeyEvent::getmod, &KeyEvent::setmod)
+    ;
+  class_< MessageEvent >("MessageEvent")
+    .add_property("type", &MessageEvent::gettype, &MessageEvent::settype)
+    .add_property("target", &MessageEvent::gettrg, &MessageEvent::settrg)
+    .add_property("action", &MessageEvent::getact, &MessageEvent::setact)
+    .add_property("message", &MessageEvent::getmsg, &MessageEvent::setmsg)
     ;
   //==============================================================================================
   enum_< SDLKey >("SDLKey")
@@ -99,7 +104,7 @@ BOOST_PYTHON_MODULE(pysdlutil)
     .value("SDLK_z", SDLK_z )//z
     //key mods
 
-    //function keys
+    //functiopn keys
     .value("SDLK_F1" , SDLK_F1  ) // F1
     .value("SDLK_F2" , SDLK_F2  ) // F2
     .value("SDLK_F3" , SDLK_F3  ) // F3
@@ -116,33 +121,38 @@ BOOST_PYTHON_MODULE(pysdlutil)
     .value("SDLK_F14", SDLK_F14 ) // F14
     .value("SDLK_F15", SDLK_F15 ) // F15
 
+    //gelly values
+    //  .value("", )
 
     .export_values()
     ;
   //==============================================================================================
-
+  /*
+   * Gelly_EventType
+   *  
+   */
   //==============================================================================================
-  enum_< SDL_EventType >("SDL_EventType")
-    .value("NOEVENT"        , SDL_NOEVENT)        //used for initialization 
+  enum_< int >("Gelly_EventType")
+    .value("NOEVENT"        , (int)SDL_NOEVENT)        //used for initialization 
     //    .value("WINDOWEVENT"    , SDL_WINDOWEVENT)    //window state change
-    .value("KEYDOWN"        , SDL_KEYDOWN)        //keys pressed
-    .value("KEYUP"          , SDL_KEYUP)          //keys released
+    .value("KEYDOWN"        , (int)SDL_KEYDOWN)        //keys pressed
+    .value("KEYUP"          , (int)SDL_KEYUP)          //keys released
     //    .value("TEXTINPUT"      , SDL_TEXTINPUT)      //keyboard text input
-    .value("MOUSEMOTION"    , SDL_MOUSEMOTION)    //mouse moved
-    .value("MOUSEBUTTONDOWN", SDL_MOUSEBUTTONDOWN)//mouse button pressed
-    .value("MOUSEBUTTONUP"  , SDL_MOUSEBUTTONUP)  //mouse button released
+    .value("MOUSEMOTION"    , (int)SDL_MOUSEMOTION)    //mouse moved
+    .value("MOUSEBUTTONDOWN", (int)SDL_MOUSEBUTTONDOWN)//mouse button pressed
+    .value("MOUSEBUTTONUP"  , (int)SDL_MOUSEBUTTONUP)  //mouse button released
     //    .value("MOUSEWHEEL"     , SDL_MOUSEWHEEL)     //mouse wheel motion
-    .value("JOYAXISMOTION"  , SDL_JOYAXISMOTION)  //joystick axis motion
-    .value("JOYBALLMOTION"  , SDL_JOYBALLMOTION)  //joystick trackball motion
-    .value("JOYHATMOTION"   , SDL_JOYHATMOTION)   //joystick hat position change
-    .value("JOYBUTTONDOWN"  , SDL_JOYBUTTONDOWN)  //joystick button pressed
-    .value("JOYBUTTONUP"    , SDL_JOYBUTTONUP)    //joystick button released
-    .value("QUIT"           , SDL_QUIT)           //user-requested quit
-    .value("SYSWMEVENT"     , SDL_SYSWMEVENT)     //system specific event
+    .value("JOYAXISMOTION"  , (int)SDL_JOYAXISMOTION)  //joystick axis motion
+    .value("JOYBALLMOTION"  , (int)SDL_JOYBALLMOTION)  //joystick trackball motion
+    .value("JOYHATMOTION"   , (int)SDL_JOYHATMOTION)   //joystick hat position change
+    .value("JOYBUTTONDOWN"  , (int)SDL_JOYBUTTONDOWN)  //joystick button pressed
+    .value("JOYBUTTONUP"    , (int)SDL_JOYBUTTONUP)    //joystick button released
+    .value("QUIT"           , (int)SDL_QUIT)           //user-requested quit
+    .value("SYSWMEVENT"     , (int)SDL_SYSWMEVENT)     //system specific event
     //    .value("PROXIMITYIN"    , SDL_PROXIMITYIN)    //proximity In event
     //    .value("PROXIMITYOUT"   , SDL_PROXIMITYOUT)   //proximity Out event
     //    .value("EVENT_RESERVED1", SDL_EVENT_RESERVED1)//Reserved for future use
-
+    .value("MSGEVENT"       , (int)SDL_SYSWMEVENT+1)
     .export_values()
     ;
   //==============================================================================================

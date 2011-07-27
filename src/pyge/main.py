@@ -19,10 +19,8 @@ from character.action import Action,Move,Attack
 from character.controller import Controller, Selection
 #
 from matrix.vector import Vector
-from other.euclid import Vector2
 #
-from gui.gui import GuiSystem
-#
+
 
 #=================================================================================================
 

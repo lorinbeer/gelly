@@ -28,29 +28,21 @@ int init_py();
 object pymain;
 //================================================================================================
 //================================================================================================
-
-void foo( unsigned int button_id )
+/*  uiButtonEvent
+ *   passes event data to python
+ */
+void uiPyEvent(std::string * message)
 {
   object gbl = pymain.attr("__dict__");
   object local = exec("locals()",gbl,gbl);
   object keypress = pymain.attr("keypress");
-  //until there is a need for more, ui button events are handled in the same way as key events
-  KeyEvent elf;
-
-  elf.settype (SDL_EventType(SDL_KEYUP));
-  switch (button_id){
-  case 1: elf.setkey (SDLK_1);
-    break;
-  case 2: elf.setkey (SDLK_2);
-    //printf("%i", button_id);
-    break;
-  case 3: elf.setkey (SDLK_3);
-    break;
-  case 4: elf.setkey (SDLK_4);
-    break;
-  }
+  std::string *str = new std::string("");
+  MessageEvent event(message->c_str());
+  // printf("%s",str.c_str());
   try {
-    keypress( elf );
+    object res = keypress( event );
+    char * str = extract<char*>(res);
+    cout << str <<"shouesthaou";
   }
   catch( error_already_set ) {
     std::cout << "Fuckup-eries" << std::endl;
@@ -58,6 +50,9 @@ void foo( unsigned int button_id )
   }
 
 }
+
+
+
 void bar( unsigned int actor_id )
 {
   //printf( "Actor %i selected\n",actor_id );
@@ -126,6 +121,7 @@ int events( GLBerkeliumWindow * bkwindow )
   unsigned int hit=0;
   MouseEvent *mouseevent=0;
       std::vector< unsigned int > name;
+
   while ( SDL_PollEvent(&event) )
   {
     switch( event.type ){
@@ -138,13 +134,16 @@ int events( GLBerkeliumWindow * bkwindow )
       x = (event.button.x * 800)/800;
       y = (event.button.y * 600)/600;
       bkwindow->window()->mouseMoved( x, y );
-      bkwindow->window()->mouseButton( 0, true);
+      bkwindow->window()->mouseButton( event.button.button, true);
+  
+
       break;
     case SDL_MOUSEBUTTONUP:
       x = (event.button.x * 800)/800;
       y = (event.button.y * 600)/600; 
       bkwindow->window()->mouseMoved( x, y );
-      bkwindow->window()->mouseButton( 0, false);
+      bkwindow->window()->mouseButton( event.button.button, false);
+   
       exec("drwsel()", gbl, local);
       INIT_VERTEX(point, 3);
       point[0]=x;
@@ -201,7 +200,7 @@ int main()
   GLBerkeliumWindow * bk_texture_window = new GLBerkeliumWindow(800, 600, true);
   bk_texture_window->window()->focus();
   bk_texture_window->clear();
-  bk_texture_window->connect( foo );
+  bk_texture_window->uiConnectSignal( uiPyEvent );
   //bk_texture_window->loadURL( "http://www.google.com" );
   bk_texture_window->loadURL( "file:///home/lorin/projects/gelly/src/html/hud.html" );
   

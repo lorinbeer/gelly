@@ -1,0 +1,27 @@
+#===========================================================================================================================
+# Class Mob
+#  group abstraction, acts as an interface for a collection of minds to cooperate
+#  a Mob could represent a small group of monsters, ie 3 bandits robbing travellers 
+#                        a large group of monsters, ie a tribe of goblins
+#                        a herd, pride, or other cooperative group
+#
+#  Modes:
+#    cooperative: Mob passes messages between component minds, which independantly choose a course of action based on
+#                 internal heuristics
+#    swarm: Mob sends 'orders' to minds, which then attempt to exetcute the orders. An order represents a request, and the
+#           mob acts as a coordinator (a kind of meta-mind)
+#  Interface
+#    
+#
+#===========================================================================================================================
+
+
+#===========================================================================================================================
+class Mob
+
+
+#===========================================================================================================================
+
+
+
+#===========================================================================================================================

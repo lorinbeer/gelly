@@ -72,7 +72,7 @@ void BERKELIUM_EXPORT forkedProcessHook(int argc, char **argv);
  *  \param homeDirectory  Just like Chrome's --user-data-dir command line flag.
  *    If homeDirectory is null or empty, creates a temporary data directory.
  */
-bool BERKELIUM_EXPORT init(FileString homeDirectory);
+void BERKELIUM_EXPORT init(FileString homeDirectory);
 
 /** Destroys Berkelium and attempts to free as much memory as possible.
  *  Note: You must destroy all Window and Context objects before calling

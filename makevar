@@ -29,8 +29,9 @@ BERKELIUM_CFLAGS = -I$(PROJ_INCL)
 BERKELIUM_LIBS   = $(PROJ_LIBS)/liblibberkelium.so
 #=================================================================================================
 #python & BOOST
-PYB_CFLAGS = -I/usr/include/python2.6/
-PYB_LIBS += -lpython2.6 -lboost_python -I/usr/include $(PROJ_LIBS)/libboost_python.so.1.45.0
+PYB_CFLAGS = -I/usr/include/python2.7/
+PYB_LIBS += -lpython2.7 -lboost_python -I/usr/include 
+#$(PROJ_LIBS)/libboost_python.so.1.45.0
 
 
 #=================================================================================================
